@@ -1,1 +1,6 @@
 analysis time = 2.00
+total time = 9.71
+memory usage = 12.15
+call graph edges = 6
+library call graph edges = 7
+library call back edges = 12

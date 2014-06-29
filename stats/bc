@@ -24,16 +24,18 @@ function docopy () {
   for index in ${!benchmarks[@]}
   do
     benchmark=${benchmarks[$index]}
-    echo "copying to ${basedir}/${benchmark}/${file}.stats ..."
-    echo "${title} = ${array[index]}" > ${basedir}/${benchmark}/${file}.stats
+    #echo "copying to ${basedir}/${benchmark}/${file}.stats ..."
+    echo "${title} = ${array[index]}" >> ${basedir}/${benchmark}/${file}.stats
   done
 }
 
 date
 
-docopy "spark" "spark" "analysis time" 1
-docopy "spark-averroes" "sparkave" "analysis time" 2
-docopy "doop" "doop" "analysis time" 3
-docopy "doop-averroes" "doopave" "analysis time" 4
+t="library call back edges"
+docopy "doop" "doop" "$t" 1
+docopy "spark" "spark" "$t" 2
+docopy "dynamic" "dyn" "$t" 3
+docopy "spark-averroes" "sparkave" "$t" 4
+docopy "doop-averroes" "doopave" "$t" 5
 
 date
