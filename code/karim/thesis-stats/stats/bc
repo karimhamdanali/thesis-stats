@@ -31,11 +31,10 @@ function docopy () {
 
 date
 
-t="library call back edges"
-docopy "doop" "doop" "$t" 1
-docopy "spark" "spark" "$t" 2
-docopy "dynamic" "dyn" "$t" 3
-docopy "spark-averroes" "sparkave" "$t" 4
-docopy "doop-averroes" "doopave" "$t" 5
+t="imprecise library call back edges"
+#docopy "spark" "spark" "$t" 1
+docopy "spark-averroes" "sparkave" "$t" 1
+#docopy "doop" "doop" "$t" 3
+docopy "doop-averroes" "doopave" "$t" 2
 
 date
