@@ -1,0 +1,39 @@
+#! /bin/bash
+
+set -e
+
+# the dacapo benchmarks
+dacapo=( antlr bloat chart hsqldb luindex lusearch pmd xalan)
+dacapo=( "${dacapo[@]/#/dacapo/}" )
+
+# the specjvm benchmarks
+specjvm=( compress db jack javac jess raytrace )
+specjvm=( "${specjvm[@]/#/specjvm/}" )
+
+# put them all in one big array
+benchmarks=( ${dacapo[@]} ${specjvm[@]} )
+
+function docopy () {
+  basedir=$1
+  file=$2
+  title=$3
+  
+  line=$(sed "$4q;d" temp.stats)
+  IFS=$'\t' read -a array <<< "$line"
+  
+  for index in ${!benchmarks[@]}
+  do
+    benchmark=${benchmarks[$index]}
+    echo "copying to ${basedir}/${benchmark}/${file}.stats ..."
+    echo "${title} = ${array[index]}" > ${basedir}/${benchmark}/${file}.stats
+  done
+}
+
+date
+
+docopy "spark" "spark" "analysis time" 1
+docopy "spark-averroes" "sparkave" "analysis time" 2
+docopy "doop" "doop" "analysis time" 3
+docopy "doop-averroes" "doopave" "analysis time" 4
+
+date
