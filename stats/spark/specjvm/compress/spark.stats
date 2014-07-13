@@ -1,9 +1,9 @@
 analysis time = 96.30
 total time = 140.22
 memory usage = 390.38
-call graph edges = 40
+application call graph edges = 40
 library call graph edges = 13
 library call back edges = 10
-unsound call graph edges = 0
+unsound application call graph edges = 0
 unsound library call graph edges = 0
 unsound library call back edges = 0

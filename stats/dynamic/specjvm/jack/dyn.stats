@@ -1,3 +1,3 @@
-call graph edges = 520
+application call graph edges = 520
 library call graph edges = 76
 library call back edges = 0
