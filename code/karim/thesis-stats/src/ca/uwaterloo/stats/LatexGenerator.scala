@@ -6,7 +6,6 @@ import java.text.DecimalFormat
 import java.util.zip.GZIPInputStream
 import scala.collection.JavaConversions.asScalaSet
 import ca.uwaterloo.util.Math
-import ca.uwaterloo.util.LibraryCallBackFrequency
 
 object LatexGenerator {
 
@@ -63,12 +62,69 @@ object LatexGenerator {
       l2a -> "library call back edges")
 
     // Emit latex files
-    //    emitSoundnessTables
-    //    emitPrecisionTables
-    emitLibraryCallBackFrequencies
+    emitSoundnessTables
+    emitPrecisionTables
+    //    emitLibraryCallBackFrequencies
+    emitLibraryCallBackSummaries("sparkave")
+    emitLibraryCallBackSummaries("doopave")
 
     // Close streams
     data.close
+
+    def emitLibraryCallBackSummaries(analysis: String) = {
+      val table = new PrintStream(s"tex/table-freqs-$analysis.tex")
+      val log = io.Source.fromFile(s"stats/summaries/$analysis.num").getLines.toList.drop(1)
+      val tool = if (analysis == "sparkave") "\\spark" else "\\doop"
+
+      // Emit Header
+      table.println("\\begin{table}[!t]")
+      table.println("  \\centering")
+      table.println("  \\caption{Frequencies of extra library call back edges in \\ave-based " + tool + " compared to " + tool + ". \\italicize{Other} methods include all methods that are encountered only in one benchmark}")
+      table.println("  \\label{table:freqs:" + analysis + "}")
+      table.println("  \\begin{tabular}{lrrrrrrrrrrrrrr>{\\bfseries}r}")
+      table.println("    \\toprule")
+      table.println("    & " + benchmarks.map(b => s"\\rot{\\$b}").mkString(" & ") + "& \\rot{Total} \\\\")
+      table.println("    \\midrule")
+
+      for (l <- log) {
+        var row = new StringBuilder("    ")
+        val line = l.split("\t")
+        val name = line.head
+
+        // append method names, special treatment for "Other" and "Total"
+        if (name == "Other") row append s"\\italicize{$name}"
+        else if (line.head == "Total") row append s"\\boldify{$name}"
+        else row append s"\\code{$name}"
+
+        // append the values
+        for((t, b) <- line.tail zip (benchmarks :+ "Total")) {
+          emit(t.toInt, b)
+        }
+        
+        row append " \\\\"
+        if (l != log.last) row append " \\midrule" // Midrule except for the last row
+        table.println(row)
+
+        def emit(v: Int, benchmark: String) = {
+          val key = s"$analysis $name $benchmark $callbackfreq"
+          val value = intFormat format v
+          
+          // ignore 0 frequencies, clutters the table
+          if (Set("Total", "Other")(name) || v != 0) data.println(s"\\pgfkeyssetvalue{$key}{$value}")
+
+          // add the key to the current results row
+          if (name == "Other") row append s" & \\italicize{\\pgfkeysvalueof{$key}}"
+          else if (name == "Total") row append s" & \\boldify{\\pgfkeysvalueof{$key}}"
+          else row append s" & \\pgfkeysvalueof{$key}"
+        }
+      }
+
+      // Emit Footer
+      table.println("    \\bottomrule")
+      table.println("  \\end{tabular}")
+      table.println("\\end{table}")
+      table.close
+    }
 
     def emitLibraryCallBackFrequencies = {
       import scala.collection.mutable.Map
@@ -82,21 +138,11 @@ object LatexGenerator {
       for (benchmark <- benchmarks) {
         val benchFull = benchmarkFull(benchmark)
 
-//        val lines = io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != "SparkAverroes - Spark").drop(2).takeWhile(_.trim.nonEmpty)
-//        for (line <- lines) {
-//          val tokens = line.split("=")
-//          if (tokens.size == 2) {
-//            sparkave(tokens(0).trim) += (benchmark -> tokens(1).trim.toInt)
-//          }
-//        }
-
-        //println(io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != "SparkAverroes - Spark").drop(2).takeWhile(_.trim.nonEmpty))
-
         readFrequencies("SparkAverroes - Spark", sparkave)
         readFrequencies("DoopAverroes - Doop", doopave)
 
         // Read in the frequencies
-        def readFrequencies(key: String, freqs: Map[String, ImmutableMap[String, Int]]) = { 
+        def readFrequencies(key: String, freqs: Map[String, ImmutableMap[String, Int]]) = {
           val lines = io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != key).drop(2).takeWhile(_.trim.nonEmpty)
           for (line <- lines) {
             val tokens = line.split("=")
@@ -107,11 +153,9 @@ object LatexGenerator {
         }
       }
 
-      // Print them out
-//      println(sparkave.size)
-      sparkave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t"))}
+      sparkave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t")) }
       println("\n\n mama 7elwa \n\n")
-      doopave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t"))}
+      doopave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t")) }
     }
 
     def emitSoundnessTables = {
