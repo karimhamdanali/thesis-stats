@@ -1,13 +1,12 @@
-package ca.uwaterloo.scalacg.experiments
+package ca.uwaterloo.stats
 
 import java.io.FileInputStream
 import java.io.PrintStream
 import java.text.DecimalFormat
 import java.util.zip.GZIPInputStream
-
 import scala.collection.JavaConversions.asScalaSet
-
 import ca.uwaterloo.util.Math
+import ca.uwaterloo.util.LibraryCallBackFrequency
 
 object LatexGenerator {
 
@@ -37,18 +36,17 @@ object LatexGenerator {
   final val callbackfreq = "call back frequencies"
 
   // Formatting
-  final lazy val floatFormat = new DecimalFormat("#,###.#")
+  //  final lazy val floatFormat = new DecimalFormat("#,###.#")
   final lazy val intFormat = "%,d"
-  final lazy val perFormat = "%5s"
+  //  final lazy val perFormat = "%5s"
 
   // keys for table of differences
   final val valueKey = "value"
-  final val perKey = "percentage"
+  //  final val perKey = "percentage"
 
   // Delimiters & special characters
   final val sep = "\t"
-  final val perChar = "\\%"
-  final val setDiff = "\\"
+  //  final val perChar = "\\%"
 
   def doubleLines(str: String) = {
     val tokens = str.split(';') // should yield 1 or 2 tokens exactly
@@ -57,30 +55,242 @@ object LatexGenerator {
     else throw new RuntimeException("more than 2 lines is not allowed.")
   }
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]) = {
     val data = new PrintStream("tex/data.tex")
 
-    val soundnessOut = Map[String, PrintStream](a2a -> new PrintStream(s"csv/$soundness/$a2a.csv"),
-      a2l -> new PrintStream(s"csv/$soundness/$a2l.csv"),
-      l2a -> new PrintStream(s"csv/$soundness/$l2a.csv"))
-
-    val imprecisionOut = Map[String, PrintStream](a2a -> new PrintStream(s"csv/$imprecision/$a2a.csv"),
-      a2l -> new PrintStream(s"csv/$imprecision/$a2l.csv"),
-      l2a -> new PrintStream(s"csv/$imprecision/$l2a.csv"))
-
-    val cgsizeOut = new PrintStream(s"csv/$cgsize.csv")
+    val edgesFull = Map[String, String](a2a -> "application call graph edges",
+      a2l -> "library call graph edges",
+      l2a -> "library call back edges")
 
     // Emit latex files
-    emitSoundnessTables
+    //    emitSoundnessTables
+    //    emitPrecisionTables
+    emitLibraryCallBackFrequencies
 
     // Close streams
     data.close
-    soundnessOut.values foreach (_.close)
-    imprecisionOut.values foreach (_.close)
-    cgsizeOut.close
+
+    def emitLibraryCallBackFrequencies = {
+      import scala.collection.mutable.Map
+      import scala.collection.immutable.{ Map => ImmutableMap }
+
+      val sparkave = Map[String, ImmutableMap[String, Int]]().withDefaultValue(ImmutableMap[String, Int]()) //.withDefaultValue(0))
+      val doopave = Map[String, ImmutableMap[String, Int]]().withDefaultValue(ImmutableMap[String, Int]()) //.withDefaultValue(0))
+
+      val base = "callgraphs/comparisons-call-graphs"
+
+      for (benchmark <- benchmarks) {
+        val benchFull = benchmarkFull(benchmark)
+
+//        val lines = io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != "SparkAverroes - Spark").drop(2).takeWhile(_.trim.nonEmpty)
+//        for (line <- lines) {
+//          val tokens = line.split("=")
+//          if (tokens.size == 2) {
+//            sparkave(tokens(0).trim) += (benchmark -> tokens(1).trim.toInt)
+//          }
+//        }
+
+        //println(io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != "SparkAverroes - Spark").drop(2).takeWhile(_.trim.nonEmpty))
+
+        readFrequencies("SparkAverroes - Spark", sparkave)
+        readFrequencies("DoopAverroes - Doop", doopave)
+
+        // Read in the frequencies
+        def readFrequencies(key: String, freqs: Map[String, ImmutableMap[String, Int]]) = { 
+          val lines = io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != key).drop(2).takeWhile(_.trim.nonEmpty)
+          for (line <- lines) {
+            val tokens = line.split("=")
+            if (tokens.size == 2) {
+              freqs(tokens(0).trim) += (benchmark -> tokens(1).trim.toInt)
+            }
+          }
+        }
+      }
+
+      // Print them out
+//      println(sparkave.size)
+      sparkave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t"))}
+      println("\n\n mama 7elwa \n\n")
+      doopave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t"))}
+    }
 
     def emitSoundnessTables = {
-      
+      //      emitSoundnessTable(a2a)
+      //      emitSoundnessTable(a2l)
+      //      emitSoundnessTable(l2a)
+      emitSoundnessTableTotal
     }
+
+    def emitSoundnessTable(tpe: String) = {
+      val table = new PrintStream(s"tex/table-$soundness-$tpe.tex")
+      val base = "stats"
+      val edFull = edgesFull(tpe)
+
+      // Emit Header
+      table.println("\\begin{table}[!t]")
+      table.println("  \\centering")
+      table.println("  \\caption{Comparing the soundness of \\spark and \\doop when analyzing the whole program vs using \\ave with respect to " + edFull + "}")
+      table.println("  \\label{table:soundness:" + tpe + "}")
+      table.println("  \\begin{tabularx}{\\textwidth}{lRRRRR}")
+      table.println("    \\toprule")
+      table.println("    & & \\multicolumn{2}{c}{\\mathify{\\dynamic \\setdiff \\spark}} & \\multicolumn{2}{c}{\\mathify{\\dynamic \\setdiff \\doop}} \\\\")
+      table.println("    \\cmidrule(l){3-4} \\cmidrule(l){5-6}")
+      table.println("    & \\dynamic & \\whole & \\ave  & \\whole  & \\ave  \\\\")
+      table.println("    \\cmidrule(l){2-2} \\cmidrule(l){3-4} \\cmidrule(l){5-6}")
+
+      for (benchmark <- benchmarks) {
+        var row = new StringBuilder("    ")
+        val benchFull = benchmarkFull(benchmark)
+
+        // add benchmark name in italics
+        row append s"\\$benchmark"
+
+        // Read the edges info
+        emit(dynamic, edges_dyn)
+        emit(s"$spark $whole", edges_spark)
+        emit(s"$spark $averroes", edges_sparkave)
+        emit(s"$doop $whole", edges_doop)
+        emit(s"$doop $averroes", edges_doopave)
+        row append " \\\\"
+        if (benchmark != benchmarks.last) row append " \\midrule" // Midrule except for the last row
+        table.println(row)
+
+        def emit(analysis: String, v: Int) = {
+          val key = s"$analysis $benchmark $soundness $tpe"
+          val value = intFormat format v
+          data.println(s"\\pgfkeyssetvalue{$key}{$value}")
+          row append s" & \\pgfkeysvalueof{$key}" // add the key to the current results row
+        }
+
+        def extractEdges(log: List[String], key: String = s"unsound $edFull") = log.find(_ contains key).get.split("=").last.trim.toInt
+        lazy val edges_dyn = extractEdges(io.Source.fromFile(s"$base/dynamic/$benchFull/dyn.stats").getLines.toList, edFull)
+        lazy val edges_spark = extractEdges(io.Source.fromFile(s"$base/spark/$benchFull/spark.stats").getLines.toList)
+        lazy val edges_sparkave = extractEdges(io.Source.fromFile(s"$base/spark-averroes/$benchFull/sparkave.stats").getLines.toList)
+        lazy val edges_doop = extractEdges(io.Source.fromFile(s"$base/doop/$benchFull/doop.stats").getLines.toList)
+        lazy val edges_doopave = extractEdges(io.Source.fromFile(s"$base/doop-averroes/$benchFull/doopave.stats").getLines.toList)
+      }
+
+      // Emit Footer
+      table.println("    \\bottomrule")
+      table.println("  \\end{tabularx}")
+      table.println("\\end{table}")
+      table.close
+    }
+
+    def emitSoundnessTableTotal = {
+      val table = new PrintStream(s"tex/table-$soundness.tex")
+      val base = "stats"
+
+      // Emit Header
+      table.println("\\begin{table}[!t]")
+      table.println("  \\centering")
+      table.println("  \\caption{Comparing the soundness of \\spark and \\doop when analyzing the whole program to using \\ave with respect to the dynamic call graphs}")
+      table.println("  \\label{table:soundness}")
+      table.println("  \\begin{tabularx}{\\textwidth}{lRRRRR}")
+      table.println("    \\toprule")
+      table.println("    & & \\multicolumn{2}{c}{\\mathify{\\dynamic \\setdiff \\spark}} & \\multicolumn{2}{c}{\\mathify{\\dynamic \\setdiff \\doop}} \\\\")
+      table.println("    \\cmidrule(l){3-4} \\cmidrule(l){5-6}")
+      table.println("    & \\dynamic & \\whole & \\ave  & \\whole  & \\ave  \\\\")
+      table.println("    \\cmidrule(l){2-2} \\cmidrule(l){3-4} \\cmidrule(l){5-6}")
+
+      for (benchmark <- benchmarks) {
+        var row = new StringBuilder("    ")
+        val benchFull = benchmarkFull(benchmark)
+
+        // add benchmark name in italics
+        row append s"\\$benchmark"
+
+        // Read the edges info
+        emit(dynamic, edges_dyn(a2a) + edges_dyn(a2l) + edges_dyn(l2a))
+        emit(s"$spark $whole", edges_spark(a2a) + edges_spark(a2l) + edges_spark(l2a))
+        emit(s"$spark $averroes", edges_sparkave(a2a) + edges_sparkave(a2l) + edges_sparkave(l2a))
+        emit(s"$doop $whole", edges_doop(a2a) + edges_doop(a2l) + edges_doop(l2a))
+        emit(s"$doop $averroes", edges_doopave(a2a) + edges_doopave(a2l) + edges_doopave(l2a))
+        row append " \\\\"
+        if (benchmark != benchmarks.last) row append " \\midrule" // Midrule except for the last row
+        table.println(row)
+
+        def emit(analysis: String, v: Int) = {
+          val key = s"$analysis $benchmark $soundness"
+          val value = intFormat format v
+          data.println(s"\\pgfkeyssetvalue{$key}{$value}")
+          row append s" & \\pgfkeysvalueof{$key}" // add the key to the current results row
+        }
+
+        def extractEdges(log: List[String], tpe: String) = log.find(_ contains s"unsound ${edgesFull(tpe)}").get.split("=").last.trim.toInt
+        def edges_dyn(tpe: String) = io.Source.fromFile(s"$base/dynamic/$benchFull/dyn.stats").getLines.toList.find(_ contains edgesFull(tpe)).get.split("=").last.trim.toInt
+        def edges_spark(tpe: String) = extractEdges(io.Source.fromFile(s"$base/spark/$benchFull/spark.stats").getLines.toList, tpe)
+        def edges_sparkave(tpe: String) = extractEdges(io.Source.fromFile(s"$base/spark-averroes/$benchFull/sparkave.stats").getLines.toList, tpe)
+        def edges_doop(tpe: String) = extractEdges(io.Source.fromFile(s"$base/doop/$benchFull/doop.stats").getLines.toList, tpe)
+        def edges_doopave(tpe: String) = extractEdges(io.Source.fromFile(s"$base/doop-averroes/$benchFull/doopave.stats").getLines.toList, tpe)
+      }
+
+      // Emit Footer
+      table.println("    \\bottomrule")
+      table.println("  \\end{tabularx}")
+      table.println("\\end{table}")
+      table.close
+    }
+
+    def emitPrecisionTables = {
+      emitPrecisionTable(a2a)
+      emitPrecisionTable(a2l)
+      emitPrecisionTable(l2a)
+      //      emitPrecisionTableTotal
+    }
+
+    def emitPrecisionTable(tpe: String) = {
+      val table = new PrintStream(s"tex/table-$imprecision-$tpe.tex")
+      val base = "stats"
+      val edFull = edgesFull(tpe)
+
+      // Emit Header
+      table.println("\\begin{table}[!t]")
+      table.println("  \\centering")
+      table.println("  \\caption{Comparing the precision of using \\ave to analyzing the whole program in both \\spark and \\doop with respect to " + edFull + "}")
+      table.println("  \\label{table:precision:" + tpe + "}")
+      table.println("  \\begin{tabularx}{\\textwidth}{lRRRR}")
+      table.println("    \\toprule")
+      table.println("    & \\spark & \\small \\mathify{\\ave \\setdiff \\spark} & \\doop & \\small \\mathify{\\ave \\setdiff \\doop} \\\\")
+      table.println("    \\cmidrule(l){2-3} \\cmidrule(l){4-5}")
+
+      for (benchmark <- benchmarks) {
+        var row = new StringBuilder("    ")
+        val benchFull = benchmarkFull(benchmark)
+
+        // add benchmark name in italics
+        row append s"\\$benchmark"
+
+        // Read the edges info
+        emit(s"$spark $whole", edges_spark)
+        emit(s"$spark $averroes", edges_sparkave)
+        emit(s"$doop $whole", edges_doop)
+        emit(s"$doop $averroes", edges_doopave)
+        row append " \\\\"
+        if (benchmark != benchmarks.last) row append " \\midrule" // Midrule except for the last row
+        table.println(row)
+
+        def emit(analysis: String, v: Int) = {
+          val key = s"$analysis $benchmark $soundness $tpe"
+          val value = intFormat format v
+          data.println(s"\\pgfkeyssetvalue{$key}{$value}")
+          row append s" & \\pgfkeysvalueof{$key}" // add the key to the current results row
+        }
+
+        def extractEdges(log: List[String], key: String = s"imprecise $edFull") = log.find(_ contains key).get.split("=").last.trim.toInt
+        lazy val edges_spark = extractEdges(io.Source.fromFile(s"$base/spark/$benchFull/spark.stats").getLines.toList, edFull)
+        lazy val edges_sparkave = extractEdges(io.Source.fromFile(s"$base/spark-averroes/$benchFull/sparkave.stats").getLines.toList)
+        lazy val edges_doop = extractEdges(io.Source.fromFile(s"$base/doop/$benchFull/doop.stats").getLines.toList, edFull)
+        lazy val edges_doopave = extractEdges(io.Source.fromFile(s"$base/doop-averroes/$benchFull/doopave.stats").getLines.toList)
+      }
+
+      // Emit Footer
+      table.println("    \\bottomrule")
+      table.println("  \\end{tabularx}")
+      table.println("\\end{table}")
+      table.close
+    }
+
+    def benchmarkFull(benchmark: String) = (if (dacapo contains benchmark) "dacapo/" else "specjvm/") + benchmark
   }
 }
