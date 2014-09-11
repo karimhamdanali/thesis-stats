@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+set -e
+
+date
+for i in {1..10}
+do
+  base=all-output/${i}
+  echo "running SparkAverroes"
+  echo "running for the ${i}th time!"
+  ./spark-averroes-all ${base}
+  echo " "
+  echo " "
+  echo " "
+  echo " "
+  echo " "
+done
+date
