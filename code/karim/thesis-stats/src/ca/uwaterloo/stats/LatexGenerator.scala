@@ -8,7 +8,6 @@ import scala.collection.JavaConversions.asScalaSet
 import ca.uwaterloo.util.Math
 
 object LatexGenerator {
-
   // The benchmarks
   final val dacapo = List("antlr", "bloat", "chart", "hsqldb", "luindex", "lusearch", "pmd", "xalan")
   final val specjvm = List("compress", "db", "jack", "javac", "jess", "raytrace")
