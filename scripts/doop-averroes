@@ -3,12 +3,13 @@
 set -e
 
 benchmark=$1
+base=$2
 
 echo "running Doop with Averroes for ${benchmark}"
 
 
 program=$(basename $benchmark)
-outputdir=callgraphs/doop-averroes-call-graphs/${benchmark}
+outputdir=${base}/callgraphs/doop-averroes-call-graphs/${benchmark}
 doop=${outputdir}/doopAverroes.tar.gz
 doopHome=/u/karim/workspace/doop
 
@@ -26,5 +27,9 @@ cp output/doopAverroes.gxl ${outputdir}/doopAverroes.gxl
 # 4. copy database
 echo "making the database of Doop with Averroes available at ${doop} ..."
 tar -czf ${doop} ../doop/last-analysis/*
+
+# 5. print disk usage
+echo -n "Disk usage stats: "
+du -sh ../doop/cache/analysis
 
 echo ""
