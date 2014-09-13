@@ -1,0 +1,33 @@
+#! /usr/bin/env bash
+
+set -e
+
+base=$1
+
+function timing()
+{
+	echo "..."
+	/usr/bin/time -f "elapsed time: %es" $* 2>&1
+}
+
+# the dacapo benchmarks
+dacapo=( antlr hsqldb)
+dacapo=( "${dacapo[@]/#/dacapo/}" )
+
+# put them all in one big array
+benchmarks=( ${dacapo[@]} )
+
+date
+for benchmark in ${benchmarks[@]}
+do
+  echo "running ${benchmark} ..."
+  program=$(basename $benchmark)
+  outputdir=${base}/callgraphs/doop-call-graphs/${benchmark}
+  
+  # 1. create output directory
+  mkdir -p ${outputdir}/
+  
+  # 2. run the script
+  timing ./doop ${benchmark} ${base} > ${outputdir}/${program}-doop.stats
+done
+date
