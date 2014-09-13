@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+set -e
+
+date
+./run-spark-all
+./run-doop-antlr-hsqldb
+date

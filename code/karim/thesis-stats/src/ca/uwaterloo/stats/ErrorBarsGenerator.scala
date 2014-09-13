@@ -10,11 +10,11 @@ object ErrorBarsGenerator {
   final val benchmarks = dacapo ++ specjvm
 
   def main(args: Array[String]) = {
-    emitSparkTime(isAve = false)
-    emitSparkTime(isAve = true)
+//    emitSparkTime(isAve = false)
+//    emitSparkTime(isAve = true)
 
     emitSparkMemory(isAve = false)
-    emitSparkMemory(isAve = true)
+//    emitSparkMemory(isAve = true)
   }
 
   def emitSparkTime(isAve: Boolean) = {
@@ -73,13 +73,13 @@ object ErrorBarsGenerator {
     } {
       val cg = if (isAve) "spark-averroes-call-graphs" else "spark-call-graphs"
       val log = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$prog-gc.stats").getLines.toList.filter(_ contains "Full GC")
-      var memory = 0
+      var memory = 0d
 
       // Get the max memory used
       for (line <- log) {
-        val pattern = "(\\d+)K".r
-        val pattern(v1, v2, v3) = line
-        val next = v2.toInt
+        val pattern = "->(\\d+)K".r
+        val value = pattern.findFirstMatchIn(line).get.group(1)
+        val next = roundAt2(value.toDouble / 1024)
         if (next > memory) memory = next
       }
       
@@ -92,4 +92,7 @@ object ErrorBarsGenerator {
 
   def benchmarkFull(benchmark: String) = (if (dacapo contains benchmark) "dacapo/" else "specjvm/") + benchmark
   final lazy val floatFormat = new DecimalFormat("#,###.##")
+  def roundAt(p: Int)(n: Double): Double = { val s = math pow (10, p); (math round n * s) / s }
+  def roundAt2(n: Double) = roundAt(2)(n)
+
 }
