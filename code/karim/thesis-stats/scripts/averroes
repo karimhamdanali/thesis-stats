@@ -4,6 +4,7 @@ set -e
 
 benchmark=$1
 reflection=$2
+base=$3
 
 function timing()
 {
@@ -12,8 +13,11 @@ function timing()
 }
 
 date
-mkdir -p benchmarks-averroes/dacapo
-mkdir -p benchmarks-averroes/specjvm
+outputdir=${base}/benchmarks-averroes
+
+# make some dirs
+mkdir -p ${outputdir}/dacapo
+mkdir -p ${outputdir}/specjvm
 
 echo "running ${benchmark}"
 program=$(basename $benchmark)
@@ -29,8 +33,8 @@ else
 fi
 
 # 2. copy the output JARs
-cp output/organizedApplication.jar benchmarks-averroes/${benchmark}-organized-app.jar
-cp output/organizedLibrary.jar benchmarks-averroes/${benchmark}-organized-lib.jar
-cp output/placeholderLibrary.jar benchmarks-averroes/${benchmark}-placeholder-lib.jar
+cp output/organizedApplication.jar ${outputdir}/${benchmark}-organized-app.jar
+cp output/organizedLibrary.jar ${outputdir}/${benchmark}-organized-lib.jar
+cp output/placeholderLibrary.jar ${outputdir}/${benchmark}-placeholder-lib.jar
 
 echo ""
