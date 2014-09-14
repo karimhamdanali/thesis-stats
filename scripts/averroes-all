@@ -1,7 +1,9 @@
 #! /usr/bin/env bash
 
 set -e
+
 reflection=$1
+base=$2
 
 # the dacapo benchmarks
 dacapo=( antlr bloat chart hsqldb jython luindex lusearch pmd xalan )
@@ -21,11 +23,18 @@ function timing()
 }
 
 date
-mkdir -p benchmarks-averroes/dacapo
-mkdir -p benchmarks-averroes/specjvm
 
 for benchmark in ${benchmarks[@]}
 do
-  ./averroes $benchmark $reflection
+  echo "running ${benchmark} ..."
+  program=$(basename $benchmark)
+  outputdir=${base}/benchmarks-averroes
+  
+  # 1. create output directory
+  mkdir -p ${outputdir}/dacapo
+  mkdir -p ${outputdir}/specjvm
+  
+  # 2. run the script
+  timing ./averroes $benchmark $reflection $base > ${outputdir}/${program}-averroes.stats
 done
 date

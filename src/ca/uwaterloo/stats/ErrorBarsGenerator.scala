@@ -17,8 +17,33 @@ object ErrorBarsGenerator {
 
     emitDoopTime(isAve = false)
     emitDoopTime(isAve = true)
-    //    emitDoopMemory(isAve = false)
-    //    emitDoopMemory(isAve = true)
+    emitDoopMemory(isAve = false)
+    emitDoopMemory(isAve = true)
+    
+    emitAverroesTime
+  }
+  
+  def emitAverroesTime = {
+    val title = "Averroes Time"
+
+    println(title)
+    println("=" * title.length)
+
+    for {
+      iteration <- 1 to 10
+      prog <- benchmarks
+      benchmark = benchmarkFull(prog)
+    } {
+      val log = io.Source.fromFile(s"all-output/$iteration/benchmarks-averroes/$prog-averroes.stats").getLines.toList
+      val line = log.find(_ startsWith "Total time (without verification)").get
+      val averroes = roundAt2(extractNumber(line).toDouble)
+
+      if (prog != benchmarks.last) print(averroes + "\t")
+      else print(averroes + "\n")
+    }
+
+    println
+    println
   }
 
   def emitDoopTime(isAve: Boolean) = {
@@ -67,7 +92,7 @@ object ErrorBarsGenerator {
       val log = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$stats").getLines.toList
 
       var total = 0d
-      
+
       total += doopExtractNumber(_ startsWith "Adding archive for resolving", log)
       total += doopExtractNumber(_ startsWith "creating database in", log)
       total += doopExtractNumber(_ startsWith "loading fact declarations ...", log)
@@ -76,11 +101,39 @@ object ErrorBarsGenerator {
       total += doopExtractNumber(_ startsWith "loading context-insensitive delta rules...", log)
       total += doopExtractNumber(_ startsWith "loading reflection delta rules...", log)
       total += doopExtractNumber(_ startsWith "loading client delta rules...", log)
-      
+      total += doopExtractNumber(_ startsWith "retrieving call graph edges ...", log)
+      total += doopExtractNumber(_ startsWith "retrieving entry points ...", log)
+
       val overhead = floatFormat format total
 
       if (prog != benchmarks.last) print(overhead + "\t")
       else print(overhead + "\n")
+    }
+
+    println
+    println
+  }
+  
+  def emitDoopMemory(isAve: Boolean) = {
+    val title = if (isAve) "DoopAve Memory" else "Doop Memory"
+
+    println(title)
+    println("=" * title.length)
+
+    for {
+      iteration <- 1 to 10
+      prog <- benchmarks
+      benchmark = benchmarkFull(prog)
+    } {
+      val cg = if (isAve) "doop-averroes-call-graphs" else "doop-call-graphs"
+      val stats = if (isAve) s"$prog-doopAverroes.stats" else s"$prog-doop.stats"
+      val log = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$stats").getLines.toList
+
+      val line = log.find(_ startsWith "Disk usage stats:").get
+      val memory = roundAt2(extractNumber(line).toDouble)
+
+      if (prog != benchmarks.last) print(memory + "\t")
+      else print(memory + "\n")
     }
 
     println
