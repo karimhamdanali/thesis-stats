@@ -1,6 +1,5 @@
 package ca.uwaterloo.util
 
-import scala.compat.Platform
 
 /**
  * Some math utilities.
