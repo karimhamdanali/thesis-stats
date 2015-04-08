@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+
+set -e
+
+benchmark=$1
+base=$2
+
+echo "running WalaAverroes for ${benchmark}"
+
+program=$(basename $benchmark)
+outputdir=${base}/callgraphs/wala-averroes-call-graphs/${benchmark}
+
+# 1. make some dirs
+mkdir -p ${outputdir}/
+
+# 2. run wala-averroes.jar
+cp properties/${benchmark}.properties averroes.properties
+jar uf wala-averroes.jar averroes.properties
+java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar wala-averroes.jar $benchmark
+
+# 3. copy the call graph
+cp output/walaAverroes.gxl ${outputdir}/walaAverroes.gxl
+
+echo ""
