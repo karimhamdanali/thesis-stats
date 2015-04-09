@@ -3,6 +3,6 @@
 set -e
 
 date
-./run-spark-all
-./run-doop-antlr-hsqldb
+./run-wala-all
+./run-wala-averroes-all
 date
