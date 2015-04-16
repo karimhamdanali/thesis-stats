@@ -10,6 +10,8 @@ object ErrorBarsGenerator {
   final val benchmarks = dacapo ++ specjvm
 
   def main(args: Array[String]) = {
+    emitAverroesTime
+    
     emitSparkTime(isAve = false)
     emitSparkTime(isAve = true)
     emitSparkMemory(isAve = false)
@@ -20,11 +22,41 @@ object ErrorBarsGenerator {
     emitDoopMemory(isAve = false)
     emitDoopMemory(isAve = true)
     
-    emitAverroesTime
+    emitWalaTime(isAve = false)
+    emitWalaTime(isAve = true)
+    emitWalaMemory(isAve = false)
+    emitWalaMemory(isAve = true)
   }
   
-  def emitAverroesTime = {
-    val title = "Averroes Time"
+  def emitWalaTime(isAve: Boolean) = {
+    emitWalaAnalysisTime(isAve)
+    emitWalaOverheadTime(isAve)
+  }
+
+  def emitWalaAnalysisTime(isAve: Boolean) = {
+    val title = if (isAve) "WalaAve Analysis Time" else "Wala Analysis Time"
+    println(title)
+    println("=" * title.length)
+    for {
+      iteration <- 1 to 10
+      prog <- benchmarks
+      benchmark = benchmarkFull(prog)
+    } {
+      val cg = if (isAve) "wala-averroes-call-graphs" else "wala-call-graphs"
+      val stats = if (isAve) s"$prog-walaAverroes.stats" else s"$prog-wala.stats"
+
+      val analysis = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$stats").getLines.toList.find(_ startsWith "[Wala] Solution found in").get.split(" ").dropRight(1).last.trim.toFloat
+
+      if (prog != benchmarks.last) print(analysis + "\t")
+      else print(analysis + "\n")
+    }
+
+    println
+    println
+  }
+
+  def emitWalaOverheadTime(isAve: Boolean) = {
+    val title = if (isAve) "WalaAve Overhead Time" else "Wala Overhead Time"
 
     println(title)
     println("=" * title.length)
@@ -34,12 +66,47 @@ object ErrorBarsGenerator {
       prog <- benchmarks
       benchmark = benchmarkFull(prog)
     } {
-      val log = io.Source.fromFile(s"all-output/$iteration/benchmarks-averroes/$prog-averroes.stats").getLines.toList
-      val line = log.find(_ startsWith "Total time (without verification)").get
-      val averroes = roundAt2(extractNumber(line).toDouble)
+      val cg = if (isAve) "wala-averroes-call-graphs" else "wala-call-graphs"
+      val stats = if (isAve) s"$prog-walaAverroes.stats" else s"$prog-wala.stats"
+      val log = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$stats").getLines.toList
 
-      if (prog != benchmarks.last) print(averroes + "\t")
-      else print(averroes + "\n")
+      val analysis = log.find(_ startsWith "[Wala] Solution found in").get.split(" ").dropRight(1).last.trim.toFloat
+      val total = log.find(_ startsWith "Total time to finish").get.split(":").last.trim.toFloat
+      val overhead = floatFormat format (total - analysis)
+
+      if (prog != benchmarks.last) print(overhead + "\t")
+      else print(overhead + "\n")
+    }
+
+    println
+    println
+  }
+
+  def emitWalaMemory(isAve: Boolean) = {
+    val title = if (isAve) "WalaAve Memory" else "Wala Memory"
+
+    println(title)
+    println("=" * title.length)
+
+    for {
+      iteration <- 1 to 10
+      prog <- benchmarks
+      benchmark = benchmarkFull(prog)
+    } {
+      val cg = if (isAve) "wala-averroes-call-graphs" else "wala-call-graphs"
+      val log = io.Source.fromFile(s"all-output/$iteration/callgraphs/$cg/$benchmark/$prog-gc.stats").getLines.toList.filter(_ contains "Full GC")
+      var memory = 0d
+
+      // Get the max memory used
+      for (line <- log) {
+        val pattern = "->(\\d+)K".r
+        val value = pattern.findFirstMatchIn(line).get.group(1)
+        val next = roundAt2(value.toDouble / 1024)
+        if (next > memory) memory = next
+      }
+
+      if (prog != benchmarks.last) print(memory + "\t")
+      else print(memory + "\n")
     }
 
     println
@@ -219,6 +286,29 @@ object ErrorBarsGenerator {
 
       if (prog != benchmarks.last) print(memory + "\t")
       else print(memory + "\n")
+    }
+
+    println
+    println
+  }
+  
+  def emitAverroesTime = {
+    val title = "Averroes Time"
+
+    println(title)
+    println("=" * title.length)
+
+    for {
+      iteration <- 1 to 10
+      prog <- benchmarks
+      benchmark = benchmarkFull(prog)
+    } {
+      val log = io.Source.fromFile(s"all-output/$iteration/benchmarks-averroes/$prog-averroes.stats").getLines.toList
+      val line = log.find(_ startsWith "Total time (without verification)").get
+      val averroes = roundAt2(extractNumber(line).toDouble)
+
+      if (prog != benchmarks.last) print(averroes + "\t")
+      else print(averroes + "\n")
     }
 
     println
