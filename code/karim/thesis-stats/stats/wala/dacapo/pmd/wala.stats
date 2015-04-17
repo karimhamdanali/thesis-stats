@@ -1,0 +1,6 @@
+application call graph edges = 4090
+library call graph edges = 391
+library call back edges = 67
+unsound application call graph edges = 153
+unsound library call graph edges = 43
+unsound library call back edges = 30

@@ -1,29 +1,35 @@
 ...
 generating stats for dacapo/hsqldb
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 1505
-Spark: 7851
-SparkAverroes: 8970
+Spark: 7861
+SparkAverroes: 8960
 Doop: 6570
 DoopAverroes: 8953
+Wala: 6560
+WalaAverroes: 6236
 
 Library Call Graph Edges
 ========================
 Dynamic: 119
 Spark: 870
 SparkAverroes: 960
-Doop: 792
+Doop: 795
 DoopAverroes: 963
+Wala: 790
+WalaAverroes: 787
 
 Library Call Back Edges
 =======================
 Dynamic: 3
-Spark: 70
+Spark: 57
 SparkAverroes: 655
 Doop: 25
 DoopAverroes: 655
+Wala: 25
+WalaAverroes: 23
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 59
 Dyn - SparkAverroes: 0
 Dyn - Doop: 325
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 209
+Dyn - Wala: 324
+Dyn - WalaAverroes: 324
+Spark - SparkAverroes: 219
 Doop - DoopAverroes: 0
-SparkAverroes - Spark: 1328
+Wala - WalaAverroes: 324
+SparkAverroes - Spark: 1318
 DoopAverroes - Doop: 2383
+WalaAverroes - Wala: 0
 Cgc - DoopAverroes: 82
 DoopAverroes - Cgc: 20
 
@@ -45,10 +55,14 @@ Dyn - Spark: 1
 Dyn - SparkAverroes: 0
 Dyn - Doop: 5
 Dyn - DoopAverroes: 0
+Dyn - Wala: 3
+Dyn - WalaAverroes: 3
 Spark - SparkAverroes: 25
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 3
 SparkAverroes - Spark: 115
-DoopAverroes - Doop: 171
+DoopAverroes - Doop: 168
+WalaAverroes - Wala: 0
 Cgc - DoopAverroes: 26
 DoopAverroes - Cgc: 7
 
@@ -58,10 +72,14 @@ Dyn - Spark: 1
 Dyn - SparkAverroes: 0
 Dyn - Doop: 1
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 20
+Dyn - Wala: 2
+Dyn - WalaAverroes: 2
+Spark - SparkAverroes: 7
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 2
 SparkAverroes - Spark: 605
 DoopAverroes - Doop: 630
+WalaAverroes - Wala: 0
 Cgc - DoopAverroes: 16
 DoopAverroes - Cgc: 8
 
@@ -855,4 +873,8 @@ postIteration = 1
 prepare = 1
 run = 1
 
-elapsed time: 12.80s
+WalaAverroes - Wala
+----------
+<EMPTY>
+
+elapsed time: 12.84s

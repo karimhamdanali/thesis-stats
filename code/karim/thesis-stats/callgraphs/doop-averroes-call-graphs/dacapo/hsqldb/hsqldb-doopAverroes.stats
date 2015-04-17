@@ -1,0 +1,53 @@
+...
+running Doop with Averroes for dacapo/hsqldb
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, org.hsqldb.hsqldbDoopDriver, benchmarks-averroes/dacapo/hsqldb-organized-app.jar, benchmarks-averroes/dacapo/hsqldb-placeholder-lib.jar]
+clearing all cached results ...
+running dacapo benchmark 
+generating facts (benchmarks-averroes/dacapo/hsqldb-organized-app.jar -l benchmarks-averroes/dacapo/hsqldb-placeholder-lib.jar) in cache/input-facts/jre1.4/cd18a16dddb11fc0c48269052e47a425868b9027e3a81532d2045af2648868f7 ...
+Adding archive: benchmarks-averroes/dacapo/hsqldb-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/dacapo/hsqldb-placeholder-lib.jar
+elapsed time: 36.15s
+creating database in cache/input-database/jre1.4/cd18a16dddb11fc0c48269052e47a425868b9027e3a81532d2045af2648868f7 ...
+elapsed time: 0.85s
+loading fact declarations ...
+elapsed time: 5.52s
+loading facts ...
+elapsed time: 6.85s
+setting main class to org.hsqldb.hsqldbDoopDriver
+loading context-insensitive declarations...
+elapsed time: 4.27s
+loading context-insensitive delta rules...
+elapsed time: 6.13s
+loading reflection delta rules...
+elapsed time: 4.86s
+loading client delta rules...
+elapsed time: 2.65s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 77.78s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/hsqldb-organized-app.jar
+making database available at last-analysis
+array index points-to                     97636
+call graph edges (context-insensitive)    21944
+call graph edges (context-sensitive)      21948
+instance field points-to                  237433
+reachable methods (context-insensitive)   4943
+reachable methods (context-sensitive)     4943
+reachable variables (context-insensitive) 36901
+reachable variables (context-sensitive)   36901
+static field points-to                    4174
+retrieving call graph edges ...
+elapsed time: 6.21s
+retrieving entry points ...
+elapsed time: 5.27s
+Total time to finish: 211.65
+=================================================
+# edges = 10571
+=================================================
+making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/dacapo/hsqldb/doopAverroes.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 79M	../doop/cache/analysis
+
+elapsed time: 221.80s

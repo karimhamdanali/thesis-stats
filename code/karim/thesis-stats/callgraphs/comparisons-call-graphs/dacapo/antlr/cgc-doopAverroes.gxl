@@ -12,7 +12,7 @@
 				<string>antlr</string>
 			</attr>
 			<attr name="name">
-				<string>Token</string>
+				<string>CommonToken</string>
 			</attr>
 		</node>
 		<node id="id7">
@@ -21,16 +21,16 @@
 				<string>antlr</string>
 			</attr>
 			<attr name="name">
-				<string>CommonToken</string>
+				<string>Token</string>
 			</attr>
 		</node>
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>toString</string>
+				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>Ljava/lang/String;</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id6">
@@ -45,16 +45,16 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id6">
+		<edge from="id2" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
+				<string>toString</string>
 			</attr>
 			<attr name="signature">
-				<string>ILjava/lang/String;</string>
+				<string/>
 			</attr>
 		</node>
 		<edge from="id3" to="id7">
@@ -69,7 +69,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id4" to="id7">
+		<edge from="id4" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id5">
@@ -78,19 +78,19 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>Ljava/lang/String;</string>
+				<string>ILjava/lang/String;</string>
 			</attr>
 		</node>
-		<edge from="id5" to="id7">
+		<edge from="id5" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id1" to="id4">
+		<edge from="id3" to="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id5" to="id2">
+		<edge from="id1" to="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="library" to="id3">
+		<edge from="library" to="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
 		<edge from="library" to="id5">

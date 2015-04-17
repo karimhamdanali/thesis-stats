@@ -21,7 +21,7 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>ILjava/lang/String;</string>
+				<string>Ljava/lang/String;</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id3">
@@ -33,7 +33,7 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>Ljava/lang/String;</string>
+				<string>ILjava/lang/String;</string>
 			</attr>
 		</node>
 		<edge from="id2" to="id3">

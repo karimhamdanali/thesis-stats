@@ -12,7 +12,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTResultType</string>
+				<string>AccessNode</string>
 			</attr>
 		</node>
 		<node id="id5">
@@ -21,7 +21,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>AccessNode</string>
+				<string>ASTClassOrInterfaceDeclaration</string>
 			</attr>
 		</node>
 		<node id="id6">
@@ -30,13 +30,13 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTClassOrInterfaceDeclaration</string>
+				<string>ASTResultType</string>
 			</attr>
 		</node>
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>isVoid</string>
+				<string>isFinal</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -48,13 +48,13 @@
 		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>isFinal</string>
+				<string>isVoid</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id5">
+		<edge from="id2" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -66,7 +66,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id3" to="id6">
+		<edge from="id3" to="id5">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">

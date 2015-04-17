@@ -18,10 +18,10 @@
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>help</string>
+				<string>harnessMain</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>[Ljava/lang/String;</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id4">
@@ -30,10 +30,10 @@
 		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>harnessMain</string>
+				<string>help</string>
 			</attr>
 			<attr name="signature">
-				<string>[Ljava/lang/String;</string>
+				<string/>
 			</attr>
 		</node>
 		<edge from="id2" to="id4">
@@ -51,10 +51,10 @@
 		<edge from="id3" to="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id2" to="id3">
+		<edge from="id1" to="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id1" to="library">
+		<edge from="id2" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 	</graph>

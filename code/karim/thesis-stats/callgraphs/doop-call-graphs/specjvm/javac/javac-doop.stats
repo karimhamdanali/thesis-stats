@@ -1,0 +1,54 @@
+...
+running Doop for specjvm/javac
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run, 1.4, spec.benchmarks._213_javac.Main, benchmarks-averroes/specjvm/javac-organized-app.jar, benchmarks-averroes/specjvm/javac-organized-lib.jar]
+clearing all cached results ...
+running doop and generating output for graph generation for benchmark benchmarks-averroes/specjvm/javac-organized-app.jar ...
+running specjvm benchmark 
+generating facts (benchmarks-averroes/specjvm/javac-organized-app.jar -l benchmarks-averroes/specjvm/javac-organized-lib.jar) in cache/input-facts/jre1.4/486af616e68349bd1deede112de9b667265a5ce4229c1f6c5f4e0a2bb1bc91df ...
+Adding archive: benchmarks-averroes/specjvm/javac-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/specjvm/javac-organized-lib.jar
+elapsed time: 89.50s
+creating database in cache/input-database/jre1.4/486af616e68349bd1deede112de9b667265a5ce4229c1f6c5f4e0a2bb1bc91df ...
+elapsed time: 1.34s
+loading fact declarations ...
+elapsed time: 5.47s
+loading facts ...
+elapsed time: 24.70s
+setting main class to spec.benchmarks._213_javac.Main
+loading context-insensitive declarations...
+elapsed time: 5.86s
+loading context-insensitive delta rules...
+elapsed time: 8.23s
+loading reflection delta rules...
+elapsed time: 10.99s
+loading client delta rules...
+elapsed time: 3.94s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 54.37s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/javac-organized-app.jar
+making database available at last-analysis
+array index points-to                     13227
+call graph edges (context-insensitive)    37426
+call graph edges (context-sensitive)      37429
+instance field points-to                  1171715
+reachable methods (context-insensitive)   5570
+reachable methods (context-sensitive)     5570
+reachable variables (context-insensitive) 51836
+reachable variables (context-sensitive)   51836
+static field points-to                    1599
+retrieving call graph edges ...
+elapsed time: 8.25s
+retrieving entry points ...
+elapsed time: 6.90s
+Total time to finish: 294.5
+=================================================
+# edges = 8524
+=================================================
+making the database of Doop available at all-output/1/callgraphs/doop-call-graphs/specjvm/javac/doop.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 202M	../doop/cache/analysis
+
+elapsed time: 310.40s

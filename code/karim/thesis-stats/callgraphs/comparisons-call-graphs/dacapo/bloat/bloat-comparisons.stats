@@ -1,6 +1,6 @@
 ...
 generating stats for dacapo/bloat
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 3733
@@ -8,6 +8,8 @@ Spark: 13419
 SparkAverroes: 15157
 Doop: 12433
 DoopAverroes: 14904
+Wala: 12733
+WalaAverroes: 12763
 
 Library Call Graph Edges
 ========================
@@ -16,14 +18,18 @@ Spark: 885
 SparkAverroes: 880
 Doop: 841
 DoopAverroes: 878
+Wala: 845
+WalaAverroes: 851
 
 Library Call Back Edges
 =======================
 Dynamic: 49
-Spark: 223
+Spark: 210
 SparkAverroes: 203
 Doop: 84
 DoopAverroes: 203
+Wala: 92
+WalaAverroes: 149
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 563
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2301
 DoopAverroes - Doop: 2471
+WalaAverroes - Wala: 30
 Cgc - DoopAverroes: 2
 DoopAverroes - Cgc: 476
 
@@ -45,10 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 17
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 12
 DoopAverroes - Doop: 37
+WalaAverroes - Wala: 6
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 4
 
@@ -58,10 +72,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 46
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
+Spark - SparkAverroes: 33
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 26
 DoopAverroes - Doop: 119
+WalaAverroes - Wala: 57
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 13
 
@@ -121,4 +139,16 @@ next = 2
 remove = 2
 <init> = 1
 
-elapsed time: 13.40s
+WalaAverroes - Wala
+----------
+clone = 49
+<init> = 1
+add = 1
+hasPrevious = 1
+nextIndex = 1
+previous = 1
+previousIndex = 1
+remove = 1
+set = 1
+
+elapsed time: 13.98s

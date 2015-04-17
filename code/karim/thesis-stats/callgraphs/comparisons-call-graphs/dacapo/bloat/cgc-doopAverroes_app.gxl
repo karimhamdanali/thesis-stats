@@ -39,7 +39,7 @@
 				<string>LEDU/purdue/cs/bloat/tree/TreeVisitor;</string>
 			</attr>
 		</node>
-		<edge from="id1" to="id4">
+		<edge from="id1" to="id5">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -63,13 +63,13 @@
 				<string>LEDU/purdue/cs/bloat/tree/TreeVisitor;</string>
 			</attr>
 		</node>
-		<edge from="id3" to="id5">
+		<edge from="id3" to="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id2" to="id1">
+		<edge from="id2" to="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id2" to="id3">
+		<edge from="id2" to="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 	</graph>

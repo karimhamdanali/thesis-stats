@@ -1,0 +1,42 @@
+...
+running Spark with Averroes for specjvm/javac
+Loading properties...
+Generating the call graph from Spark.
+
+Preparing classes ...
+Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/javac-organized-app.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/javac-placeholder-lib.jar
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Total methods: 1533
+Initially reachable methods: 31
+Classes with at least one reachable method: 27
+[Spark] Pointer Assignment Graph in 1.0 seconds.
+Total types: 314
+[Spark] Type masks in 0.0 seconds.
+VarNodes: 118
+FieldRefNodes: 3
+AllocNodes: 62
+Cleaning up graph for merged nodes
+Done cleaning up graph for merged nodes
+[Spark] Pointer Graph simplified in 0.0 seconds.
+Worklist has 63 nodes.
+Now handling field references
+Worklist has 316 nodes.
+Now handling field references
+Worklist has 1491 nodes.
+Now handling field references
+Worklist has 319 nodes.
+Now handling field references
+Worklist has 64 nodes.
+Now handling field references
+Worklist has 4 nodes.
+Now handling field references
+[Spark] Propagation in 13.9 seconds.
+[Spark] Solution found in 14.2 seconds.
+[Spark] Number of reachable methods: 1369
+Total time to finish: 19.96
+=================================================
+# edges = 8693
+=================================================
+
+elapsed time: 23.85s

@@ -1,0 +1,53 @@
+...
+running Doop with Averroes for specjvm/jess
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, spec.benchmarks._202_jess.Main, benchmarks-averroes/specjvm/jess-organized-app.jar, benchmarks-averroes/specjvm/jess-placeholder-lib.jar]
+clearing all cached results ...
+running specjvm benchmark 
+generating facts (benchmarks-averroes/specjvm/jess-organized-app.jar -l benchmarks-averroes/specjvm/jess-placeholder-lib.jar) in cache/input-facts/jre1.4/2d439db8a505ac2bc2f4115fb6263a1d1e1c56bcac0594c975a99e7b5619c2de ...
+Adding archive: benchmarks-averroes/specjvm/jess-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/specjvm/jess-placeholder-lib.jar
+elapsed time: 4.17s
+creating database in cache/input-database/jre1.4/2d439db8a505ac2bc2f4115fb6263a1d1e1c56bcac0594c975a99e7b5619c2de ...
+elapsed time: 0.88s
+loading fact declarations ...
+elapsed time: 5.40s
+loading facts ...
+elapsed time: 1.17s
+setting main class to spec.benchmarks._202_jess.Main
+loading context-insensitive declarations...
+elapsed time: 3.60s
+loading context-insensitive delta rules...
+elapsed time: 5.53s
+loading reflection delta rules...
+elapsed time: 3.73s
+loading client delta rules...
+elapsed time: 2.12s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 8.17s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/jess-organized-app.jar
+making database available at last-analysis
+array index points-to                     90
+call graph edges (context-insensitive)    323
+call graph edges (context-sensitive)      323
+instance field points-to                  1
+reachable methods (context-insensitive)   145
+reachable methods (context-sensitive)     145
+reachable variables (context-insensitive) 446
+reachable variables (context-sensitive)   446
+static field points-to                    151
+retrieving call graph edges ...
+elapsed time: 4.87s
+retrieving entry points ...
+elapsed time: 4.69s
+Total time to finish: 90.17
+=================================================
+# edges = 25
+=================================================
+making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/specjvm/jess/doopAverroes.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 7.8M	../doop/cache/analysis
+
+elapsed time: 92.05s

@@ -12,7 +12,7 @@
 				<string>org.apache.lucene.store</string>
 			</attr>
 			<attr name="name">
-				<string>FSIndexInput</string>
+				<string>FSIndexOutput</string>
 			</attr>
 		</node>
 		<node id="id6">
@@ -21,25 +21,25 @@
 				<string>org.apache.lucene.index</string>
 			</attr>
 			<attr name="name">
-				<string>TermInfosReader</string>
+				<string>SegmentReader</string>
 			</attr>
 		</node>
 		<node id="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>org.apache.lucene.store</string>
+				<string>org.apache.lucene.index</string>
 			</attr>
 			<attr name="name">
-				<string>FSIndexOutput</string>
+				<string>TermInfosReader</string>
 			</attr>
 		</node>
 		<node id="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>org.apache.lucene.index</string>
+				<string>org.apache.lucene.store</string>
 			</attr>
 			<attr name="name">
-				<string>SegmentReader</string>
+				<string>FSIndexInput</string>
 			</attr>
 		</node>
 		<node id="id1">
@@ -51,7 +51,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id1" to="id5">
+		<edge from="id1" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -63,7 +63,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id8">
+		<edge from="id2" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -75,7 +75,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id3" to="id7">
+		<edge from="id3" to="id5">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id4">
@@ -87,7 +87,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id4" to="id6">
+		<edge from="id4" to="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">
