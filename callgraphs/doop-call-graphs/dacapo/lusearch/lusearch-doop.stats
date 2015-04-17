@@ -1,0 +1,54 @@
+...
+running Doop for dacapo/lusearch
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run, 1.4, dacapo.lusearch.Main2, benchmarks-averroes/dacapo/lusearch-organized-app.jar, benchmarks-averroes/dacapo/lusearch-organized-lib.jar]
+clearing all cached results ...
+running doop and generating output for graph generation for benchmark benchmarks-averroes/dacapo/lusearch-organized-app.jar ...
+running dacapo benchmark 
+generating facts (benchmarks-averroes/dacapo/lusearch-organized-app.jar -l benchmarks-averroes/dacapo/lusearch-organized-lib.jar) in cache/input-facts/jre1.4/6776f61ba8a2c0b4a4c78ca7920baebd10251b3762e6f010e3d24df7e9f306f0 ...
+Adding archive: benchmarks-averroes/dacapo/lusearch-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/dacapo/lusearch-organized-lib.jar
+elapsed time: 65.77s
+creating database in cache/input-database/jre1.4/6776f61ba8a2c0b4a4c78ca7920baebd10251b3762e6f010e3d24df7e9f306f0 ...
+elapsed time: 1.18s
+loading fact declarations ...
+elapsed time: 6.03s
+loading facts ...
+elapsed time: 14.23s
+setting main class to dacapo.lusearch.Main2
+loading context-insensitive declarations...
+elapsed time: 5.02s
+loading context-insensitive delta rules...
+elapsed time: 7.48s
+loading reflection delta rules...
+elapsed time: 7.85s
+loading client delta rules...
+elapsed time: 3.12s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 43.22s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/lusearch-organized-app.jar
+making database available at last-analysis
+array index points-to                     9890
+call graph edges (context-insensitive)    27759
+call graph edges (context-sensitive)      27763
+instance field points-to                  982854
+reachable methods (context-insensitive)   5475
+reachable methods (context-sensitive)     5475
+reachable variables (context-insensitive) 47368
+reachable variables (context-sensitive)   47368
+static field points-to                    1613
+retrieving call graph edges ...
+elapsed time: 7.01s
+retrieving entry points ...
+elapsed time: 5.97s
+Total time to finish: 231.08
+=================================================
+# edges = 1784
+=================================================
+making the database of Doop available at all-output/1/callgraphs/doop-call-graphs/dacapo/lusearch/doop.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 135M	../doop/cache/analysis
+
+elapsed time: 242.90s

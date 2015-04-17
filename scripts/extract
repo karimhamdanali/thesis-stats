@@ -1,0 +1,112 @@
+#! /bin/bash
+
+# this file extract the statistics from the comparison files and put them in the respective stats file thesis-stats understands
+set -e
+
+basedir=callgraphs/comparisons-call-graphs
+outputdir=statistics
+
+# the dacapo benchmarks
+dacapo=( antlr bloat chart hsqldb luindex lusearch pmd xalan)
+dacapo=( "${dacapo[@]/#/dacapo/}" )
+
+# the specjvm benchmarks
+specjvm=( compress db jack javac jess raytrace )
+specjvm=( "${specjvm[@]/#/specjvm/}" )
+
+# put them all in one big array
+benchmarks=( ${dacapo[@]} ${specjvm[@]} )
+
+# tpe: 1 = Dynamic, 2 = Spark/Doop/Wala, 3 = SparkAverroes/DoopAverroes/WalaAverroes
+# tool: Dynamic/Spark/Doop/Wala
+function doextract () {
+  tpe=$1
+  tool=$2
+  statsfile=$3
+  outputfile=$4
+  
+  # Just to get the correct Ave-based tool name
+  if [[ ${tpe} > 2 ]] ;then
+    originaltool=${tool}
+    tool=${tool}Averroes
+  fi
+  
+  # edge counts
+  a2a=$(cat ${statsfile} | grep -m1 "${tool}: " | tail -n1 | cut -f2- -d':')
+  a2l=$(cat ${statsfile} | grep -m2 "${tool}: " | tail -n1 | cut -f2- -d':')
+  l2a=$(cat ${statsfile} | grep -m3 "${tool}: " | tail -n1 | cut -f2- -d':')
+  echo "application call graph edges =${a2a}" > ${outputfile}
+  echo "library call graph edges =${a2l}" >> ${outputfile}
+  echo "library call back edges =${l2a}" >> ${outputfile}
+  
+  # soundness
+  if [[ ${tpe} > 1 ]] ;then
+    a2a_s=$(cat ${statsfile} | grep -m1 "Dyn - ${tool}: " | tail -n1 | cut -f2- -d':')
+    a2l_s=$(cat ${statsfile} | grep -m2 "Dyn - ${tool}: " | tail -n1 | cut -f2- -d':')
+    l2a_s=$(cat ${statsfile} | grep -m3 "Dyn - ${tool}: " | tail -n1 | cut -f2- -d':')
+    echo "unsound application call graph edges =${a2a_s}" >> ${outputfile}
+    echo "unsound library call graph edges =${a2l_s}" >> ${outputfile}
+    echo "unsound library call back edges =${l2a_s}" >> ${outputfile}
+  fi
+  
+  # precision
+  if [[ ${tpe} > 2 ]] ;then
+    a2a_p=$(cat ${statsfile} | grep -m1 "${tool} - ${originaltool}: " | tail -n1 | cut -f2- -d':')
+    a2l_p=$(cat ${statsfile} | grep -m2 "${tool} - ${originaltool}: " | tail -n1 | cut -f2- -d':')
+    l2a_p=$(cat ${statsfile} | grep -m3 "${tool} - ${originaltool}: " | tail -n1 | cut -f2- -d':')
+    echo "imprecise application call graph edges =${a2a_p}" >> ${outputfile}
+    echo "imprecise library call graph edges =${a2l_p}" >> ${outputfile}
+    echo "imprecise library call back edges =${l2a_p}" >> ${outputfile}
+  fi
+}
+
+date
+
+# First let's create some directories and  files
+for benchmark in ${benchmarks[@]}
+do
+  mkdir -p ${outputdir}/dynamic/${benchmark}
+  touch ${outputdir}/dynamic/${benchmark}/dyn.stats
+  
+  mkdir -p ${outputdir}/spark/${benchmark}
+  touch ${outputdir}/spark/${benchmark}/spark.stats
+  
+  mkdir -p ${outputdir}/spark-averroes/${benchmark}
+  touch ${outputdir}/spark-averroes/${benchmark}/sparkave.stats
+  
+  mkdir -p ${outputdir}/doop/${benchmark}
+  touch ${outputdir}/doop/${benchmark}/doop.stats
+  
+  mkdir -p ${outputdir}/doop-averroes/${benchmark}
+  touch ${outputdir}/doop-averroes/${benchmark}/doopave.stats
+  
+  mkdir -p ${outputdir}/wala/${benchmark}
+  touch ${outputdir}/wala/${benchmark}/wala.stats
+  
+  mkdir -p ${outputdir}/wala-averroes/${benchmark}
+  touch ${outputdir}/wala-averroes/${benchmark}/walaave.stats
+done
+
+# Then let's copy the various counts
+for benchmark in ${benchmarks[@]}
+do
+  program=$(basename $benchmark)
+  
+  # dynamic call graphs
+  doextract 1 "Dynamic" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/dynamic/${benchmark}/dyn.stats
+  
+  # spark call graphs
+  doextract 2 "Spark" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/spark/${benchmark}/spark.stats
+  doextract 3 "Spark" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/spark-averroes/${benchmark}/sparkave.stats
+  
+  # doop call graphs
+  doextract 2 "Doop" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/doop/${benchmark}/doop.stats
+  doextract 3 "Doop" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/doop-averroes/${benchmark}/doopave.stats
+  
+  # wala call graphs
+  doextract 2 "Wala" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/wala/${benchmark}/wala.stats
+  doextract 3 "Wala" ${basedir}/${benchmark}/${program}-comparisons.stats ${outputdir}/wala-averroes/${benchmark}/walaave.stats
+done
+
+
+date

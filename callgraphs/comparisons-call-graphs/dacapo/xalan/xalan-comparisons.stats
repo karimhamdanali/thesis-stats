@@ -1,29 +1,35 @@
 ...
 generating stats for dacapo/xalan
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 2543
-Spark: 13079
-SparkAverroes: 11299
+Spark: 13509
+SparkAverroes: 10979
 Doop: 9161
 DoopAverroes: 10791
+Wala: 2544
+WalaAverroes: 7232
 
 Library Call Graph Edges
 ========================
 Dynamic: 325
 Spark: 1064
 SparkAverroes: 1032
-Doop: 860
+Doop: 862
 DoopAverroes: 1029
+Wala: 325
+WalaAverroes: 854
 
 Library Call Back Edges
 =======================
 Dynamic: 85
-Spark: 492
+Spark: 470
 SparkAverroes: 662
-Doop: 156
+Doop: 139
 DoopAverroes: 662
+Wala: 86
+WalaAverroes: 441
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 59
 Dyn - SparkAverroes: 0
 Dyn - Doop: 250
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 3316
+Dyn - Wala: 2529
+Dyn - WalaAverroes: 367
+Spark - SparkAverroes: 3749
 Doop - DoopAverroes: 798
-SparkAverroes - Spark: 1536
+Wala - WalaAverroes: 367
+SparkAverroes - Spark: 1219
 DoopAverroes - Doop: 2428
+WalaAverroes - Wala: 5055
 Cgc - DoopAverroes: 1151
 DoopAverroes - Cgc: 314
 
@@ -43,12 +53,16 @@ LCGE
 ====
 Dyn - Spark: 9
 Dyn - SparkAverroes: 1
-Dyn - Doop: 42
+Dyn - Doop: 41
 Dyn - DoopAverroes: 0
+Dyn - Wala: 313
+Dyn - WalaAverroes: 26
 Spark - SparkAverroes: 148
 Doop - DoopAverroes: 92
+Wala - WalaAverroes: 26
 SparkAverroes - Spark: 116
-DoopAverroes - Doop: 261
+DoopAverroes - Doop: 259
+WalaAverroes - Wala: 555
 Cgc - DoopAverroes: 138
 DoopAverroes - Cgc: 18
 
@@ -56,12 +70,16 @@ LCBE
 ====
 Dyn - Spark: 28
 Dyn - SparkAverroes: 0
-Dyn - Doop: 57
+Dyn - Doop: 78
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 102
-Doop - DoopAverroes: 29
+Dyn - Wala: 82
+Dyn - WalaAverroes: 9
+Spark - SparkAverroes: 80
+Doop - DoopAverroes: 25
+Wala - WalaAverroes: 9
 SparkAverroes - Spark: 272
-DoopAverroes - Doop: 535
+DoopAverroes - Doop: 548
+WalaAverroes - Wala: 364
 Cgc - DoopAverroes: 44
 DoopAverroes - Cgc: 10
 
@@ -192,6 +210,7 @@ DoopAverroes - Doop
 -----------
 getNodeName = 33
 clone = 17
+<init> = 16
 processingInstruction = 10
 ignorableWhitespace = 9
 write = 9
@@ -229,7 +248,6 @@ getNodeType = 4
 getNodeValue = 4
 internalEntityDecl = 4
 setPrefix = 4
-<init> = 3
 cloneNode = 3
 close = 3
 equals = 3
@@ -366,4 +384,153 @@ toString = 2
 <init> = 1
 equals = 1
 
-elapsed time: 15.36s
+WalaAverroes - Wala
+----------
+getNodeName = 31
+<init> = 17
+clone = 11
+getSystemId = 7
+processingInstruction = 7
+error = 6
+fatalError = 6
+ignorableWhitespace = 6
+startElement = 6
+warning = 6
+characters = 5
+comment = 5
+endDocument = 5
+endElement = 5
+endPrefixMapping = 5
+printStackTrace = 5
+setDocumentLocator = 5
+skippedEntity = 5
+startDocument = 5
+endCDATA = 4
+endDTD = 4
+endEntity = 4
+getPrefix = 4
+getPublicId = 4
+hashCode = 4
+startCDATA = 4
+startDTD = 4
+startEntity = 4
+startPrefixMapping = 4
+toString = 4
+attributeDecl = 3
+elementDecl = 3
+externalEntityDecl = 3
+getAttribute = 3
+getColumnNumber = 3
+getErrorListener = 3
+getLineNumber = 3
+getOutputProperties = 3
+getURIResolver = 3
+internalEntityDecl = 3
+newTransformer = 3
+newTransformerHandler = 3
+notationDecl = 3
+setErrorListener = 3
+setSystemId = 3
+setURIResolver = 3
+unparsedEntityDecl = 3
+write = 3
+appendChild = 2
+clearParameters = 2
+equals = 2
+getLocalName = 2
+getNodeType = 2
+getNodeValue = 2
+getOutputProperty = 2
+getParameter = 2
+getPrefixes = 2
+getTransformer = 2
+newXMLFilter = 2
+parse = 2
+resolveEntity = 2
+setAttribute = 2
+setOutputProperties = 2
+setOutputProperty = 2
+setParameter = 2
+setPrefix = 2
+setResult = 2
+transform = 2
+addAttribute = 1
+cloneNode = 1
+createAttribute = 1
+createAttributeNS = 1
+createCDATASection = 1
+createComment = 1
+createDocumentFragment = 1
+createElement = 1
+createElementNS = 1
+createEntityReference = 1
+createProcessingInstruction = 1
+createTextNode = 1
+declarePrefix = 1
+detach = 1
+finalize = 1
+getAssociatedStylesheet = 1
+getAttributeNS = 1
+getAttributeNode = 1
+getAttributeNodeNS = 1
+getAttributes = 1
+getCause = 1
+getChildNodes = 1
+getDeclaredPrefixes = 1
+getDoctype = 1
+getDocumentElement = 1
+getElementById = 1
+getElementsByTagName = 1
+getElementsByTagNameNS = 1
+getException = 1
+getExpandEntityReferences = 1
+getFeature = 1
+getFilter = 1
+getFirstChild = 1
+getImplementation = 1
+getLastChild = 1
+getLength = 1
+getMessage = 1
+getNamespaceURI = 1
+getNextSibling = 1
+getOwnerDocument = 1
+getParentNode = 1
+getPreviousSibling = 1
+getRoot = 1
+getTagName = 1
+getTemplates = 1
+getURI = 1
+getWhatToShow = 1
+hasAttribute = 1
+hasAttributeNS = 1
+hasAttributes = 1
+hasChildNodes = 1
+hasMoreElements = 1
+importNode = 1
+initCause = 1
+insertBefore = 1
+isSupported = 1
+item = 1
+newTemplates = 1
+newTemplatesHandler = 1
+nextElement = 1
+nextNode = 1
+normalize = 1
+popContext = 1
+previousNode = 1
+processName = 1
+pushContext = 1
+removeAttribute = 1
+removeAttributeNS = 1
+removeAttributeNode = 1
+removeChild = 1
+replaceChild = 1
+run = 1
+setAttributeNS = 1
+setAttributeNode = 1
+setAttributeNodeNS = 1
+setContentHandler = 1
+setNodeValue = 1
+setParent = 1
+
+elapsed time: 15.28s

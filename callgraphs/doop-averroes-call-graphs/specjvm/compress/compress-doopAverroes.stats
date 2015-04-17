@@ -1,0 +1,53 @@
+...
+running Doop with Averroes for specjvm/compress
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, spec.benchmarks._201_compress.Main, benchmarks-averroes/specjvm/compress-organized-app.jar, benchmarks-averroes/specjvm/compress-placeholder-lib.jar]
+clearing all cached results ...
+running specjvm benchmark 
+generating facts (benchmarks-averroes/specjvm/compress-organized-app.jar -l benchmarks-averroes/specjvm/compress-placeholder-lib.jar) in cache/input-facts/jre1.4/33e594406a0e62f4e10b52fbeb45d407b3fc0d345e43389c161e494bcee1a8c8 ...
+Adding archive: benchmarks-averroes/specjvm/compress-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/specjvm/compress-placeholder-lib.jar
+elapsed time: 4.26s
+creating database in cache/input-database/jre1.4/33e594406a0e62f4e10b52fbeb45d407b3fc0d345e43389c161e494bcee1a8c8 ...
+elapsed time: 0.82s
+loading fact declarations ...
+elapsed time: 5.45s
+loading facts ...
+elapsed time: 1.09s
+setting main class to spec.benchmarks._201_compress.Main
+loading context-insensitive declarations...
+elapsed time: 3.63s
+loading context-insensitive delta rules...
+elapsed time: 5.54s
+loading reflection delta rules...
+elapsed time: 3.65s
+loading client delta rules...
+elapsed time: 2.05s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 8.31s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/compress-organized-app.jar
+making database available at last-analysis
+array index points-to                     52
+call graph edges (context-insensitive)    217
+call graph edges (context-sensitive)      217
+instance field points-to                  25
+reachable methods (context-insensitive)   95
+reachable methods (context-sensitive)     95
+reachable variables (context-insensitive) 408
+reachable variables (context-sensitive)   408
+static field points-to                    92
+retrieving call graph edges ...
+elapsed time: 4.78s
+retrieving entry points ...
+elapsed time: 4.86s
+Total time to finish: 89.99
+=================================================
+# edges = 53
+=================================================
+making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/specjvm/compress/doopAverroes.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 7.6M	../doop/cache/analysis
+
+elapsed time: 91.95s

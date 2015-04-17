@@ -1,6 +1,6 @@
 ...
 generating stats for specjvm/db
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 36
@@ -8,6 +8,8 @@ Spark: 47
 SparkAverroes: 48
 Doop: 47
 DoopAverroes: 48
+Wala: 47
+WalaAverroes: 47
 
 Library Call Graph Edges
 ========================
@@ -16,14 +18,18 @@ Spark: 23
 SparkAverroes: 24
 Doop: 24
 DoopAverroes: 24
+Wala: 23
+WalaAverroes: 24
 
 Library Call Back Edges
 =======================
 Dynamic: 1
-Spark: 12
+Spark: 2
 SparkAverroes: 3
 Doop: 2
 DoopAverroes: 3
+Wala: 1
+WalaAverroes: 2
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 0
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 1
+WalaAverroes - Wala: 0
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -45,10 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 0
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 0
+WalaAverroes - Wala: 1
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 0
 
@@ -58,10 +72,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 10
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
+Spark - SparkAverroes: 0
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 1
+WalaAverroes - Wala: 1
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -80,4 +98,8 @@ DoopAverroes - Cgc
 -----------
 harnessMain = 1
 
-elapsed time: 2.55s
+WalaAverroes - Wala
+----------
+hashCode = 1
+
+elapsed time: 2.59s

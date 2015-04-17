@@ -1,0 +1,57 @@
+...
+running Spark for specjvm/jack
+Loading properties...
+Generating the call graph from Spark.
+
+Preparing classes ...
+Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/jack-organized-app.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/jack-organized-lib.jar
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Total methods: 35872
+Initially reachable methods: 16
+Classes with at least one reachable method: 9
+[Spark] Pointer Assignment Graph in 0.7 seconds.
+Total types: 4221
+[Spark] Type masks in 0.1 seconds.
+VarNodes: 72
+FieldRefNodes: 2
+AllocNodes: 25
+Cleaning up graph for merged nodes
+Done cleaning up graph for merged nodes
+[Spark] Pointer Graph simplified in 0.0 seconds.
+Worklist has 29 nodes.
+Now handling field references
+Worklist has 1155 nodes.
+Now handling field references
+Worklist has 1442 nodes.
+Now handling field references
+Worklist has 1912 nodes.
+Now handling field references
+Worklist has 2333 nodes.
+Now handling field references
+Worklist has 2218 nodes.
+Now handling field references
+Worklist has 2049 nodes.
+Now handling field references
+Worklist has 1237 nodes.
+Now handling field references
+Worklist has 621 nodes.
+Now handling field references
+Worklist has 230 nodes.
+Now handling field references
+Worklist has 97 nodes.
+Now handling field references
+Worklist has 31 nodes.
+Now handling field references
+Worklist has 2 nodes.
+Now handling field references
+[Spark] Propagation in 55.5 seconds.
+[Spark] Solution found in 56.3 seconds.
+[Spark] Number of reachable methods: 10662
+size of original spark is: 57600
+Total time to finish: 70.94
+=================================================
+# edges = 743
+=================================================
+
+elapsed time: 73.70s

@@ -1,0 +1,55 @@
+...
+running Spark for dacapo/chart
+Loading properties...
+Generating the call graph from Spark.
+
+Preparing classes ...
+Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/chart-organized-app.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/chart-organized-lib.jar
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Total methods: 49519
+Initially reachable methods: 8
+Classes with at least one reachable method: 3
+[Spark] Pointer Assignment Graph in 0.4 seconds.
+Total types: 5532
+[Spark] Type masks in 0.1 seconds.
+VarNodes: 18
+FieldRefNodes: 1
+AllocNodes: 5
+Cleaning up graph for merged nodes
+Done cleaning up graph for merged nodes
+[Spark] Pointer Graph simplified in 0.0 seconds.
+Worklist has 5 nodes.
+Now handling field references
+Worklist has 2437 nodes.
+Now handling field references
+Worklist has 4024 nodes.
+Now handling field references
+Worklist has 4482 nodes.
+Now handling field references
+Worklist has 3483 nodes.
+Now handling field references
+Worklist has 2750 nodes.
+Now handling field references
+Worklist has 1630 nodes.
+Now handling field references
+Worklist has 776 nodes.
+Now handling field references
+Worklist has 315 nodes.
+Now handling field references
+Worklist has 119 nodes.
+Now handling field references
+Worklist has 41 nodes.
+Now handling field references
+Worklist has 1 nodes.
+Now handling field references
+[Spark] Propagation in 108.6 seconds.
+[Spark] Solution found in 109.4 seconds.
+[Spark] Number of reachable methods: 17461
+size of original spark is: 110348
+Total time to finish: 127.05
+=================================================
+# edges = 8266
+=================================================
+
+elapsed time: 131.49s

@@ -1,0 +1,10 @@
+...
+running Wala for dacapo/pmd
+Loading properties...
+[Wala] Solution found in 5.09 seconds.
+Total time to finish: 10.35
+=================================================
+# edges = 4322
+=================================================
+
+elapsed time: 16.42s

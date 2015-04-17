@@ -12,7 +12,7 @@
 				<string>spec.benchmarks._202_jess</string>
 			</attr>
 			<attr name="name">
-				<string>NullDisplay</string>
+				<string>Jess</string>
 			</attr>
 		</node>
 		<node id="id13">
@@ -21,22 +21,10 @@
 				<string>spec.benchmarks._202_jess</string>
 			</attr>
 			<attr name="name">
-				<string>Jess</string>
+				<string>NullDisplay</string>
 			</attr>
 		</node>
 		<node id="id1">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>FireRule</string>
-			</attr>
-			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
-			</attr>
-		</node>
-		<edge from="id1" to="id12">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
 				<string>AddDeftemplate</string>
@@ -45,25 +33,37 @@
 				<string>Lspec/benchmarks/_202_jess/jess/Deftemplate;</string>
 			</attr>
 		</node>
-		<edge from="id2" to="id12">
+		<edge from="id1" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<node id="id3">
+		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>ActivateRule</string>
+				<string>DeactivateRule</string>
 			</attr>
 			<attr name="signature">
 				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
 			</attr>
 		</node>
-		<edge from="id3" to="id12">
+		<edge from="id2" to="id13">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id3">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>AssertFact</string>
+			</attr>
+			<attr name="signature">
+				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
+			</attr>
+		</node>
+		<edge from="id3" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>applet</string>
+				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -81,58 +81,22 @@
 				<string>[Ljava/lang/String;</string>
 			</attr>
 		</node>
-		<edge from="id5" to="id13">
+		<edge from="id5" to="id12">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>DeactivateRule</string>
+				<string>ActivateRule</string>
 			</attr>
 			<attr name="signature">
 				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
 			</attr>
 		</node>
-		<edge from="id6" to="id12">
+		<edge from="id6" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id7">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>AddDeffacts</string>
-			</attr>
-			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Deffacts;</string>
-			</attr>
-		</node>
-		<edge from="id7" to="id12">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id8">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>RetractFact</string>
-			</attr>
-			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
-			</attr>
-		</node>
-		<edge from="id8" to="id12">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id9">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>AssertFact</string>
-			</attr>
-			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
-			</attr>
-		</node>
-		<edge from="id9" to="id12">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id10">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
 				<string>stderr</string>
@@ -141,13 +105,49 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id10" to="id12">
+		<edge from="id7" to="id13">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id8">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>FireRule</string>
+			</attr>
+			<attr name="signature">
+				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
+			</attr>
+		</node>
+		<edge from="id8" to="id13">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id9">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>RetractFact</string>
+			</attr>
+			<attr name="signature">
+				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
+			</attr>
+		</node>
+		<edge from="id9" to="id13">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id10">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>AddDeffacts</string>
+			</attr>
+			<attr name="signature">
+				<string>Lspec/benchmarks/_202_jess/jess/Deffacts;</string>
+			</attr>
+		</node>
+		<edge from="id10" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id11">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
+				<string>applet</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -156,25 +156,22 @@
 		<edge from="id11" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id5" to="id10">
+		<edge from="id5" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id1" to="library">
+		<edge from="id4" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id11" to="library">
+		<edge from="id8" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
-		</edge>
-		<edge from="library" to="id2">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
 		<edge from="library" to="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
-		<edge from="library" to="id3">
+		<edge from="library" to="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
-		<edge from="library" to="id4">
+		<edge from="library" to="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
 		<edge from="library" to="id6">
@@ -190,6 +187,9 @@
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
 		<edge from="library" to="id10">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
+		</edge>
+		<edge from="library" to="id11">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#libraryCallsBack"/>
 		</edge>
 	</graph>

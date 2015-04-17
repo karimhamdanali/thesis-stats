@@ -9,31 +9,13 @@
 		<node id="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>dacapo.lusearch</string>
-			</attr>
-			<attr name="name">
-				<string>LusearchHarness$QueryThread</string>
-			</attr>
-		</node>
-		<node id="id8">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
-			<attr name="package">
 				<string>org.apache.lucene.index</string>
 			</attr>
 			<attr name="name">
 				<string>IndexReader</string>
 			</attr>
 		</node>
-		<node id="id9">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
-			<attr name="package">
-				<string>org.apache.lucene.index</string>
-			</attr>
-			<attr name="name">
-				<string>TermInfosReader</string>
-			</attr>
-		</node>
-		<node id="id10">
+		<node id="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>org.apache.lucene.store</string>
@@ -42,13 +24,31 @@
 				<string>FSIndexOutput</string>
 			</attr>
 		</node>
-		<node id="id11">
+		<node id="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>org.apache.lucene.index</string>
 			</attr>
 			<attr name="name">
 				<string>SegmentReader</string>
+			</attr>
+		</node>
+		<node id="id10">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
+			<attr name="package">
+				<string>org.apache.lucene.index</string>
+			</attr>
+			<attr name="name">
+				<string>TermInfosReader</string>
+			</attr>
+		</node>
+		<node id="id11">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
+			<attr name="package">
+				<string>dacapo.lusearch</string>
+			</attr>
+			<attr name="name">
+				<string>LusearchHarness$QueryThread</string>
 			</attr>
 		</node>
 		<node id="id12">
@@ -63,25 +63,25 @@
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
-			</attr>
-			<attr name="signature">
-				<string>Ldacapo/parser/Config;Ljava/io/File;</string>
-			</attr>
-		</node>
-		<edge from="id1" to="id12">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id2">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>run</string>
+				<string>finalize</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id7">
+		<edge from="id1" to="id9">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id2">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>finalize</string>
+			</attr>
+			<attr name="signature">
+				<string/>
+			</attr>
+		</node>
+		<edge from="id2" to="id10">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -93,19 +93,19 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id3" to="id11">
+		<edge from="id3" to="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>finalize</string>
+				<string>run</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id4" to="id10">
+		<edge from="id4" to="id11">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id5">
@@ -117,19 +117,19 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id5" to="id8">
+		<edge from="id5" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>finalize</string>
+				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>Ldacapo/parser/Config;Ljava/io/File;</string>
 			</attr>
 		</node>
-		<edge from="id6" to="id9">
+		<edge from="id6" to="id12">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">

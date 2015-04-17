@@ -168,7 +168,7 @@
 				<string>spec.benchmarks._228_jack</string>
 			</attr>
 			<attr name="name">
-				<string>Choice</string>
+				<string>RChoice</string>
 			</attr>
 		</node>
 		<node id="id311">
@@ -177,7 +177,7 @@
 				<string>spec.benchmarks._228_jack</string>
 			</attr>
 			<attr name="name">
-				<string>RChoice</string>
+				<string>Choice</string>
 			</attr>
 		</node>
 		<node id="id312">
@@ -624,25 +624,25 @@
 		<node id="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>GenerateNfa</string>
-			</attr>
-			<attr name="signature">
-				<string>Ljava/io/PrintStream;I</string>
-			</attr>
-		</node>
-		<edge from="id13" to="id314">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id14">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
 				<string>_Jack2_43</string>
 			</attr>
 			<attr name="signature">
 				<string>II</string>
 			</attr>
 		</node>
-		<edge from="id14" to="id307">
+		<edge from="id13" to="id307">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id14">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>GenerateNfa</string>
+			</attr>
+			<attr name="signature">
+				<string>Ljava/io/PrintStream;I</string>
+			</attr>
+		</node>
+		<edge from="id14" to="id314">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id15">
@@ -1620,25 +1620,25 @@
 		<node id="id96">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
-			</attr>
-			<attr name="signature">
-				<string/>
-			</attr>
-		</node>
-		<edge from="id96" to="id305">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id97">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
 				<string>_Jack3integer_literal</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id97" to="id307">
+		<edge from="id96" to="id307">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id97">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>&lt;init&gt;</string>
+			</attr>
+			<attr name="signature">
+				<string/>
+			</attr>
+		</node>
+		<edge from="id97" to="id305">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id98">
@@ -1710,7 +1710,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id103" to="id310">
+		<edge from="id103" to="id311">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id104">
@@ -2772,7 +2772,7 @@
 		<node id="id192">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>_Jack3expansion_choices</string>
+				<string>string_literal</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -2784,7 +2784,7 @@
 		<node id="id193">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>string_literal</string>
+				<string>_Jack3expansion_choices</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -3366,7 +3366,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id241" to="id311">
+		<edge from="id241" to="id310">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id242">
@@ -3666,7 +3666,7 @@
 				<string>Ljava/io/PrintStream;I</string>
 			</attr>
 		</node>
-		<edge from="id266" to="id311">
+		<edge from="id266" to="id310">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id267">
@@ -4023,7 +4023,7 @@
 		<edge from="id16" to="id160">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id192" to="id190">
+		<edge from="id193" to="id190">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id279" to="id104">
@@ -4041,7 +4041,7 @@
 		<edge from="id105" to="id276">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id14" to="id151">
+		<edge from="id13" to="id151">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id144" to="id80">
@@ -4110,7 +4110,7 @@
 		<edge from="id56" to="id183">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id13">
+		<edge from="id14" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id56" to="id185">
@@ -4215,16 +4215,16 @@
 		<edge from="id72" to="id263">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id192" to="id139">
+		<edge from="id193" to="id139">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id102" to="id99">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id212" to="id57">
+		<edge from="id280" to="id156">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id280" to="id156">
+		<edge from="id212" to="id57">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id110" to="id278">
@@ -4332,7 +4332,7 @@
 		<edge from="id47" to="id283">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id45">
+		<edge from="id14" to="id45">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id180" to="id86">
@@ -4350,7 +4350,7 @@
 		<edge from="id213" to="id127">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id193" to="id127">
+		<edge from="id192" to="id127">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id124" to="id156">
@@ -4398,7 +4398,7 @@
 		<edge from="id44" to="id291">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id180" to="id96">
+		<edge from="id180" to="id97">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id292" to="id204">
@@ -4485,7 +4485,7 @@
 		<edge from="id27" to="id185">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id203" to="id193">
+		<edge from="id203" to="id192">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id27" to="id181">
@@ -4527,7 +4527,7 @@
 		<edge from="id266" to="id122">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id102" to="id193">
+		<edge from="id102" to="id192">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id144" to="id32">
@@ -4623,7 +4623,7 @@
 		<edge from="id169" to="id273">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id232" to="id193">
+		<edge from="id232" to="id192">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id272" to="id35">
@@ -4695,10 +4695,10 @@
 		<edge from="id39" to="id260">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id233" to="id13">
+		<edge from="id233" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id233">
+		<edge from="id14" to="id233">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id175" to="id278">
@@ -4788,7 +4788,7 @@
 		<edge from="id123" to="id107">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id192" to="id220">
+		<edge from="id193" to="id220">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id224" to="id179">
@@ -4800,7 +4800,7 @@
 		<edge from="id203" to="id37">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id230" to="id192">
+		<edge from="id230" to="id193">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id246" to="id269">
@@ -4842,7 +4842,7 @@
 		<edge from="id224" to="id20">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id281" to="id192">
+		<edge from="id281" to="id193">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id1" to="id173">
@@ -4887,7 +4887,7 @@
 		<edge from="id23" to="id219">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id171">
+		<edge from="id14" to="id171">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id172" to="id104">
@@ -4899,7 +4899,7 @@
 		<edge from="id94" to="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id96" to="id237">
+		<edge from="id97" to="id237">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id49" to="id169">
@@ -4950,10 +4950,10 @@
 		<edge from="id35" to="id217">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id266">
+		<edge from="id14" to="id266">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id266" to="id13">
+		<edge from="id266" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id169" to="id85">
@@ -4983,10 +4983,10 @@
 		<edge from="id94" to="id75">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id271" to="id13">
+		<edge from="id271" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id271">
+		<edge from="id14" to="id271">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id56" to="id140">
@@ -5025,10 +5025,10 @@
 		<edge from="id227" to="id148">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id122">
+		<edge from="id14" to="id122">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id122" to="id13">
+		<edge from="id122" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id203" to="id19">
@@ -5049,7 +5049,7 @@
 		<edge from="id203" to="id17">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id203" to="id14">
+		<edge from="id203" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id119" to="id149">
@@ -5094,7 +5094,7 @@
 		<edge from="id123" to="id156">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id244" to="id97">
+		<edge from="id244" to="id96">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id233" to="id122">
@@ -5127,7 +5127,7 @@
 		<edge from="id7" to="id184">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id193" to="id42">
+		<edge from="id192" to="id42">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id180" to="id214">
@@ -5256,10 +5256,10 @@
 		<edge from="id39" to="id73">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id119">
+		<edge from="id14" to="id119">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id119" to="id13">
+		<edge from="id119" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id105" to="id273">
@@ -5289,7 +5289,7 @@
 		<edge from="id205" to="id100">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id123" to="id13">
+		<edge from="id123" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id245" to="id242">
@@ -5355,7 +5355,7 @@
 		<edge from="id273" to="id124">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id193" to="id273">
+		<edge from="id192" to="id273">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id169" to="id65">
@@ -5505,10 +5505,10 @@
 		<edge from="id146" to="id146">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id146">
+		<edge from="id14" to="id146">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id146" to="id13">
+		<edge from="id146" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id84" to="id242">
@@ -5592,7 +5592,7 @@
 		<edge from="id53" to="id17">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id53" to="id14">
+		<edge from="id53" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id230" to="id286">
@@ -5631,7 +5631,7 @@
 		<edge from="id223" to="id153">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id97" to="id104">
+		<edge from="id96" to="id104">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id123" to="id122">
@@ -5832,7 +5832,7 @@
 		<edge from="id31" to="id131">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id13" to="id149">
+		<edge from="id14" to="id149">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id131" to="id30">
@@ -5865,7 +5865,7 @@
 		<edge from="id232" to="id129">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id272" to="id192">
+		<edge from="id272" to="id193">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id56" to="id213">
@@ -5973,7 +5973,7 @@
 		<edge from="id144" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id13" to="library">
+		<edge from="id14" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 		<edge from="id145" to="library">
@@ -5991,10 +5991,10 @@
 		<edge from="id22" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id155" to="library">
+		<edge from="id156" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id156" to="library">
+		<edge from="id155" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 		<edge from="id162" to="library">
@@ -6060,7 +6060,7 @@
 		<edge from="id49" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id193" to="library">
+		<edge from="id192" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 		<edge from="id195" to="library">

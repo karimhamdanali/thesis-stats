@@ -1,6 +1,6 @@
 ...
 generating stats for specjvm/javac
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 2384
@@ -8,6 +8,8 @@ Spark: 8519
 SparkAverroes: 8350
 Doop: 8188
 DoopAverroes: 8239
+Wala: 8265
+WalaAverroes: 8293
 
 Library Call Graph Edges
 ========================
@@ -16,14 +18,18 @@ Spark: 317
 SparkAverroes: 314
 Doop: 313
 DoopAverroes: 313
+Wala: 310
+WalaAverroes: 314
 
 Library Call Back Edges
 =======================
 Dynamic: 6
-Spark: 41
+Spark: 31
 SparkAverroes: 29
 Doop: 23
 DoopAverroes: 29
+Wala: 19
+WalaAverroes: 23
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 214
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 45
 DoopAverroes - Doop: 51
+WalaAverroes - Wala: 28
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 45
 
@@ -45,10 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 5
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2
 DoopAverroes - Doop: 0
+WalaAverroes - Wala: 4
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 0
 
@@ -58,10 +72,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 14
+Dyn - Wala: 0
+Dyn - WalaAverroes: 0
+Spark - SparkAverroes: 4
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2
 DoopAverroes - Doop: 6
+WalaAverroes - Wala: 4
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 4
 
@@ -87,4 +105,8 @@ toString = 2
 hasMoreElements = 1
 nextElement = 1
 
-elapsed time: 10.41s
+WalaAverroes - Wala
+----------
+toString = 4
+
+elapsed time: 9.18s

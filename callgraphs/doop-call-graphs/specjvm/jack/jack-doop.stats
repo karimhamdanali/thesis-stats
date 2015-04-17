@@ -1,0 +1,54 @@
+...
+running Doop for specjvm/jack
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run, 1.4, spec.benchmarks._228_jack.Main, benchmarks-averroes/specjvm/jack-organized-app.jar, benchmarks-averroes/specjvm/jack-organized-lib.jar]
+clearing all cached results ...
+running doop and generating output for graph generation for benchmark benchmarks-averroes/specjvm/jack-organized-app.jar ...
+running specjvm benchmark 
+generating facts (benchmarks-averroes/specjvm/jack-organized-app.jar -l benchmarks-averroes/specjvm/jack-organized-lib.jar) in cache/input-facts/jre1.4/c306d99e4f9899dc19e2987d24ddf6a17ceecdf4866a1363487b568be4a6b28e ...
+Adding archive: benchmarks-averroes/specjvm/jack-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/specjvm/jack-organized-lib.jar
+elapsed time: 91.78s
+creating database in cache/input-database/jre1.4/c306d99e4f9899dc19e2987d24ddf6a17ceecdf4866a1363487b568be4a6b28e ...
+elapsed time: 1.19s
+loading fact declarations ...
+elapsed time: 5.39s
+loading facts ...
+elapsed time: 23.40s
+setting main class to spec.benchmarks._228_jack.Main
+loading context-insensitive declarations...
+elapsed time: 5.89s
+loading context-insensitive delta rules...
+elapsed time: 8.19s
+loading reflection delta rules...
+elapsed time: 10.51s
+loading client delta rules...
+elapsed time: 3.90s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 47.28s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/jack-organized-app.jar
+making database available at last-analysis
+array index points-to                     7955
+call graph edges (context-insensitive)    25063
+call graph edges (context-sensitive)      25066
+instance field points-to                  858615
+reachable methods (context-insensitive)   4643
+reachable methods (context-sensitive)     4643
+reachable variables (context-insensitive) 42731
+reachable variables (context-sensitive)   42731
+static field points-to                    1447
+retrieving call graph edges ...
+elapsed time: 7.73s
+retrieving entry points ...
+elapsed time: 6.65s
+Total time to finish: 284.03
+=================================================
+# edges = 744
+=================================================
+making the database of Doop available at all-output/1/callgraphs/doop-call-graphs/specjvm/jack/doop.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 186M	../doop/cache/analysis
+
+elapsed time: 297.15s

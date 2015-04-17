@@ -1,0 +1,10 @@
+...
+running Wala for specjvm/raytrace
+Loading properties...
+[Wala] Solution found in 2.04 seconds.
+Total time to finish: 6.97
+=================================================
+# edges = 435
+=================================================
+
+elapsed time: 11.35s

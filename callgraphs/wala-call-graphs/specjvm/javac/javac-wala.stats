@@ -1,0 +1,10 @@
+...
+running Wala for specjvm/javac
+Loading properties...
+[Wala] Solution found in 3.66 seconds.
+Total time to finish: 9.22
+=================================================
+# edges = 8594
+=================================================
+
+elapsed time: 14.99s

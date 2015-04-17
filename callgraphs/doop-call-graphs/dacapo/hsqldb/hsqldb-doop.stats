@@ -1,0 +1,55 @@
+...
+running Doop for dacapo/hsqldb
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run, 1.4, org.hsqldb.hsqldbDoopDriver, benchmarks-averroes/dacapo/hsqldb-organized-app.jar, benchmarks-averroes/dacapo/hsqldb-organized-lib.jar]
+clearing all cached results ...
+running doop and generating output for graph generation for benchmark benchmarks-averroes/dacapo/hsqldb-organized-app.jar ...
+running dacapo benchmark 
+adding dynamic file benchmarks/dacapo/hsqldb.dynamic
+generating facts (benchmarks-averroes/dacapo/hsqldb-organized-app.jar -l benchmarks-averroes/dacapo/hsqldb-organized-lib.jar) in cache/input-facts/jre1.4/38df4c9bacdbc89b145fa105ee2b635250259c692166aae049d3c379083aa758 ...
+Adding archive: benchmarks-averroes/dacapo/hsqldb-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/dacapo/hsqldb-organized-lib.jar
+elapsed time: 115.91s
+creating database in cache/input-database/jre1.4/38df4c9bacdbc89b145fa105ee2b635250259c692166aae049d3c379083aa758 ...
+elapsed time: 1.29s
+loading fact declarations ...
+elapsed time: 5.45s
+loading facts ...
+elapsed time: 28.81s
+setting main class to org.hsqldb.hsqldbDoopDriver
+loading context-insensitive declarations...
+elapsed time: 6.53s
+loading context-insensitive delta rules...
+elapsed time: 8.93s
+loading reflection delta rules...
+elapsed time: 12.19s
+loading client delta rules...
+elapsed time: 5.18s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 58.10s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/hsqldb-organized-app.jar
+making database available at last-analysis
+array index points-to                     44872
+call graph edges (context-insensitive)    35671
+call graph edges (context-sensitive)      35678
+instance field points-to                  1359694
+reachable methods (context-insensitive)   7083
+reachable methods (context-sensitive)     7083
+reachable variables (context-insensitive) 64601
+reachable variables (context-sensitive)   64601
+static field points-to                    1325
+retrieving call graph edges ...
+elapsed time: 8.62s
+retrieving entry points ...
+elapsed time: 7.17s
+Total time to finish: 340.14
+=================================================
+# edges = 7059
+=================================================
+making the database of Doop available at all-output/1/callgraphs/doop-call-graphs/dacapo/hsqldb/doop.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 247M	../doop/cache/analysis
+
+elapsed time: 359.16s

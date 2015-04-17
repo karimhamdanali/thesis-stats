@@ -21,7 +21,7 @@
 				<string>spec.benchmarks._213_javac</string>
 			</attr>
 			<attr name="name">
-				<string>Instruction</string>
+				<string>ClassPath</string>
 			</attr>
 		</node>
 		<node id="id7">
@@ -30,19 +30,19 @@
 				<string>spec.benchmarks._213_javac</string>
 			</attr>
 			<attr name="name">
-				<string>ClassPath</string>
+				<string>Instruction</string>
 			</attr>
 		</node>
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>toString</string>
+				<string>nextElement</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id1" to="id7">
+		<edge from="id1" to="id5">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -60,7 +60,7 @@
 		<node id="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>nextElement</string>
+				<string>hasMoreElements</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -72,13 +72,13 @@
 		<node id="id4">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>hasMoreElements</string>
+				<string>toString</string>
 			</attr>
 			<attr name="signature">
 				<string/>
 			</attr>
 		</node>
-		<edge from="id4" to="id5">
+		<edge from="id4" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">

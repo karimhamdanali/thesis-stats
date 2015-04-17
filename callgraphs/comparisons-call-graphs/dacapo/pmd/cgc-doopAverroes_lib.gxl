@@ -12,7 +12,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTPrimarySuffix</string>
+				<string>ASTVariableDeclaratorId</string>
 			</attr>
 		</node>
 		<node id="id7">
@@ -21,7 +21,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTStatementExpression</string>
+				<string>ASTSynchronizedStatement</string>
 			</attr>
 		</node>
 		<node id="id8">
@@ -30,7 +30,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTVariableDeclaratorId</string>
+				<string>ASTStatementExpression</string>
 			</attr>
 		</node>
 		<node id="id9">
@@ -39,7 +39,7 @@
 				<string>net.sourceforge.pmd.ast</string>
 			</attr>
 			<attr name="name">
-				<string>ASTSynchronizedStatement</string>
+				<string>ASTPrimarySuffix</string>
 			</attr>
 		</node>
 		<node id="id10">
@@ -60,7 +60,7 @@
 				<string>I</string>
 			</attr>
 		</node>
-		<edge from="id1" to="id7">
+		<edge from="id1" to="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -69,10 +69,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>I</string>
 			</attr>
 		</node>
-		<edge from="id2" to="id10">
+		<edge from="id2" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -96,7 +96,7 @@
 				<string>I</string>
 			</attr>
 		</node>
-		<edge from="id4" to="id9">
+		<edge from="id4" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id5">
@@ -105,10 +105,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id5" to="id6">
+		<edge from="id5" to="id10">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">

@@ -21,7 +21,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>[C</string>
+				<string>C</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id11">
@@ -33,7 +33,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>Ljava/lang/String;</string>
+				<string>Ljava/lang/Object;</string>
 			</attr>
 		</node>
 		<edge from="id2" to="id11">
@@ -45,7 +45,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>D</string>
 			</attr>
 		</node>
 		<edge from="id3" to="id11">
@@ -57,7 +57,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>D</string>
+				<string>F</string>
 			</attr>
 		</node>
 		<edge from="id4" to="id11">
@@ -69,7 +69,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>C</string>
+				<string>[C</string>
 			</attr>
 		</node>
 		<edge from="id5" to="id11">
@@ -81,7 +81,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>F</string>
+				<string>I</string>
 			</attr>
 		</node>
 		<edge from="id6" to="id11">
@@ -105,7 +105,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string>Z</string>
 			</attr>
 		</node>
 		<edge from="id8" to="id11">
@@ -117,7 +117,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>Z</string>
+				<string>Ljava/lang/String;</string>
 			</attr>
 		</node>
 		<edge from="id9" to="id11">
@@ -129,7 +129,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>Ljava/lang/Object;</string>
+				<string/>
 			</attr>
 		</node>
 		<edge from="id10" to="id11">

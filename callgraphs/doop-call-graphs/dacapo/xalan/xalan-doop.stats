@@ -1,0 +1,54 @@
+...
+running Doop for dacapo/xalan
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run, 1.4, dacapo.xalan.Main2, benchmarks-averroes/dacapo/xalan-organized-app.jar, benchmarks-averroes/dacapo/xalan-organized-lib.jar]
+clearing all cached results ...
+running doop and generating output for graph generation for benchmark benchmarks-averroes/dacapo/xalan-organized-app.jar ...
+running dacapo benchmark 
+generating facts (benchmarks-averroes/dacapo/xalan-organized-app.jar -l benchmarks-averroes/dacapo/xalan-organized-lib.jar) in cache/input-facts/jre1.4/42dc40c797e51bfebe3098cb6ee587e3e4bf9c22bc02d1885ddaa6910521d73b ...
+Adding archive: benchmarks-averroes/dacapo/xalan-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/dacapo/xalan-organized-lib.jar
+elapsed time: 98.35s
+creating database in cache/input-database/jre1.4/42dc40c797e51bfebe3098cb6ee587e3e4bf9c22bc02d1885ddaa6910521d73b ...
+elapsed time: 1.25s
+loading fact declarations ...
+elapsed time: 5.61s
+loading facts ...
+elapsed time: 26.81s
+setting main class to dacapo.xalan.Main2
+loading context-insensitive declarations...
+elapsed time: 6.16s
+loading context-insensitive delta rules...
+elapsed time: 8.54s
+loading reflection delta rules...
+elapsed time: 12.13s
+loading client delta rules...
+elapsed time: 4.80s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 70.57s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/xalan-organized-app.jar
+making database available at last-analysis
+array index points-to                     31145
+call graph edges (context-insensitive)    40769
+call graph edges (context-sensitive)      40774
+instance field points-to                  2059218
+reachable methods (context-insensitive)   7656
+reachable methods (context-sensitive)     7656
+reachable variables (context-insensitive) 64899
+reachable variables (context-sensitive)   64899
+static field points-to                    3088
+retrieving call graph edges ...
+elapsed time: 8.76s
+retrieving entry points ...
+elapsed time: 6.94s
+Total time to finish: 328.33
+=================================================
+# edges = 9793
+=================================================
+making the database of Doop available at all-output/1/callgraphs/doop-call-graphs/dacapo/xalan/doop.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 247M	../doop/cache/analysis
+
+elapsed time: 347.44s

@@ -1,13 +1,15 @@
 ...
 generating stats for dacapo/luindex
-Loading properties.
+Loading properties...
 Call Graph Edges
 ================
 Dynamic: 565
-Spark: 1412
-SparkAverroes: 928
+Spark: 1416
+SparkAverroes: 924
 Doop: 693
 DoopAverroes: 924
+Wala: 692
+WalaAverroes: 511
 
 Library Call Graph Edges
 ========================
@@ -16,14 +18,18 @@ Spark: 336
 SparkAverroes: 246
 Doop: 205
 DoopAverroes: 246
+Wala: 202
+WalaAverroes: 168
 
 Library Call Back Edges
 =======================
 Dynamic: 13
-Spark: 136
+Spark: 120
 SparkAverroes: 37
 Doop: 21
 DoopAverroes: 37
+Wala: 17
+WalaAverroes: 19
 
 
 CGE
@@ -32,10 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 244
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 489
+Dyn - Wala: 244
+Dyn - WalaAverroes: 210
+Spark - SparkAverroes: 493
 Doop - DoopAverroes: 0
-SparkAverroes - Spark: 5
+Wala - WalaAverroes: 210
+SparkAverroes - Spark: 1
 DoopAverroes - Doop: 231
+WalaAverroes - Wala: 29
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -45,10 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 53
 Dyn - DoopAverroes: 0
+Dyn - Wala: 53
+Dyn - WalaAverroes: 43
 Spark - SparkAverroes: 90
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 43
 SparkAverroes - Spark: 0
 DoopAverroes - Doop: 41
+WalaAverroes - Wala: 9
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 3
 
@@ -58,10 +72,14 @@ Dyn - Spark: 4
 Dyn - SparkAverroes: 0
 Dyn - Doop: 6
 Dyn - DoopAverroes: 0
-Spark - SparkAverroes: 101
+Dyn - Wala: 6
+Dyn - WalaAverroes: 3
+Spark - SparkAverroes: 85
 Doop - DoopAverroes: 0
+Wala - WalaAverroes: 3
 SparkAverroes - Spark: 2
 DoopAverroes - Doop: 16
+WalaAverroes - Wala: 5
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 10
 
@@ -90,4 +108,10 @@ clone = 2
 equals = 1
 hashCode = 1
 
-elapsed time: 6.80s
+WalaAverroes - Wala
+----------
+toString = 3
+<init> = 1
+compareTo = 1
+
+elapsed time: 4.35s

@@ -1,0 +1,53 @@
+...
+running Doop with Averroes for dacapo/chart
+Loading properties...
+Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, dacapo.chart.Main2, benchmarks-averroes/dacapo/chart-organized-app.jar, benchmarks-averroes/dacapo/chart-placeholder-lib.jar]
+clearing all cached results ...
+running dacapo benchmark 
+generating facts (benchmarks-averroes/dacapo/chart-organized-app.jar -l benchmarks-averroes/dacapo/chart-placeholder-lib.jar) in cache/input-facts/jre1.4/44dbea90fa145cb08bafa130258a2d8710256bf8ea5d6abedcaaa759d1865ef5 ...
+Adding archive: benchmarks-averroes/dacapo/chart-organized-app.jar
+Adding archive for resolving: benchmarks-averroes/dacapo/chart-placeholder-lib.jar
+elapsed time: 28.91s
+creating database in cache/input-database/jre1.4/44dbea90fa145cb08bafa130258a2d8710256bf8ea5d6abedcaaa759d1865ef5 ...
+elapsed time: 0.98s
+loading fact declarations ...
+elapsed time: 5.49s
+loading facts ...
+elapsed time: 5.67s
+setting main class to dacapo.chart.Main2
+loading context-insensitive declarations...
+elapsed time: 4.28s
+loading context-insensitive delta rules...
+elapsed time: 6.14s
+loading reflection delta rules...
+elapsed time: 4.78s
+loading client delta rules...
+elapsed time: 2.56s
+loading context-insensitive rules ...
+MBBENCH logicblox START
+elapsed time: 14.32s
+MBBENCH logicblox STOP
+making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/chart-organized-app.jar
+making database available at last-analysis
+array index points-to                     7694
+call graph edges (context-insensitive)    7591
+call graph edges (context-sensitive)      7591
+instance field points-to                  8466
+reachable methods (context-insensitive)   1926
+reachable methods (context-sensitive)     1926
+reachable variables (context-insensitive) 13179
+reachable variables (context-sensitive)   13179
+static field points-to                    8358
+retrieving call graph edges ...
+elapsed time: 5.64s
+retrieving entry points ...
+elapsed time: 5.22s
+Total time to finish: 137.3
+=================================================
+# edges = 2674
+=================================================
+making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/dacapo/chart/doopAverroes.tar.gz ...
+tar: Removing leading `../' from member names
+Disk usage stats: 45M	../doop/cache/analysis
+
+elapsed time: 143.53s

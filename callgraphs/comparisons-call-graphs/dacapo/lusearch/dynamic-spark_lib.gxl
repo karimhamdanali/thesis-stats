@@ -12,7 +12,7 @@
 				<string>org.apache.lucene.store</string>
 			</attr>
 			<attr name="name">
-				<string>FSIndexInput</string>
+				<string>FSDirectory</string>
 			</attr>
 		</node>
 		<node id="id5">
@@ -30,13 +30,13 @@
 				<string>org.apache.lucene.store</string>
 			</attr>
 			<attr name="name">
-				<string>FSDirectory</string>
+				<string>FSIndexInput</string>
 			</attr>
 		</node>
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>finalize</string>
+				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
 				<string/>
@@ -48,7 +48,7 @@
 		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
+				<string>finalize</string>
 			</attr>
 			<attr name="signature">
 				<string/>

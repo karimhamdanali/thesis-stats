@@ -1,0 +1,10 @@
+...
+running Wala for dacapo/hsqldb
+Loading properties...
+[Wala] Solution found in 9.47 seconds.
+Total time to finish: 14.85
+=================================================
+# edges = 7046
+=================================================
+
+elapsed time: 20.96s

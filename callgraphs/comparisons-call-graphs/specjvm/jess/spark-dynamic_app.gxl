@@ -12,7 +12,7 @@
 				<string>spec.benchmarks._202_jess</string>
 			</attr>
 			<attr name="name">
-				<string>NullDisplay</string>
+				<string>Jess</string>
 			</attr>
 		</node>
 		<node id="id5">
@@ -21,34 +21,10 @@
 				<string>spec.benchmarks._202_jess</string>
 			</attr>
 			<attr name="name">
-				<string>Jess</string>
+				<string>NullDisplay</string>
 			</attr>
 		</node>
 		<node id="id1">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>run_jess</string>
-			</attr>
-			<attr name="signature">
-				<string>[Ljava/lang/String;</string>
-			</attr>
-		</node>
-		<edge from="id1" to="id5">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id2">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>stderr</string>
-			</attr>
-			<attr name="signature">
-				<string/>
-			</attr>
-		</node>
-		<edge from="id2" to="id4">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
 				<string>&lt;init&gt;</string>
@@ -57,13 +33,37 @@
 				<string/>
 			</attr>
 		</node>
+		<edge from="id1" to="id4">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id2">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>run_jess</string>
+			</attr>
+			<attr name="signature">
+				<string>[Ljava/lang/String;</string>
+			</attr>
+		</node>
+		<edge from="id2" to="id4">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id3">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>stderr</string>
+			</attr>
+			<attr name="signature">
+				<string/>
+			</attr>
+		</node>
 		<edge from="id3" to="id5">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id1" to="id2">
+		<edge from="id2" to="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
-		<edge from="id3" to="library">
+		<edge from="id1" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 	</graph>

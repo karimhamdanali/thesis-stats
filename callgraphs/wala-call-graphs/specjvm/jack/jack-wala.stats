@@ -1,0 +1,10 @@
+...
+running Wala for specjvm/jack
+Loading properties...
+[Wala] Solution found in 2.39 seconds.
+Total time to finish: 7.31
+=================================================
+# edges = 747
+=================================================
+
+elapsed time: 10.61s
