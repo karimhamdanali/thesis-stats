@@ -64,9 +64,7 @@ object LatexGenerator {
     // Emit latex files
     emitSoundnessTables
     emitPrecisionTables
-    emitLibraryCallBackSummaries("sparkave")
-    emitLibraryCallBackSummaries("doopave")
-    emitLibraryCallBackSummaries("walaave")
+    emitLibraryCallBackSummaries
     emitCGSizeTable
 
     // Close streams
@@ -122,20 +120,26 @@ object LatexGenerator {
       table.close
     }
 
-    def emitLibraryCallBackSummaries(analysis: String) = {
-      val table = new PrintStream(s"tex/table-freqs-$analysis.tex")
-      val log = io.Source.fromFile(s"stats/summaries/$analysis.num").getLines.toList.drop(1)
-      val tool = if (analysis == "sparkave") "\\spark" else "\\doop"
+    def emitLibraryCallBackSummaries = {
+      emitLibraryCallBackSummariesFor(spark)
+      emitLibraryCallBackSummariesFor(doop)
+      emitLibraryCallBackSummariesFor(wala)
+    }
+    
+    def emitLibraryCallBackSummariesFor(analysis: String) = {
+      val table = new PrintStream(s"tex/table-freqs-${analysis}ave.tex")
+      val log = io.Source.fromFile(s"callbacks/${analysis}ave.num").getLines.toList.drop(1)
       val first = if (analysis == "sparkave") "R" else "r"
-
+      
       // Emit Header
       table.println("\\begin{table}")
       table.println("  \\centering")
-      table.println("  \\caption{Frequencies of extra library call back edges in \\ave-based " + tool + " compared to " + tool + ". \\italicize{Other} methods include all methods that are encountered only in one benchmark}")
-      table.println("  \\label{table:freqs:" + analysis + "}")
-      table.println("  \\begin{tabularx}{\\textwidth}{l" + first + "rrrrrrrrrrrrr>{\\bfseries}R}")
+      table.println("  \\caption{" + s"Frequencies of extra library callback edges computed by \\${analysis}ave compared to \\${analysis}. \\italicize{Other} methods include all methods that are encountered only in one benchmark.}")
+      table.println("  \\label{table:freqs:" + s"${analysis}ave}")
+//      table.println("  \\begin{tabularx}{\\textwidth}{l" + first + "rrrrrrrrrrrrr>{\\bfseries}R}")
+      table.println("  \\begin{tabularx}{\\textwidth}{lRRRRRRRRRRRRRR>{\\bfseries}R}")
       table.println("    \\toprule")
-      table.println("    & " + benchmarks.map(b => s"\\rot{\\$b}").mkString(" & ") + "& \\rot{Total} \\\\")
+      table.println("    & " + benchmarks.map(b => s"\\rot{\\small \\$b}").mkString(" & ") + "& \\rot{\\small Total} \\\\")
       table.println("    \\midrule")
 
       for (l <- log) {
@@ -144,8 +148,8 @@ object LatexGenerator {
         val name = line.head
 
         // append method names, special treatment for "Other" and "Total"
-        if (name == "Other") row append s"\\italicize{$name}"
-        else if (line.head == "Total") row append s"\\boldify{$name}"
+        if (name == "Other") row append s"\\italicize{\\small $name}"
+        else if (line.head == "Total") row append s"\\boldify{\\small $name}"
         else row append s"\\codesm{$name}"
 
         // append the values
@@ -165,9 +169,9 @@ object LatexGenerator {
           if (Set("Total", "Other")(name) || v != 0) data.println(s"\\pgfkeyssetvalue{$key}{$value}")
 
           // add the key to the current results row
-          if (name == "Other") row append s" & \\italicize{\\pgfkeysvalueof{$key}}"
-          else if (name == "Total") row append s" & \\boldify{\\pgfkeysvalueof{$key}}"
-          else row append s" & \\pgfkeysvalueof{$key}"
+          if (name == "Other") row append s" & \\italicize{\\small \\pgfkeysvalueof{$key}}"
+          else if (name == "Total") row append s" & \\boldify{\\small \\pgfkeysvalueof{$key}}"
+          else row append s" & \\small \\pgfkeysvalueof{$key}"
         }
       }
 
