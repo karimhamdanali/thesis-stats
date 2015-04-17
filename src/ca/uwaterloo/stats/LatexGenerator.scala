@@ -64,10 +64,9 @@ object LatexGenerator {
     // Emit latex files
     emitSoundnessTables
     emitPrecisionTables
-    //    emitLibraryCallBackFrequencies
-//    emitLibraryCallBackSummaries("sparkave")
-//    emitLibraryCallBackSummaries("doopave")
-//    emitLibraryCallBackSummaries("walaave")
+    emitLibraryCallBackSummaries("sparkave")
+    emitLibraryCallBackSummaries("doopave")
+    emitLibraryCallBackSummaries("walaave")
     emitCGSizeTable
 
     // Close streams
@@ -177,38 +176,6 @@ object LatexGenerator {
       table.println("  \\end{tabularx}")
       table.println("\\end{table}")
       table.close
-    }
-
-    def emitLibraryCallBackFrequencies = {
-      import scala.collection.mutable.Map
-      import scala.collection.immutable.{ Map => ImmutableMap }
-
-      val sparkave = Map[String, ImmutableMap[String, Int]]().withDefaultValue(ImmutableMap[String, Int]()) //.withDefaultValue(0))
-      val doopave = Map[String, ImmutableMap[String, Int]]().withDefaultValue(ImmutableMap[String, Int]()) //.withDefaultValue(0))
-
-      val base = "callgraphs/comparisons-call-graphs"
-
-      for (benchmark <- benchmarks) {
-        val benchFull = benchmarkFull(benchmark)
-
-        readFrequencies("SparkAverroes - Spark", sparkave)
-        readFrequencies("DoopAverroes - Doop", doopave)
-
-        // Read in the frequencies
-        def readFrequencies(key: String, freqs: Map[String, ImmutableMap[String, Int]]) = {
-          val lines = io.Source.fromFile(s"$base/$benchFull/$benchmark-comparisons.stats").getLines.toList.dropWhile(_ != key).drop(2).takeWhile(_.trim.nonEmpty)
-          for (line <- lines) {
-            val tokens = line.split("=")
-            if (tokens.size == 2) {
-              freqs(tokens(0).trim) += (benchmark -> tokens(1).trim.toInt)
-            }
-          }
-        }
-      }
-
-      sparkave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t")) }
-      println("\n\n mama 7elwa \n\n")
-      doopave.foreach { m => println(m._1 + "\t" + benchmarks.map(m._2.getOrElse(_, 0)).mkString("\t")) }
     }
 
     def emitSoundnessTables = {
