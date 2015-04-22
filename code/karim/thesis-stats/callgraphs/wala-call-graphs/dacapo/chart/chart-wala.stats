@@ -1,10 +1,10 @@
 ...
 running Wala for dacapo/chart
 Loading properties...
-[Wala] Solution found in 5.51 seconds.
-Total time to finish: 11.04
+[Wala] Solution found in 7.97 seconds.
+Total time to finish: 12.56
 =================================================
-# edges = 2299
+# edges = 2315
 =================================================
 
-elapsed time: 14.55s
+elapsed time: 16.25s

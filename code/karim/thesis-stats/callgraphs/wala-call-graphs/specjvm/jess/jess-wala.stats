@@ -1,10 +1,10 @@
 ...
 running Wala for specjvm/jess
 Loading properties...
-[Wala] Solution found in 2.72 seconds.
-Total time to finish: 7.76
+[Wala] Solution found in 3.66 seconds.
+Total time to finish: 8.18
 =================================================
-# edges = 20
+# edges = 23
 =================================================
 
-elapsed time: 10.91s
+elapsed time: 12.09s

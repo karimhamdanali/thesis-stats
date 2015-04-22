@@ -1,0 +1,40 @@
+#! /bin/bash
+
+# this file converts averroes call graph files to probe txt.gzip call graph 
+# files (faster to process and can use all the probe tools with it)
+set -e
+
+basedir=$1
+
+# the dacapo benchmarks
+dacapo=( antlr bloat chart hsqldb luindex lusearch pmd xalan)
+dacapo=( "${dacapo[@]/#/dacapo/}" )
+
+# the specjvm benchmarks
+specjvm=( compress db jack javac jess raytrace )
+specjvm=( "${specjvm[@]/#/specjvm/}" )
+
+# put them all in one big array
+benchmarks=( ${dacapo[@]} ${specjvm[@]} )
+
+date
+
+for benchmark in ${benchmarks[@]}
+do
+  # dynamic call graphs
+  java -jar converter.jar ${basedir}/dynamic-call-graphs/${benchmark}/dynamic.gxl
+  
+  # spark call graphs
+  java -jar converter.jar ${basedir}/spark-call-graphs/${benchmark}/spark.gxl
+  java -jar converter.jar ${basedir}/spark-averroes-call-graphs/${benchmark}/sparkAverroes.gxl
+  
+  # doop call graphs
+  java -jar converter.jar ${basedir}/doop-call-graphs/${benchmark}/doop.gxl
+  java -jar converter.jar ${basedir}/doop-averroes-call-graphs/${benchmark}/doopAverroes.gxl
+  
+  # wala call graphs
+  java -jar converter.jar ${basedir}/wala-call-graphs/${benchmark}/wala.gxl
+  java -jar converter.jar ${basedir}/wala-averroes-call-graphs/${benchmark}/walaAverroes.gxl
+done
+
+date

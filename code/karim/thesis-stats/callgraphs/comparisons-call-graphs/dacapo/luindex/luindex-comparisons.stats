@@ -8,7 +8,7 @@ Spark: 1416
 SparkAverroes: 924
 Doop: 693
 DoopAverroes: 924
-Wala: 692
+Wala: 1035
 WalaAverroes: 511
 
 Library Call Graph Edges
@@ -18,7 +18,7 @@ Spark: 336
 SparkAverroes: 246
 Doop: 205
 DoopAverroes: 246
-Wala: 202
+Wala: 242
 WalaAverroes: 168
 
 Library Call Back Edges
@@ -28,7 +28,7 @@ Spark: 120
 SparkAverroes: 37
 Doop: 21
 DoopAverroes: 37
-Wala: 17
+Wala: 20
 WalaAverroes: 19
 
 
@@ -38,14 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 244
 Dyn - DoopAverroes: 0
-Dyn - Wala: 244
+Dyn - Wala: 2
 Dyn - WalaAverroes: 210
 Spark - SparkAverroes: 493
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 210
+Wala - WalaAverroes: 525
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 231
-WalaAverroes - Wala: 29
+WalaAverroes - Wala: 1
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -55,14 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 53
 Dyn - DoopAverroes: 0
-Dyn - Wala: 53
+Dyn - Wala: 3
 Dyn - WalaAverroes: 43
 Spark - SparkAverroes: 90
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 43
+Wala - WalaAverroes: 77
 SparkAverroes - Spark: 0
 DoopAverroes - Doop: 41
-WalaAverroes - Wala: 9
+WalaAverroes - Wala: 3
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 3
 
@@ -72,11 +72,11 @@ Dyn - Spark: 4
 Dyn - SparkAverroes: 0
 Dyn - Doop: 6
 Dyn - DoopAverroes: 0
-Dyn - Wala: 6
+Dyn - Wala: 4
 Dyn - WalaAverroes: 3
 Spark - SparkAverroes: 85
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 3
+Wala - WalaAverroes: 6
 SparkAverroes - Spark: 2
 DoopAverroes - Doop: 16
 WalaAverroes - Wala: 5
@@ -114,4 +114,4 @@ toString = 3
 <init> = 1
 compareTo = 1
 
-elapsed time: 4.35s
+elapsed time: 5.04s

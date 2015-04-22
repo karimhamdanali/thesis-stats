@@ -1,10 +1,10 @@
 ...
 running Wala for dacapo/luindex
 Loading properties...
-[Wala] Solution found in 3.06 seconds.
-Total time to finish: 8.06
+[Wala] Solution found in 3.92 seconds.
+Total time to finish: 8.42
 =================================================
-# edges = 608
+# edges = 1288
 =================================================
 
-elapsed time: 12.39s
+elapsed time: 12.74s

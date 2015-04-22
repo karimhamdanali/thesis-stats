@@ -20,5 +20,6 @@ java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar wala.jar $benchma
 
 # 3. copy the call graph
 cp output/wala.gxl ${outputdir}/wala.gxl
+cp output/wala.txt.gzip ${outputdir}/wala.txt.gzip
 
 echo ""

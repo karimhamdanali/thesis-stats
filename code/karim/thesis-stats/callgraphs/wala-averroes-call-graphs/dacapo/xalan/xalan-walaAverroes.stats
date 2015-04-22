@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/xalan
 Loading properties...
-[Wala] Solution found in 9.24 seconds.
-Total time to finish: 14.76
+[Wala] Solution found in 13.93 seconds.
+Total time to finish: 18.47
 =================================================
-# edges = 8527
+# edges = 8129
 =================================================
 
-elapsed time: 20.60s
+elapsed time: 24.82s

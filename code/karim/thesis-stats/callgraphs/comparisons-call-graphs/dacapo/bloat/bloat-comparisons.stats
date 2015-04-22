@@ -8,8 +8,8 @@ Spark: 13419
 SparkAverroes: 15157
 Doop: 12433
 DoopAverroes: 14904
-Wala: 12733
-WalaAverroes: 12763
+Wala: 12698
+WalaAverroes: 12723
 
 Library Call Graph Edges
 ========================
@@ -29,7 +29,7 @@ SparkAverroes: 203
 Doop: 84
 DoopAverroes: 203
 Wala: 92
-WalaAverroes: 149
+WalaAverroes: 146
 
 
 CGE
@@ -45,7 +45,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2301
 DoopAverroes - Doop: 2471
-WalaAverroes - Wala: 30
+WalaAverroes - Wala: 25
 Cgc - DoopAverroes: 2
 DoopAverroes - Cgc: 476
 
@@ -79,7 +79,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 26
 DoopAverroes - Doop: 119
-WalaAverroes - Wala: 57
+WalaAverroes - Wala: 54
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 13
 
@@ -141,7 +141,7 @@ remove = 2
 
 WalaAverroes - Wala
 ----------
-clone = 49
+clone = 46
 <init> = 1
 add = 1
 hasPrevious = 1
@@ -151,4 +151,4 @@ previousIndex = 1
 remove = 1
 set = 1
 
-elapsed time: 13.98s
+elapsed time: 14.77s
