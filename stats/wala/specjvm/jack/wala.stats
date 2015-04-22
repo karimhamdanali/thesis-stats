@@ -1,4 +1,4 @@
-application call graph edges = 649
+application call graph edges = 646
 library call graph edges = 98
 library call back edges = 0
 unsound application call graph edges = 0

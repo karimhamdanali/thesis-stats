@@ -9,7 +9,7 @@ SparkAverroes: 10979
 Doop: 9161
 DoopAverroes: 10791
 Wala: 2544
-WalaAverroes: 7232
+WalaAverroes: 6877
 
 Library Call Graph Edges
 ========================
@@ -19,7 +19,7 @@ SparkAverroes: 1032
 Doop: 862
 DoopAverroes: 1029
 Wala: 325
-WalaAverroes: 854
+WalaAverroes: 815
 
 Library Call Back Edges
 =======================
@@ -29,7 +29,7 @@ SparkAverroes: 662
 Doop: 139
 DoopAverroes: 662
 Wala: 86
-WalaAverroes: 441
+WalaAverroes: 437
 
 
 CGE
@@ -39,13 +39,13 @@ Dyn - SparkAverroes: 0
 Dyn - Doop: 250
 Dyn - DoopAverroes: 0
 Dyn - Wala: 2529
-Dyn - WalaAverroes: 367
+Dyn - WalaAverroes: 409
 Spark - SparkAverroes: 3749
 Doop - DoopAverroes: 798
-Wala - WalaAverroes: 367
+Wala - WalaAverroes: 409
 SparkAverroes - Spark: 1219
 DoopAverroes - Doop: 2428
-WalaAverroes - Wala: 5055
+WalaAverroes - Wala: 4742
 Cgc - DoopAverroes: 1151
 DoopAverroes - Cgc: 314
 
@@ -56,13 +56,13 @@ Dyn - SparkAverroes: 1
 Dyn - Doop: 41
 Dyn - DoopAverroes: 0
 Dyn - Wala: 313
-Dyn - WalaAverroes: 26
+Dyn - WalaAverroes: 38
 Spark - SparkAverroes: 148
 Doop - DoopAverroes: 92
-Wala - WalaAverroes: 26
+Wala - WalaAverroes: 38
 SparkAverroes - Spark: 116
 DoopAverroes - Doop: 259
-WalaAverroes - Wala: 555
+WalaAverroes - Wala: 528
 Cgc - DoopAverroes: 138
 DoopAverroes - Cgc: 18
 
@@ -79,7 +79,7 @@ Doop - DoopAverroes: 25
 Wala - WalaAverroes: 9
 SparkAverroes - Spark: 272
 DoopAverroes - Doop: 548
-WalaAverroes - Wala: 364
+WalaAverroes - Wala: 360
 Cgc - DoopAverroes: 44
 DoopAverroes - Cgc: 10
 
@@ -387,7 +387,7 @@ equals = 1
 WalaAverroes - Wala
 ----------
 getNodeName = 31
-<init> = 17
+<init> = 16
 clone = 11
 getSystemId = 7
 processingInstruction = 7
@@ -433,7 +433,6 @@ setErrorListener = 3
 setSystemId = 3
 setURIResolver = 3
 unparsedEntityDecl = 3
-write = 3
 appendChild = 2
 clearParameters = 2
 equals = 2
@@ -533,4 +532,4 @@ setContentHandler = 1
 setNodeValue = 1
 setParent = 1
 
-elapsed time: 15.28s
+elapsed time: 14.94s

@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/hsqldb
 Loading properties...
-[Wala] Solution found in 9.76 seconds.
-Total time to finish: 15.03
+[Wala] Solution found in 7.5 seconds.
+Total time to finish: 11.97
 =================================================
-# edges = 7046
+# edges = 7036
 =================================================
 
-elapsed time: 21.18s
+elapsed time: 18.32s

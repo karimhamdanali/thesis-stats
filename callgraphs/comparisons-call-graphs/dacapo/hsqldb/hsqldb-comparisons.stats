@@ -8,8 +8,8 @@ Spark: 7861
 SparkAverroes: 8960
 Doop: 6570
 DoopAverroes: 8953
-Wala: 6560
-WalaAverroes: 6236
+Wala: 7583
+WalaAverroes: 6226
 
 Library Call Graph Edges
 ========================
@@ -18,7 +18,7 @@ Spark: 870
 SparkAverroes: 960
 Doop: 795
 DoopAverroes: 963
-Wala: 790
+Wala: 836
 WalaAverroes: 787
 
 Library Call Back Edges
@@ -28,7 +28,7 @@ Spark: 57
 SparkAverroes: 655
 Doop: 25
 DoopAverroes: 655
-Wala: 25
+Wala: 30
 WalaAverroes: 23
 
 
@@ -38,11 +38,11 @@ Dyn - Spark: 59
 Dyn - SparkAverroes: 0
 Dyn - Doop: 325
 Dyn - DoopAverroes: 0
-Dyn - Wala: 324
-Dyn - WalaAverroes: 324
+Dyn - Wala: 62
+Dyn - WalaAverroes: 328
 Spark - SparkAverroes: 219
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 324
+Wala - WalaAverroes: 1357
 SparkAverroes - Spark: 1318
 DoopAverroes - Doop: 2383
 WalaAverroes - Wala: 0
@@ -55,11 +55,11 @@ Dyn - Spark: 1
 Dyn - SparkAverroes: 0
 Dyn - Doop: 5
 Dyn - DoopAverroes: 0
-Dyn - Wala: 3
+Dyn - Wala: 1
 Dyn - WalaAverroes: 3
 Spark - SparkAverroes: 25
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 3
+Wala - WalaAverroes: 49
 SparkAverroes - Spark: 115
 DoopAverroes - Doop: 168
 WalaAverroes - Wala: 0
@@ -72,11 +72,11 @@ Dyn - Spark: 1
 Dyn - SparkAverroes: 0
 Dyn - Doop: 1
 Dyn - DoopAverroes: 0
-Dyn - Wala: 2
+Dyn - Wala: 1
 Dyn - WalaAverroes: 2
 Spark - SparkAverroes: 7
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 2
+Wala - WalaAverroes: 7
 SparkAverroes - Spark: 605
 DoopAverroes - Doop: 630
 WalaAverroes - Wala: 0
@@ -877,4 +877,4 @@ WalaAverroes - Wala
 ----------
 <EMPTY>
 
-elapsed time: 12.84s
+elapsed time: 12.93s

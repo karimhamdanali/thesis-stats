@@ -8,8 +8,8 @@ Spark: 646
 SparkAverroes: 653
 Doop: 646
 DoopAverroes: 653
-Wala: 649
-WalaAverroes: 649
+Wala: 646
+WalaAverroes: 646
 
 Library Call Graph Edges
 ========================
@@ -102,4 +102,4 @@ WalaAverroes - Wala
 ----------
 <EMPTY>
 
-elapsed time: 3.34s
+elapsed time: 3.46s

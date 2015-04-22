@@ -28,7 +28,7 @@ Spark: 11
 SparkAverroes: 12
 Doop: 8
 DoopAverroes: 12
-Wala: 8
+Wala: 11
 WalaAverroes: 12
 
 
@@ -79,7 +79,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 4
-WalaAverroes - Wala: 4
+WalaAverroes - Wala: 1
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 0
 
@@ -103,9 +103,6 @@ DoopAverroes - Cgc
 
 WalaAverroes - Wala
 ----------
-AssertFact = 1
 FireRule = 1
-RetractFact = 1
-applet = 1
 
-elapsed time: 2.94s
+elapsed time: 2.93s

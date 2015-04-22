@@ -8,8 +8,8 @@ Spark: 6901
 SparkAverroes: 4694
 Doop: 4109
 DoopAverroes: 4694
-Wala: 4090
-WalaAverroes: 4397
+Wala: 6453
+WalaAverroes: 3990
 
 Library Call Graph Edges
 ========================
@@ -18,8 +18,8 @@ Spark: 797
 SparkAverroes: 433
 Doop: 391
 DoopAverroes: 433
-Wala: 391
-WalaAverroes: 426
+Wala: 731
+WalaAverroes: 355
 
 Library Call Back Edges
 =======================
@@ -28,8 +28,8 @@ Spark: 119
 SparkAverroes: 118
 Doop: 66
 DoopAverroes: 118
-Wala: 67
-WalaAverroes: 111
+Wala: 170
+WalaAverroes: 66
 
 
 CGE
@@ -38,14 +38,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 153
 Dyn - DoopAverroes: 0
-Dyn - Wala: 153
-Dyn - WalaAverroes: 15
+Dyn - Wala: 31
+Dyn - WalaAverroes: 147
 Spark - SparkAverroes: 2469
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 15
+Wala - WalaAverroes: 2491
 SparkAverroes - Spark: 262
 DoopAverroes - Doop: 585
-WalaAverroes - Wala: 322
+WalaAverroes - Wala: 28
 Cgc - DoopAverroes: 4
 DoopAverroes - Cgc: 104
 
@@ -55,14 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 43
 Dyn - DoopAverroes: 0
-Dyn - Wala: 43
-Dyn - WalaAverroes: 3
+Dyn - Wala: 9
+Dyn - WalaAverroes: 40
 Spark - SparkAverroes: 367
 Doop - DoopAverroes: 1
-Wala - WalaAverroes: 3
+Wala - WalaAverroes: 376
 SparkAverroes - Spark: 3
 DoopAverroes - Doop: 43
-WalaAverroes - Wala: 38
+WalaAverroes - Wala: 0
 Cgc - DoopAverroes: 2
 DoopAverroes - Cgc: 4
 
@@ -72,14 +72,14 @@ Dyn - Spark: 3
 Dyn - SparkAverroes: 0
 Dyn - Doop: 29
 Dyn - DoopAverroes: 0
-Dyn - Wala: 30
-Dyn - WalaAverroes: 0
+Dyn - Wala: 25
+Dyn - WalaAverroes: 22
 Spark - SparkAverroes: 24
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 0
+Wala - WalaAverroes: 121
 SparkAverroes - Spark: 23
 DoopAverroes - Doop: 52
-WalaAverroes - Wala: 44
+WalaAverroes - Wala: 17
 Cgc - DoopAverroes: 5
 DoopAverroes - Cgc: 9
 
@@ -136,27 +136,7 @@ remove = 1
 WalaAverroes - Wala
 ----------
 <init> = 15
-printStackTrace = 4
-equals = 2
-hashCode = 2
-remove = 2
-toString = 2
-call = 1
-getAttributeQName = 1
-getCommentStringValue = 1
-getElementQName = 1
-getElementStringValue = 1
-getFollowingAxisIterator = 1
 getImage = 1
-getMessage = 1
-getNamespacePrefix = 1
-getNamespaceStringValue = 1
-getPrecedingAxisIterator = 1
-getPrecedingSiblingAxisIterator = 1
-getTextStringValue = 1
 hasElse = 1
-isFinal = 1
-isStatic = 1
-parseXPath = 1
 
-elapsed time: 9.43s
+elapsed time: 10.26s

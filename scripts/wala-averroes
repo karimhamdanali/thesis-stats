@@ -20,5 +20,6 @@ java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar wala-averroes.jar
 
 # 3. copy the call graph
 cp output/walaAverroes.gxl ${outputdir}/walaAverroes.gxl
+cp output/walaAverroes.txt.gzip ${outputdir}/walaAverroes.txt.gzip
 
 echo ""

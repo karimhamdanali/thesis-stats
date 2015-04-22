@@ -6,4 +6,4 @@ unsound library call graph edges = 0
 unsound library call back edges = 0
 imprecise application call graph edges = 0
 imprecise library call graph edges = 1
-imprecise library call back edges = 4
+imprecise library call back edges = 1

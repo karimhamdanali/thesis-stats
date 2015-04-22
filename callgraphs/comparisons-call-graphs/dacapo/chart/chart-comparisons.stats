@@ -8,8 +8,8 @@ Spark: 6735
 SparkAverroes: 1921
 Doop: 1811
 DoopAverroes: 1921
-Wala: 1794
-WalaAverroes: 1798
+Wala: 1793
+WalaAverroes: 1797
 
 Library Call Graph Edges
 ========================
@@ -18,7 +18,7 @@ Spark: 1062
 SparkAverroes: 604
 Doop: 529
 DoopAverroes: 604
-Wala: 496
+Wala: 498
 WalaAverroes: 497
 
 Library Call Back Edges
@@ -28,7 +28,7 @@ Spark: 469
 SparkAverroes: 149
 Doop: 55
 DoopAverroes: 149
-Wala: 50
+Wala: 62
 WalaAverroes: 80
 
 
@@ -55,14 +55,14 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
-Dyn - Wala: 25
+Dyn - Wala: 24
 Dyn - WalaAverroes: 24
 Spark - SparkAverroes: 472
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 24
+Wala - WalaAverroes: 30
 SparkAverroes - Spark: 14
 DoopAverroes - Doop: 75
-WalaAverroes - Wala: 25
+WalaAverroes - Wala: 29
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 33
 
@@ -72,11 +72,11 @@ Dyn - Spark: 0
 Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
-Dyn - Wala: 2
+Dyn - Wala: 0
 Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 329
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 0
+Wala - WalaAverroes: 12
 SparkAverroes - Spark: 9
 DoopAverroes - Doop: 94
 WalaAverroes - Wala: 30
@@ -122,4 +122,4 @@ getLogo = 1
 toString = 1
 validateObject = 1
 
-elapsed time: 8.10s
+elapsed time: 8.08s
