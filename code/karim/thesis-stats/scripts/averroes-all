@@ -6,7 +6,7 @@ reflection=$1
 base=$2
 
 # the dacapo benchmarks
-dacapo=( antlr bloat chart hsqldb jython luindex lusearch pmd xalan )
+dacapo=( antlr bloat chart hsqldb luindex lusearch pmd xalan )
 dacapo=( "${dacapo[@]/#/dacapo/}" )
 
 # the specjvm benchmarks

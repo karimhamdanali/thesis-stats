@@ -8,7 +8,7 @@ do
   base=all-output/${i}
   echo "running for the ${i}th time!"
   echo "running Averroes"
-  ./averroes-all bla ${base}
+  ./averroes-all -disable-reflection ${base}
   echo " "
   echo " "
   echo " "
