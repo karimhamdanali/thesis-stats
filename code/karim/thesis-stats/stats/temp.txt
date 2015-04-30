@@ -1,5 +1,51 @@
-unknown: -1 :: org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/index/SegmentInfo;) ===> org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfo;Lorg/apache/lucene/index/SegmentInfos;ZZ)
-unknown: -1 :: org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/index/SegmentInfos;Lorg/apache/lucene/index/SegmentInfo;Z) ===> org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfo;Lorg/apache/lucene/index/SegmentInfos;ZZ)
-unknown: -1 :: org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfo;Lorg/apache/lucene/index/SegmentInfos;ZZ) ===> ca.uwaterloo.averroes.Library: blob()
-unknown: -1 :: org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfo;Lorg/apache/lucene/index/SegmentInfos;ZZ) ===> org.apache.lucene.index.IndexReader: init(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfos;ZZ)
-unknown: -1 :: org.apache.lucene.index.SegmentReader: get(Lorg/apache/lucene/store/Directory;Lorg/apache/lucene/index/SegmentInfo;Lorg/apache/lucene/index/SegmentInfos;ZZ) ===> org.apache.lucene.index.SegmentReader: initialize(Lorg/apache/lucene/index/SegmentInfo;)
+.cpp
+.cs
+.java
+2
+and
+antlr
+ANTLR
+antlr.
+antlr.build.
+antlr.build.ANTLR
+antlr.build.Tool
+antlr.CommonAST
+antlr.CommonToken
+antlr.debug.LLkDebuggingParser
+antlr.Token
+antlr.TokenBuffer
+antlr.TokenStream
+AST
+ASTEnumerator
+BitSet
+CharScanner
+CodeGenerator
+Cpp
+CSharp
+debug.DebuggingCharScanner
+debug.LLkDebuggingParser
+Diagnostic
+DocBook
+Grammar
+HTML
+if
+is
+Java
+k
+L
+Lexer
+LLkParser
+m
+NoViableAlt
+Parser
+RecognitionException
+Ref
+sh
+Token
+TokenStream
+TokenTypes
+TreeParser
+try
+Type
+UL
+VectorEnumerator

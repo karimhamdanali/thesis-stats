@@ -3,10 +3,7 @@
 set -e
 
 date
-for i in {1..10}
-do
-  base=all-output/${i}
-  echo "running for the ${i}th time!"
+  base=.
   echo "running Spark"
   ./spark-all ${base}
   echo "running SparkAverroes"
@@ -19,10 +16,4 @@ do
   ./wala-all ${base}
   echo "running WalaAverroes"
   ./wala-averroes-all ${base}
-  echo " "
-  echo " "
-  echo " "
-  echo " "
-  echo " "
-done
 date
