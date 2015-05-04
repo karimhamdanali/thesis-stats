@@ -1,10 +1,10 @@
 ...
 running Wala for specjvm/raytrace
 Loading properties...
-[Wala] Solution found in 2.17 seconds.
-Total time to finish: 6.46
+[Wala] Solution found in 2.33 seconds.
+Total time to finish: 4.66
 =================================================
 # edges = 435
 =================================================
 
-elapsed time: 9.89s
+elapsed time: 9.56s

@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for specjvm/javac
 Loading properties...
-[Wala] Solution found in 11.09 seconds.
-Total time to finish: 15.05
+[Wala] Solution found in 5.44 seconds.
+Total time to finish: 6.04
 =================================================
-# edges = 8630
+# edges = 8692
 =================================================
 
-elapsed time: 21.36s
+elapsed time: 13.90s

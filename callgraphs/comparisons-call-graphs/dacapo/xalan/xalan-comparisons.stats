@@ -5,115 +5,108 @@ Call Graph Edges
 ================
 Dynamic: 2543
 Spark: 13509
-SparkAverroes: 10979
+SparkAverroes: 10647
 Doop: 9161
-DoopAverroes: 10791
+DoopAverroes: 10479
 Wala: 2544
-WalaAverroes: 6877
+WalaAverroes: 10631
 
 Library Call Graph Edges
 ========================
 Dynamic: 325
 Spark: 1064
-SparkAverroes: 1032
+SparkAverroes: 1006
 Doop: 862
-DoopAverroes: 1029
+DoopAverroes: 1007
 Wala: 325
-WalaAverroes: 815
+WalaAverroes: 1002
 
 Library Call Back Edges
 =======================
 Dynamic: 85
 Spark: 470
-SparkAverroes: 662
+SparkAverroes: 630
 Doop: 139
-DoopAverroes: 662
+DoopAverroes: 630
 Wala: 86
-WalaAverroes: 437
+WalaAverroes: 630
 
 
 CGE
 ===
 Dyn - Spark: 59
-Dyn - SparkAverroes: 0
+Dyn - SparkAverroes: 167
 Dyn - Doop: 250
-Dyn - DoopAverroes: 0
+Dyn - DoopAverroes: 167
 Dyn - Wala: 2529
-Dyn - WalaAverroes: 409
-Spark - SparkAverroes: 3749
-Doop - DoopAverroes: 798
-Wala - WalaAverroes: 409
-SparkAverroes - Spark: 1219
-DoopAverroes - Doop: 2428
-WalaAverroes - Wala: 4742
-Cgc - DoopAverroes: 1151
-DoopAverroes - Cgc: 314
+Dyn - WalaAverroes: 167
+Spark - SparkAverroes: 4156
+Doop - DoopAverroes: 481
+Wala - WalaAverroes: 167
+SparkAverroes - Spark: 1294
+DoopAverroes - Doop: 1799
+WalaAverroes - Wala: 8254
+Cgc - DoopAverroes: 1499
+DoopAverroes - Cgc: 350
 
 LCGE
 ====
 Dyn - Spark: 9
-Dyn - SparkAverroes: 1
+Dyn - SparkAverroes: 30
 Dyn - Doop: 41
-Dyn - DoopAverroes: 0
+Dyn - DoopAverroes: 29
 Dyn - Wala: 313
-Dyn - WalaAverroes: 38
-Spark - SparkAverroes: 148
-Doop - DoopAverroes: 92
-Wala - WalaAverroes: 38
-SparkAverroes - Spark: 116
-DoopAverroes - Doop: 259
-WalaAverroes - Wala: 528
-Cgc - DoopAverroes: 138
-DoopAverroes - Cgc: 18
+Dyn - WalaAverroes: 30
+Spark - SparkAverroes: 188
+Doop - DoopAverroes: 64
+Wala - WalaAverroes: 30
+SparkAverroes - Spark: 130
+DoopAverroes - Doop: 209
+WalaAverroes - Wala: 707
+Cgc - DoopAverroes: 167
+DoopAverroes - Cgc: 25
 
 LCBE
 ====
 Dyn - Spark: 28
-Dyn - SparkAverroes: 0
+Dyn - SparkAverroes: 12
 Dyn - Doop: 78
-Dyn - DoopAverroes: 0
+Dyn - DoopAverroes: 12
 Dyn - Wala: 82
-Dyn - WalaAverroes: 9
-Spark - SparkAverroes: 80
-Doop - DoopAverroes: 25
-Wala - WalaAverroes: 9
+Dyn - WalaAverroes: 12
+Spark - SparkAverroes: 112
+Doop - DoopAverroes: 21
+Wala - WalaAverroes: 12
 SparkAverroes - Spark: 272
-DoopAverroes - Doop: 548
-WalaAverroes - Wala: 360
-Cgc - DoopAverroes: 44
-DoopAverroes - Cgc: 10
+DoopAverroes - Doop: 512
+WalaAverroes - Wala: 556
+Cgc - DoopAverroes: 79
+DoopAverroes - Cgc: 13
 
 
 Frequencies of extra library call-backs
 =======================================
 SparkAverroes - Spark
 ----------
-<init> = 16
-skippedEntity = 8
-comment = 6
+<init> = 40
+skippedEntity = 7
 error = 6
 fatalError = 6
 getPrefix = 6
 warning = 6
-write = 6
-endCDATA = 5
-endDTD = 5
-endEntity = 5
-startCDATA = 5
-startDTD = 5
-startEntity = 5
-attributeDecl = 3
-close = 3
-elementDecl = 3
-externalEntityDecl = 3
-flush = 3
+comment = 4
+endCDATA = 4
+endDTD = 4
+endEntity = 4
+startCDATA = 4
+startDTD = 4
+startEntity = 4
 getErrorListener = 3
 getOutputProperties = 3
 getPublicId = 3
 getSystemId = 3
 getURIResolver = 3
 hasAttributes = 3
-internalEntityDecl = 3
 isSupported = 3
 newTransformer = 3
 newTransformerHandler = 3
@@ -125,10 +118,14 @@ setErrorListener = 3
 setSystemId = 3
 setURIResolver = 3
 unparsedEntityDecl = 3
+attributeDecl = 2
 clearParameters = 2
 createDocumentFragment = 2
 createElement = 2
 createElementNS = 2
+elementDecl = 2
+externalEntityDecl = 2
+finalize = 2
 getAttributeNS = 2
 getElementById = 2
 getElementsByTagName = 2
@@ -144,6 +141,7 @@ getValue = 2
 hasAttribute = 2
 hasAttributeNS = 2
 importNode = 2
+internalEntityDecl = 2
 newXMLFilter = 2
 parse = 2
 removeAttribute = 2
@@ -169,7 +167,6 @@ createTextNode = 1
 declarePrefix = 1
 deleteData = 1
 detach = 1
-finalize = 1
 getAssociatedStylesheet = 1
 getAttribute = 1
 getDeclaredPrefixes = 1
@@ -209,49 +206,45 @@ substringData = 1
 DoopAverroes - Doop
 -----------
 getNodeName = 33
+<init> = 26
 clone = 17
-<init> = 16
-processingInstruction = 10
-ignorableWhitespace = 9
-write = 9
-endDocument = 8
-endPrefixMapping = 8
 error = 8
 fatalError = 8
-skippedEntity = 8
-startDocument = 8
-startElement = 8
+processingInstruction = 8
 warning = 8
-characters = 7
-comment = 7
-endDTD = 7
-endElement = 7
-endEntity = 7
-setDocumentLocator = 7
-startDTD = 7
-startEntity = 7
-startPrefixMapping = 7
-endCDATA = 6
+endPrefixMapping = 7
+ignorableWhitespace = 7
+skippedEntity = 7
+endDTD = 6
+endDocument = 6
+endEntity = 6
 getPrefix = 6
-startCDATA = 6
+startDTD = 6
+startDocument = 6
+startElement = 6
+startEntity = 6
+startPrefixMapping = 6
+characters = 5
+comment = 5
+endCDATA = 5
+endElement = 5
 getLength = 5
 getLocalName = 5
 getValue = 5
 notationDecl = 5
+setDocumentLocator = 5
+startCDATA = 5
 unparsedEntityDecl = 5
 appendChild = 4
-attributeDecl = 4
-elementDecl = 4
-externalEntityDecl = 4
 getAttribute = 4
 getNodeType = 4
 getNodeValue = 4
-internalEntityDecl = 4
 setPrefix = 4
+attributeDecl = 3
 cloneNode = 3
-close = 3
+elementDecl = 3
 equals = 3
-flush = 3
+externalEntityDecl = 3
 getAttributes = 3
 getChildNodes = 3
 getErrorListener = 3
@@ -270,6 +263,7 @@ getURIResolver = 3
 hasAttributes = 3
 hasChildNodes = 3
 insertBefore = 3
+internalEntityDecl = 3
 isSupported = 3
 item = 3
 newTransformer = 3
@@ -380,156 +374,183 @@ substringData = 1
 DoopAverroes - Cgc
 -----------
 clone = 6
+<init> = 4
 toString = 2
-<init> = 1
 equals = 1
 
 WalaAverroes - Wala
 ----------
-getNodeName = 31
-<init> = 16
-clone = 11
+<init> = 40
+getNodeName = 33
+clone = 17
+error = 8
+fatalError = 8
+processingInstruction = 8
+warning = 8
+endPrefixMapping = 7
 getSystemId = 7
-processingInstruction = 7
-error = 6
-fatalError = 6
-ignorableWhitespace = 6
+ignorableWhitespace = 7
+skippedEntity = 7
+endDTD = 6
+endDocument = 6
+endEntity = 6
+getPrefix = 6
+startDTD = 6
+startDocument = 6
 startElement = 6
-warning = 6
+startEntity = 6
+startPrefixMapping = 6
+toString = 6
 characters = 5
 comment = 5
-endDocument = 5
+endCDATA = 5
 endElement = 5
-endPrefixMapping = 5
+equals = 5
+getLength = 5
+getLocalName = 5
+getValue = 5
+hashCode = 5
+notationDecl = 5
 printStackTrace = 5
 setDocumentLocator = 5
-skippedEntity = 5
-startDocument = 5
-endCDATA = 4
-endDTD = 4
-endEntity = 4
-getPrefix = 4
+startCDATA = 5
+unparsedEntityDecl = 5
+appendChild = 4
+getAttribute = 4
+getNodeType = 4
+getNodeValue = 4
 getPublicId = 4
-hashCode = 4
-startCDATA = 4
-startDTD = 4
-startEntity = 4
-startPrefixMapping = 4
-toString = 4
+setPrefix = 4
 attributeDecl = 3
+cloneNode = 3
 elementDecl = 3
 externalEntityDecl = 3
-getAttribute = 3
+getAttributes = 3
+getChildNodes = 3
 getColumnNumber = 3
 getErrorListener = 3
+getFirstChild = 3
+getLastChild = 3
 getLineNumber = 3
+getNamespaceURI = 3
+getNextSibling = 3
 getOutputProperties = 3
+getOwnerDocument = 3
+getParentNode = 3
+getPreviousSibling = 3
+getType = 3
 getURIResolver = 3
+hasAttributes = 3
+hasChildNodes = 3
+insertBefore = 3
 internalEntityDecl = 3
+isSupported = 3
+item = 3
 newTransformer = 3
 newTransformerHandler = 3
-notationDecl = 3
+normalize = 3
+removeChild = 3
+replaceChild = 3
+resolveEntity = 3
+setAttribute = 3
 setErrorListener = 3
+setNodeValue = 3
 setSystemId = 3
 setURIResolver = 3
-unparsedEntityDecl = 3
-appendChild = 2
 clearParameters = 2
-equals = 2
-getLocalName = 2
-getNodeType = 2
-getNodeValue = 2
+createAttribute = 2
+createAttributeNS = 2
+createCDATASection = 2
+createComment = 2
+createDocumentFragment = 2
+createElement = 2
+createElementNS = 2
+createEntityReference = 2
+createProcessingInstruction = 2
+createTextNode = 2
+finalize = 2
+getAttributeNS = 2
+getAttributeNode = 2
+getAttributeNodeNS = 2
+getDoctype = 2
+getDocumentElement = 2
+getElementById = 2
+getElementsByTagName = 2
+getElementsByTagNameNS = 2
+getImplementation = 2
+getIndex = 2
+getName = 2
 getOutputProperty = 2
+getOwnerElement = 2
 getParameter = 2
 getPrefixes = 2
+getSpecified = 2
+getTagName = 2
 getTransformer = 2
+getURI = 2
+hasAttribute = 2
+hasAttributeNS = 2
+importNode = 2
 newXMLFilter = 2
 parse = 2
-resolveEntity = 2
-setAttribute = 2
+removeAttribute = 2
+removeAttributeNS = 2
+removeAttributeNode = 2
+run = 2
+setAttributeNS = 2
+setAttributeNode = 2
+setAttributeNodeNS = 2
 setOutputProperties = 2
 setOutputProperty = 2
 setParameter = 2
-setPrefix = 2
 setResult = 2
+setValue = 2
 transform = 2
 addAttribute = 1
-cloneNode = 1
-createAttribute = 1
-createAttributeNS = 1
-createCDATASection = 1
-createComment = 1
-createDocumentFragment = 1
-createElement = 1
-createElementNS = 1
-createEntityReference = 1
-createProcessingInstruction = 1
-createTextNode = 1
+appendData = 1
+createDocument = 1
+createDocumentType = 1
 declarePrefix = 1
+deleteData = 1
 detach = 1
-finalize = 1
 getAssociatedStylesheet = 1
-getAttributeNS = 1
-getAttributeNode = 1
-getAttributeNodeNS = 1
-getAttributes = 1
 getCause = 1
-getChildNodes = 1
+getContents = 1
+getData = 1
 getDeclaredPrefixes = 1
-getDoctype = 1
-getDocumentElement = 1
-getElementById = 1
-getElementsByTagName = 1
-getElementsByTagNameNS = 1
 getException = 1
 getExpandEntityReferences = 1
 getFeature = 1
 getFilter = 1
-getFirstChild = 1
-getImplementation = 1
-getLastChild = 1
-getLength = 1
 getMessage = 1
-getNamespaceURI = 1
-getNextSibling = 1
-getOwnerDocument = 1
-getParentNode = 1
-getPreviousSibling = 1
+getNamedItem = 1
+getNamedItemNS = 1
+getQName = 1
 getRoot = 1
-getTagName = 1
+getTarget = 1
 getTemplates = 1
-getURI = 1
 getWhatToShow = 1
-hasAttribute = 1
-hasAttributeNS = 1
-hasAttributes = 1
-hasChildNodes = 1
+hasFeature = 1
 hasMoreElements = 1
-importNode = 1
 initCause = 1
-insertBefore = 1
-isSupported = 1
-item = 1
+insertData = 1
 newTemplates = 1
 newTemplatesHandler = 1
 nextElement = 1
 nextNode = 1
-normalize = 1
 popContext = 1
 previousNode = 1
 processName = 1
 pushContext = 1
-removeAttribute = 1
-removeAttributeNS = 1
-removeAttributeNode = 1
-removeChild = 1
-replaceChild = 1
-run = 1
-setAttributeNS = 1
-setAttributeNode = 1
-setAttributeNodeNS = 1
+removeNamedItem = 1
+removeNamedItemNS = 1
+replaceData = 1
 setContentHandler = 1
-setNodeValue = 1
+setData = 1
+setNamedItem = 1
+setNamedItemNS = 1
 setParent = 1
+splitText = 1
+substringData = 1
 
-elapsed time: 14.94s
+elapsed time: 14.93s

@@ -4,50 +4,51 @@ Loading properties...
 Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, dacapo.xalan.Main2, benchmarks-averroes/dacapo/xalan-organized-app.jar, benchmarks-averroes/dacapo/xalan-placeholder-lib.jar]
 clearing all cached results ...
 running dacapo benchmark 
-generating facts (benchmarks-averroes/dacapo/xalan-organized-app.jar -l benchmarks-averroes/dacapo/xalan-placeholder-lib.jar) in cache/input-facts/jre1.4/a7a9323a591c5d0502a6c4ebb8e0bc425efbae11dc0308cc2bd3ac7cf8df65f3 ...
+generating facts (benchmarks-averroes/dacapo/xalan-organized-app.jar -l benchmarks-averroes/dacapo/xalan-placeholder-lib.jar -l benchmarks-averroes/dacapo/xalan-averroes-lib-class.jar) in cache/input-facts/jre1.4/b58457867981489a421e85a0c061b145268aac849a6be0d3594e7ecdd9f756aa ...
 Adding archive: benchmarks-averroes/dacapo/xalan-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/dacapo/xalan-placeholder-lib.jar
-elapsed time: 28.36s
-creating database in cache/input-database/jre1.4/a7a9323a591c5d0502a6c4ebb8e0bc425efbae11dc0308cc2bd3ac7cf8df65f3 ...
-elapsed time: 0.85s
+Adding archive for resolving: benchmarks-averroes/dacapo/xalan-averroes-lib-class.jar
+elapsed time: 16.30s
+creating database in cache/input-database/jre1.4/b58457867981489a421e85a0c061b145268aac849a6be0d3594e7ecdd9f756aa ...
+elapsed time: 0.99s
 loading fact declarations ...
-elapsed time: 5.43s
+elapsed time: 3.26s
 loading facts ...
-elapsed time: 5.21s
+elapsed time: 5.24s
 setting main class to dacapo.xalan.Main2
 loading context-insensitive declarations...
-elapsed time: 4.27s
+elapsed time: 3.21s
 loading context-insensitive delta rules...
-elapsed time: 6.16s
+elapsed time: 3.81s
 loading reflection delta rules...
-elapsed time: 4.88s
+elapsed time: 3.74s
 loading client delta rules...
-elapsed time: 2.51s
+elapsed time: 2.50s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 29.57s
+elapsed time: 28.82s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/xalan-organized-app.jar
 making database available at last-analysis
-array index points-to                     397482
-call graph edges (context-insensitive)    22909
-call graph edges (context-sensitive)      22911
-instance field points-to                  299262
-reachable methods (context-insensitive)   4297
-reachable methods (context-sensitive)     4297
-reachable variables (context-insensitive) 29159
-reachable variables (context-sensitive)   29159
-static field points-to                    4941
+array index points-to                     471774
+call graph edges (context-insensitive)    22343
+call graph edges (context-sensitive)      22345
+instance field points-to                  300283
+reachable methods (context-insensitive)   4259
+reachable methods (context-sensitive)     4259
+reachable variables (context-insensitive) 30394
+reachable variables (context-sensitive)   30394
+static field points-to                    5182
 retrieving call graph edges ...
-elapsed time: 6.08s
+elapsed time: 4.26s
 retrieving entry points ...
-elapsed time: 5.20s
-Total time to finish: 152.96
+elapsed time: 3.57s
+Total time to finish: 116.15
 =================================================
-# edges = 12482
+# edges = 12116
 =================================================
 making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/dacapo/xalan/doopAverroes.tar.gz ...
 tar: Removing leading `../' from member names
-Disk usage stats: 67M	../doop/cache/analysis
+Disk usage stats: 72M	../doop/cache/analysis
 
-elapsed time: 162.12s
+elapsed time: 125.76s

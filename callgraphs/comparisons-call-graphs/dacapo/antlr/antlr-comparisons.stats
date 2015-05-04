@@ -5,31 +5,31 @@ Call Graph Edges
 ================
 Dynamic: 3066
 Spark: 6307
-SparkAverroes: 6280
+SparkAverroes: 6850
 Doop: 6293
-DoopAverroes: 6279
+DoopAverroes: 6849
 Wala: 6747
-WalaAverroes: 2414
+WalaAverroes: 6850
 
 Library Call Graph Edges
 ========================
 Dynamic: 372
 Spark: 661
-SparkAverroes: 650
+SparkAverroes: 712
 Doop: 649
-DoopAverroes: 650
+DoopAverroes: 712
 Wala: 694
-WalaAverroes: 306
+WalaAverroes: 712
 
 Library Call Back Edges
 =======================
 Dynamic: 11
 Spark: 62
-SparkAverroes: 52
+SparkAverroes: 71
 Doop: 42
-DoopAverroes: 52
+DoopAverroes: 71
 Wala: 44
-WalaAverroes: 39
+WalaAverroes: 71
 
 
 CGE
@@ -39,15 +39,15 @@ Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
 Dyn - Wala: 0
-Dyn - WalaAverroes: 1904
-Spark - SparkAverroes: 33
+Dyn - WalaAverroes: 0
+Spark - SparkAverroes: 12
 Doop - DoopAverroes: 31
-Wala - WalaAverroes: 4333
-SparkAverroes - Spark: 6
-DoopAverroes - Doop: 17
-WalaAverroes - Wala: 0
+Wala - WalaAverroes: 0
+SparkAverroes - Spark: 555
+DoopAverroes - Doop: 587
+WalaAverroes - Wala: 103
 Cgc - DoopAverroes: 2
-DoopAverroes - Cgc: 5
+DoopAverroes - Cgc: 575
 
 LCGE
 ====
@@ -56,15 +56,15 @@ Dyn - SparkAverroes: 0
 Dyn - Doop: 0
 Dyn - DoopAverroes: 0
 Dyn - Wala: 0
-Dyn - WalaAverroes: 232
-Spark - SparkAverroes: 11
+Dyn - WalaAverroes: 0
+Spark - SparkAverroes: 3
 Doop - DoopAverroes: 0
-Wala - WalaAverroes: 388
-SparkAverroes - Spark: 0
-DoopAverroes - Doop: 1
-WalaAverroes - Wala: 0
+Wala - WalaAverroes: 0
+SparkAverroes - Spark: 54
+DoopAverroes - Doop: 63
+WalaAverroes - Wala: 18
 Cgc - DoopAverroes: 0
-DoopAverroes - Cgc: 1
+DoopAverroes - Cgc: 63
 
 LCBE
 ====
@@ -74,44 +74,48 @@ Dyn - Doop: 3
 Dyn - DoopAverroes: 0
 Dyn - Wala: 0
 Dyn - WalaAverroes: 0
-Spark - SparkAverroes: 13
+Spark - SparkAverroes: 5
 Doop - DoopAverroes: 2
-Wala - WalaAverroes: 7
-SparkAverroes - Spark: 3
-DoopAverroes - Doop: 12
-WalaAverroes - Wala: 2
+Wala - WalaAverroes: 0
+SparkAverroes - Spark: 14
+DoopAverroes - Doop: 31
+WalaAverroes - Wala: 27
 Cgc - DoopAverroes: 2
-DoopAverroes - Cgc: 7
+DoopAverroes - Cgc: 26
 
 
 Frequencies of extra library call-backs
 =======================================
 SparkAverroes - Spark
 ----------
-<init> = 1
+<init> = 12
 hasMoreElements = 1
 nextElement = 1
 
 DoopAverroes - Doop
 -----------
+<init> = 12
+toString = 11
 clone = 5
-toString = 3
-<init> = 1
 equals = 1
 hasMoreElements = 1
 nextElement = 1
 
 DoopAverroes - Cgc
 -----------
-toString = 3
-<init> = 1
+<init> = 12
+toString = 11
 clone = 1
 hasMoreElements = 1
 nextElement = 1
 
 WalaAverroes - Wala
 ----------
-<init> = 1
-toString = 1
+toString = 12
+<init> = 7
+clone = 5
+equals = 1
+hasMoreElements = 1
+nextElement = 1
 
-elapsed time: 8.70s
+elapsed time: 8.50s

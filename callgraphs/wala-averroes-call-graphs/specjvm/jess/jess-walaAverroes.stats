@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for specjvm/jess
 Loading properties...
-[Wala] Solution found in 1.72 seconds.
-Total time to finish: 5.59
+[Wala] Solution found in 0.47 seconds.
+Total time to finish: 0.78
 =================================================
 # edges = 25
 =================================================
 
-elapsed time: 9.03s
+elapsed time: 5.42s

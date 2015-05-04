@@ -1,10 +1,10 @@
 ...
 running Wala for dacapo/lusearch
 Loading properties...
-[Wala] Solution found in 4.04 seconds.
-Total time to finish: 8.7
+[Wala] Solution found in 4.11 seconds.
+Total time to finish: 6.76
 =================================================
 # edges = 2402
 =================================================
 
-elapsed time: 13.10s
+elapsed time: 13.56s

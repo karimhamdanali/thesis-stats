@@ -4,50 +4,51 @@ Loading properties...
 Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, dacapo.bloat.Main2, benchmarks-averroes/dacapo/bloat-organized-app.jar, benchmarks-averroes/dacapo/bloat-placeholder-lib.jar]
 clearing all cached results ...
 running dacapo benchmark 
-generating facts (benchmarks-averroes/dacapo/bloat-organized-app.jar -l benchmarks-averroes/dacapo/bloat-placeholder-lib.jar) in cache/input-facts/jre1.4/822ac1777cfcdccaafc69dffe34dcb56aab2670da5826c4a9628523d3d7a6941 ...
+generating facts (benchmarks-averroes/dacapo/bloat-organized-app.jar -l benchmarks-averroes/dacapo/bloat-placeholder-lib.jar -l benchmarks-averroes/dacapo/bloat-averroes-lib-class.jar) in cache/input-facts/jre1.4/2f12fc4ff14bc8c812d9dc504872271e782cc6c79367bb13c5392599b35f5a2f ...
 Adding archive: benchmarks-averroes/dacapo/bloat-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/dacapo/bloat-placeholder-lib.jar
-elapsed time: 21.30s
-creating database in cache/input-database/jre1.4/822ac1777cfcdccaafc69dffe34dcb56aab2670da5826c4a9628523d3d7a6941 ...
-elapsed time: 0.83s
+Adding archive for resolving: benchmarks-averroes/dacapo/bloat-averroes-lib-class.jar
+elapsed time: 12.28s
+creating database in cache/input-database/jre1.4/2f12fc4ff14bc8c812d9dc504872271e782cc6c79367bb13c5392599b35f5a2f ...
+elapsed time: 0.93s
 loading fact declarations ...
-elapsed time: 5.47s
+elapsed time: 3.22s
 loading facts ...
-elapsed time: 4.57s
+elapsed time: 4.73s
 setting main class to dacapo.bloat.Main2
 loading context-insensitive declarations...
-elapsed time: 4.14s
+elapsed time: 3.11s
 loading context-insensitive delta rules...
-elapsed time: 5.96s
+elapsed time: 3.74s
 loading reflection delta rules...
-elapsed time: 4.19s
+elapsed time: 3.16s
 loading client delta rules...
-elapsed time: 2.51s
+elapsed time: 2.29s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 39.12s
+elapsed time: 35.29s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/bloat-organized-app.jar
 making database available at last-analysis
-array index points-to                     4634
-call graph edges (context-insensitive)    33239
-call graph edges (context-sensitive)      33239
-instance field points-to                  564064
-reachable methods (context-insensitive)   3000
-reachable methods (context-sensitive)     3000
-reachable variables (context-insensitive) 29641
-reachable variables (context-sensitive)   29641
-static field points-to                    4727
+array index points-to                     4633
+call graph edges (context-insensitive)    33237
+call graph edges (context-sensitive)      33237
+instance field points-to                  563894
+reachable methods (context-insensitive)   3002
+reachable methods (context-sensitive)     3002
+reachable variables (context-insensitive) 30090
+reachable variables (context-sensitive)   30090
+static field points-to                    4726
 retrieving call graph edges ...
-elapsed time: 6.22s
+elapsed time: 4.56s
 retrieving entry points ...
-elapsed time: 5.08s
-Total time to finish: 152.93
+elapsed time: 3.44s
+Total time to finish: 115.65
 =================================================
-# edges = 15985
+# edges = 15984
 =================================================
 making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/dacapo/bloat/doopAverroes.tar.gz ...
 tar: Removing leading `../' from member names
 Disk usage stats: 81M	../doop/cache/analysis
 
-elapsed time: 163.82s
+elapsed time: 126.73s

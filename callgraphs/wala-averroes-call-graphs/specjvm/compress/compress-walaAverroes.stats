@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for specjvm/compress
 Loading properties...
-[Wala] Solution found in 1.7 seconds.
-Total time to finish: 5.63
+[Wala] Solution found in 0.53 seconds.
+Total time to finish: 0.84
 =================================================
 # edges = 53
 =================================================
 
-elapsed time: 9.02s
+elapsed time: 5.51s

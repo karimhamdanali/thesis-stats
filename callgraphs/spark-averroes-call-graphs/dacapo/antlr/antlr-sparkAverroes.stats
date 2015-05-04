@@ -1,46 +1,48 @@
 ...
 running Spark with Averroes for dacapo/antlr
 Loading properties...
-Generating the call graph from Spark.
+Generating the call graph from SparkAverroes.
 
 Preparing classes ...
 Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/antlr-organized-app.jar
 Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/antlr-placeholder-lib.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/antlr-averroes-lib-class.jar
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-Total methods: 2695
-Initially reachable methods: 41
-Classes with at least one reachable method: 40
-[Spark] Pointer Assignment Graph in 1.2 seconds.
-Total types: 402
-[Spark] Type masks in 0.4 seconds.
-VarNodes: 208
-FieldRefNodes: 2
-AllocNodes: 124
+Total methods: 2693
+Initially reachable methods: 4
+Classes with at least one reachable method: 4
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+Total types: 392
+[Spark] Type masks in 0.0 seconds.
+VarNodes: 19
+FieldRefNodes: 1
+AllocNodes: 4
 Cleaning up graph for merged nodes
 Done cleaning up graph for merged nodes
 [Spark] Pointer Graph simplified in 0.0 seconds.
-Worklist has 125 nodes.
+Worklist has 4 nodes.
 Now handling field references
-Worklist has 368 nodes.
+Worklist has 394 nodes.
 Now handling field references
-Worklist has 382 nodes.
+Worklist has 403 nodes.
 Now handling field references
-Worklist has 310 nodes.
+Worklist has 344 nodes.
 Now handling field references
-Worklist has 2394 nodes.
+Worklist has 2541 nodes.
 Now handling field references
-Worklist has 526 nodes.
+Worklist has 566 nodes.
 Now handling field references
-Worklist has 75 nodes.
+Worklist has 71 nodes.
 Now handling field references
-Worklist has 9 nodes.
+Worklist has 12 nodes.
 Now handling field references
-[Spark] Propagation in 19.1 seconds.
-[Spark] Solution found in 19.4 seconds.
-[Spark] Number of reachable methods: 1611
-Total time to finish: 26.08
+[Spark] Propagation in 7.9 seconds.
+[Spark] Solution found in 8.2 seconds.
+[Spark] Number of reachable methods: 1748
+size of original spark is: 9636
+Total time to finish: 12.03
 =================================================
-# edges = 6982
+# edges = 7633
 =================================================
 
-elapsed time: 30.06s
+elapsed time: 18.96s

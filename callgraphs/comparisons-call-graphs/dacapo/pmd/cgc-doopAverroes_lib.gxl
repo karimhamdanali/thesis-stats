@@ -9,58 +9,49 @@
 		<node id="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.ast</string>
+				<string>net.sourceforge.pmd.rules</string>
 			</attr>
 			<attr name="name">
-				<string>ASTVariableDeclaratorId</string>
+				<string>UnnecessaryConversionTemporary</string>
 			</attr>
 		</node>
 		<node id="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.ast</string>
+				<string>net.sourceforge.pmd.rules</string>
 			</attr>
 			<attr name="name">
-				<string>ASTSynchronizedStatement</string>
+				<string>DoubleCheckedLocking</string>
 			</attr>
 		</node>
 		<node id="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.ast</string>
+				<string>net.sourceforge.pmd</string>
 			</attr>
 			<attr name="name">
-				<string>ASTStatementExpression</string>
+				<string>AbstractRule</string>
 			</attr>
 		</node>
 		<node id="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.ast</string>
+				<string>net.sourceforge.pmd.rules</string>
 			</attr>
 			<attr name="name">
-				<string>ASTPrimarySuffix</string>
-			</attr>
-		</node>
-		<node id="id10">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
-			<attr name="package">
-				<string>net.sourceforge.pmd.util</string>
-			</attr>
-			<attr name="name">
-				<string>ResourceLoader</string>
+				<string>UselessOverridingMethod</string>
 			</attr>
 		</node>
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
+				<string>hashCode</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id1" to="id9">
+		<edge from="id1" to="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -69,19 +60,19 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id7">
+		<edge from="id2" to="id6">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>&lt;init&gt;</string>
+				<string>equals</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string>Ljava/lang/Object;</string>
 			</attr>
 		</node>
 		<edge from="id3" to="id8">
@@ -93,10 +84,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>I</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id4" to="id6">
+		<edge from="id4" to="id7">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id5">
@@ -108,7 +99,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id5" to="id10">
+		<edge from="id5" to="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<edge from="library" to="id1">

@@ -72,19 +72,19 @@
 		<node id="id38">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.dfa</string>
+				<string>net.sourceforge.pmd.symboltable</string>
 			</attr>
 			<attr name="name">
-				<string>DataFlowNode</string>
+				<string>MethodScope</string>
 			</attr>
 		</node>
 		<node id="id39">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
-				<string>net.sourceforge.pmd.symboltable</string>
+				<string>net.sourceforge.pmd.dfa</string>
 			</attr>
 			<attr name="name">
-				<string>MethodScope</string>
+				<string>DataFlowNode</string>
 			</attr>
 		</node>
 		<node id="id40">

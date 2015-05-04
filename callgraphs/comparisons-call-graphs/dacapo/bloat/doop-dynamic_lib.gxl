@@ -396,7 +396,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id14" to="id48">
+		<edge from="id14" to="id49">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id15">
@@ -420,7 +420,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id16" to="id49">
+		<edge from="id16" to="id48">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id17">
@@ -468,7 +468,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id20" to="id55">
+		<edge from="id20" to="id46">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id21">
@@ -480,7 +480,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id21" to="id46">
+		<edge from="id21" to="id55">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id22">
