@@ -9,7 +9,7 @@ SparkAverroes: 48
 Doop: 47
 DoopAverroes: 48
 Wala: 47
-WalaAverroes: 47
+WalaAverroes: 48
 
 Library Call Graph Edges
 ========================
@@ -29,7 +29,7 @@ SparkAverroes: 3
 Doop: 2
 DoopAverroes: 3
 Wala: 1
-WalaAverroes: 2
+WalaAverroes: 3
 
 
 CGE
@@ -45,7 +45,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 1
-WalaAverroes - Wala: 0
+WalaAverroes - Wala: 1
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -79,7 +79,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 1
 DoopAverroes - Doop: 1
-WalaAverroes - Wala: 1
+WalaAverroes - Wala: 2
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 1
 
@@ -100,6 +100,7 @@ harnessMain = 1
 
 WalaAverroes - Wala
 ----------
+harnessMain = 1
 hashCode = 1
 
-elapsed time: 2.79s
+elapsed time: 2.56s

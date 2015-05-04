@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/chart
 Loading properties...
-[Wala] Solution found in 5.92 seconds.
-Total time to finish: 10.22
+[Wala] Solution found in 2.75 seconds.
+Total time to finish: 3.47
 =================================================
-# edges = 2374
+# edges = 2808
 =================================================
 
-elapsed time: 13.99s
+elapsed time: 10.20s

@@ -1,36 +1,38 @@
 ...
 running Spark with Averroes for specjvm/db
 Loading properties...
-Generating the call graph from Spark.
+Generating the call graph from SparkAverroes.
 
 Preparing classes ...
 Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/db-organized-app.jar
 Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/db-placeholder-lib.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/specjvm/db-averroes-lib-class.jar
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-Total methods: 218
-Initially reachable methods: 23
-Classes with at least one reachable method: 20
-[Spark] Pointer Assignment Graph in 0.8 seconds.
-Total types: 107
+Total methods: 199
+Initially reachable methods: 8
+Classes with at least one reachable method: 6
+[Spark] Pointer Assignment Graph in 0.2 seconds.
+Total types: 108
 [Spark] Type masks in 0.0 seconds.
-VarNodes: 72
-FieldRefNodes: 3
-AllocNodes: 41
+VarNodes: 19
+FieldRefNodes: 2
+AllocNodes: 7
 Cleaning up graph for merged nodes
 Done cleaning up graph for merged nodes
 [Spark] Pointer Graph simplified in 0.0 seconds.
-Worklist has 40 nodes.
+Worklist has 6 nodes.
 Now handling field references
 Worklist has 27 nodes.
 Now handling field references
 Worklist has 10 nodes.
 Now handling field references
-[Spark] Propagation in 2.1 seconds.
-[Spark] Solution found in 2.4 seconds.
-[Spark] Number of reachable methods: 139
-Total time to finish: 5.71
+[Spark] Propagation in 0.6 seconds.
+[Spark] Solution found in 0.8 seconds.
+[Spark] Number of reachable methods: 140
+size of original spark is: 373
+Total time to finish: 3.07
 =================================================
 # edges = 75
 =================================================
 
-elapsed time: 7.88s
+elapsed time: 7.77s

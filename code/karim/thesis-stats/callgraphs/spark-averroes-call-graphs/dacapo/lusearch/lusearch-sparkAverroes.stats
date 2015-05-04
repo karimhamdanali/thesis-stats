@@ -1,42 +1,44 @@
 ...
 running Spark with Averroes for dacapo/lusearch
 Loading properties...
-Generating the call graph from Spark.
+Generating the call graph from SparkAverroes.
 
 Preparing classes ...
 Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/lusearch-organized-app.jar
 Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/lusearch-placeholder-lib.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/lusearch-averroes-lib-class.jar
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-Total methods: 3017
-Initially reachable methods: 58
-Classes with at least one reachable method: 53
-[Spark] Pointer Assignment Graph in 1.6 seconds.
-Total types: 597
-[Spark] Type masks in 0.7 seconds.
-VarNodes: 302
-FieldRefNodes: 2
-AllocNodes: 155
+Total methods: 3021
+Initially reachable methods: 4
+Classes with at least one reachable method: 4
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+Total types: 590
+[Spark] Type masks in 0.0 seconds.
+VarNodes: 19
+FieldRefNodes: 1
+AllocNodes: 4
 Cleaning up graph for merged nodes
 Done cleaning up graph for merged nodes
 [Spark] Pointer Graph simplified in 0.0 seconds.
-Worklist has 160 nodes.
+Worklist has 4 nodes.
 Now handling field references
-Worklist has 195 nodes.
+Worklist has 172 nodes.
 Now handling field references
-Worklist has 301 nodes.
+Worklist has 307 nodes.
 Now handling field references
-Worklist has 398 nodes.
+Worklist has 399 nodes.
 Now handling field references
 Worklist has 95 nodes.
 Now handling field references
 Worklist has 22 nodes.
 Now handling field references
-[Spark] Propagation in 9.6 seconds.
-[Spark] Solution found in 9.9 seconds.
-[Spark] Number of reachable methods: 1323
-Total time to finish: 16.77
+[Spark] Propagation in 4.0 seconds.
+[Spark] Solution found in 4.3 seconds.
+[Spark] Number of reachable methods: 1334
+size of original spark is: 3896
+Total time to finish: 7.34
 =================================================
-# edges = 2518
+# edges = 2531
 =================================================
 
-elapsed time: 20.05s
+elapsed time: 12.81s

@@ -10,9 +10,9 @@ Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-
 Total methods: 35872
 Initially reachable methods: 16
 Classes with at least one reachable method: 9
-[Spark] Pointer Assignment Graph in 0.7 seconds.
-Total types: 4221
-[Spark] Type masks in 0.1 seconds.
+[Spark] Pointer Assignment Graph in 0.3 seconds.
+Total types: 4224
+[Spark] Type masks in 0.0 seconds.
 VarNodes: 72
 FieldRefNodes: 2
 AllocNodes: 25
@@ -21,15 +21,15 @@ Done cleaning up graph for merged nodes
 [Spark] Pointer Graph simplified in 0.0 seconds.
 Worklist has 29 nodes.
 Now handling field references
-Worklist has 1155 nodes.
+Worklist has 1143 nodes.
 Now handling field references
-Worklist has 1442 nodes.
+Worklist has 1449 nodes.
 Now handling field references
-Worklist has 1912 nodes.
+Worklist has 1906 nodes.
 Now handling field references
-Worklist has 2333 nodes.
+Worklist has 2327 nodes.
 Now handling field references
-Worklist has 2218 nodes.
+Worklist has 2223 nodes.
 Now handling field references
 Worklist has 2049 nodes.
 Now handling field references
@@ -45,13 +45,13 @@ Worklist has 31 nodes.
 Now handling field references
 Worklist has 2 nodes.
 Now handling field references
-[Spark] Propagation in 55.5 seconds.
-[Spark] Solution found in 56.3 seconds.
+[Spark] Propagation in 45.8 seconds.
+[Spark] Solution found in 46.5 seconds.
 [Spark] Number of reachable methods: 10662
 size of original spark is: 57600
-Total time to finish: 70.94
+Total time to finish: 57.35
 =================================================
 # edges = 743
 =================================================
 
-elapsed time: 73.70s
+elapsed time: 62.50s

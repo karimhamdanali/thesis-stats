@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/pmd
 Loading properties...
-[Wala] Solution found in 4.55 seconds.
-Total time to finish: 8.91
+[Wala] Solution found in 3.34 seconds.
+Total time to finish: 3.98
 =================================================
-# edges = 4411
+# edges = 5154
 =================================================
 
-elapsed time: 14.14s
+elapsed time: 10.79s

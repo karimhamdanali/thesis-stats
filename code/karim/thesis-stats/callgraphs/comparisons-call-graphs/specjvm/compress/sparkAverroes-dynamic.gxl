@@ -3,10 +3,13 @@
 <gxl xmlns:xlink="http://www.w3.org/1999/xlink">
 	<graph id="callgraph">
 		<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#CallGraph"/>
+		<node id="root">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Root"/>
+		</node>
 		<node id="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Library"/>
 		</node>
-		<node id="id12">
+		<node id="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -15,7 +18,7 @@
 				<string>Code_Table</string>
 			</attr>
 		</node>
-		<node id="id13">
+		<node id="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -24,7 +27,7 @@
 				<string>Compressor$Hash_Table</string>
 			</attr>
 		</node>
-		<node id="id14">
+		<node id="id15">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -33,7 +36,7 @@
 				<string>Decompressor</string>
 			</attr>
 		</node>
-		<node id="id15">
+		<node id="id16">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -42,7 +45,7 @@
 				<string>Harness</string>
 			</attr>
 		</node>
-		<node id="id16">
+		<node id="id17">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -51,7 +54,7 @@
 				<string>Decompressor$De_Stack</string>
 			</attr>
 		</node>
-		<node id="id17">
+		<node id="id18">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -60,7 +63,7 @@
 				<string>Decompressor$Suffix_Table</string>
 			</attr>
 		</node>
-		<node id="id18">
+		<node id="id19">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -69,7 +72,7 @@
 				<string>Input_Buffer</string>
 			</attr>
 		</node>
-		<node id="id19">
+		<node id="id20">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -78,7 +81,16 @@
 				<string>Compress</string>
 			</attr>
 		</node>
-		<node id="id20">
+		<node id="id21">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
+			<attr name="package">
+				<string>ca.uwaterloo.averroes</string>
+			</attr>
+			<attr name="name">
+				<string>Library</string>
+			</attr>
+		</node>
+		<node id="id22">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -87,7 +99,7 @@
 				<string>Output_Buffer</string>
 			</attr>
 		</node>
-		<node id="id21">
+		<node id="id23">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Class"/>
 			<attr name="package">
 				<string>spec.benchmarks._201_compress</string>
@@ -105,7 +117,7 @@
 				<string>[BII[B</string>
 			</attr>
 		</node>
-		<edge from="id1" to="id19">
+		<edge from="id1" to="id20">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id2">
@@ -117,7 +129,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id2" to="id15">
+		<edge from="id2" to="id16">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -129,7 +141,7 @@
 				<string>Lspec/benchmarks/_201_compress/Decompressor;</string>
 			</attr>
 		</node>
-		<edge from="id3" to="id16">
+		<edge from="id3" to="id17">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id4">
@@ -138,10 +150,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>Lspec/benchmarks/_201_compress/Input_Buffer;Lspec/benchmarks/_201_compress/Output_Buffer;</string>
 			</attr>
 		</node>
-		<edge from="id4" to="id12">
+		<edge from="id4" to="id15">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id5">
@@ -150,10 +162,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_201_compress/Input_Buffer;Lspec/benchmarks/_201_compress/Output_Buffer;</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id5" to="id14">
+		<edge from="id5" to="id13">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id6">
@@ -165,10 +177,22 @@
 				<string>Lspec/benchmarks/_201_compress/Compressor;</string>
 			</attr>
 		</node>
-		<edge from="id6" to="id13">
+		<edge from="id6" to="id14">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id7">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>&lt;clinit&gt;</string>
+			</attr>
+			<attr name="signature">
+				<string/>
+			</attr>
+		</node>
+		<edge from="id7" to="id21">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
 				<string>&lt;init&gt;</string>
@@ -177,10 +201,10 @@
 				<string>[B</string>
 			</attr>
 		</node>
-		<edge from="id7" to="id20">
+		<edge from="id8" to="id22">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<node id="id8">
+		<node id="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
 				<string>count</string>
@@ -189,19 +213,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id8" to="id20">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
-		</edge>
-		<node id="id9">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
-			<attr name="name">
-				<string>&lt;init&gt;</string>
-			</attr>
-			<attr name="signature">
-				<string>I[B</string>
-			</attr>
-		</node>
-		<edge from="id9" to="id18">
+		<edge from="id9" to="id22">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id10">
@@ -210,10 +222,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_201_compress/Input_Buffer;Lspec/benchmarks/_201_compress/Output_Buffer;</string>
+				<string>I[B</string>
 			</attr>
 		</node>
-		<edge from="id10" to="id21">
+		<edge from="id10" to="id19">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id11">
@@ -222,13 +234,28 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
+				<string>Lspec/benchmarks/_201_compress/Input_Buffer;Lspec/benchmarks/_201_compress/Output_Buffer;</string>
+			</attr>
+		</node>
+		<edge from="id11" to="id23">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
+		</edge>
+		<node id="id12">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
+			<attr name="name">
+				<string>&lt;init&gt;</string>
+			</attr>
+			<attr name="signature">
 				<string>Lspec/benchmarks/_201_compress/Decompressor;</string>
 			</attr>
 		</node>
-		<edge from="id11" to="id17">
+		<edge from="id12" to="id18">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
-		<edge from="id1" to="id8">
+		<edge from="root" to="id7">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#entryPoint"/>
+		</edge>
+		<edge from="id1" to="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#calls"/>
 		</edge>
 		<edge from="id2" to="library">
@@ -246,16 +273,16 @@
 		<edge from="id6" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
-		<edge from="id7" to="library">
-			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
-		</edge>
-		<edge from="id9" to="library">
+		<edge from="id8" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 		<edge from="id10" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 		<edge from="id11" to="library">
+			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
+		</edge>
+		<edge from="id12" to="library">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#callsLibrary"/>
 		</edge>
 	</graph>

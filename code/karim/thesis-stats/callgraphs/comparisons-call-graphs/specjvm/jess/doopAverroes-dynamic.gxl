@@ -39,10 +39,10 @@
 		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>DeactivateRule</string>
+				<string>AssertFact</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
 			</attr>
 		</node>
 		<edge from="id2" to="id13">
@@ -51,10 +51,10 @@
 		<node id="id3">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>AssertFact</string>
+				<string>DeactivateRule</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
 			</attr>
 		</node>
 		<edge from="id3" to="id13">

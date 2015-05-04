@@ -114,10 +114,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string/>
+				<string>Lspec/benchmarks/_201_compress/Decompressor;</string>
 			</attr>
 		</node>
-		<edge from="id2" to="id15">
+		<edge from="id2" to="id16">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id3">
@@ -126,10 +126,10 @@
 				<string>&lt;init&gt;</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_201_compress/Decompressor;</string>
+				<string/>
 			</attr>
 		</node>
-		<edge from="id3" to="id16">
+		<edge from="id3" to="id15">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id4">

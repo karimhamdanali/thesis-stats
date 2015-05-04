@@ -4,45 +4,46 @@ Loading properties...
 Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, spec.benchmarks._213_javac.Main, benchmarks-averroes/specjvm/javac-organized-app.jar, benchmarks-averroes/specjvm/javac-placeholder-lib.jar]
 clearing all cached results ...
 running specjvm benchmark 
-generating facts (benchmarks-averroes/specjvm/javac-organized-app.jar -l benchmarks-averroes/specjvm/javac-placeholder-lib.jar) in cache/input-facts/jre1.4/4a6d0305f40295ddbb26770eda0782ffe1e08e168b41eec4b35c0502934a36e9 ...
+generating facts (benchmarks-averroes/specjvm/javac-organized-app.jar -l benchmarks-averroes/specjvm/javac-placeholder-lib.jar -l benchmarks-averroes/specjvm/javac-averroes-lib-class.jar) in cache/input-facts/jre1.4/cfa35263fca893e9cf5586d092b8310f77584079529e6bdf3624ea934743604d ...
 Adding archive: benchmarks-averroes/specjvm/javac-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/specjvm/javac-placeholder-lib.jar
-elapsed time: 16.21s
-creating database in cache/input-database/jre1.4/4a6d0305f40295ddbb26770eda0782ffe1e08e168b41eec4b35c0502934a36e9 ...
-elapsed time: 0.95s
+Adding archive for resolving: benchmarks-averroes/specjvm/javac-averroes-lib-class.jar
+elapsed time: 7.78s
+creating database in cache/input-database/jre1.4/cfa35263fca893e9cf5586d092b8310f77584079529e6bdf3624ea934743604d ...
+elapsed time: 1.02s
 loading fact declarations ...
-elapsed time: 5.55s
+elapsed time: 3.23s
 loading facts ...
-elapsed time: 2.30s
+elapsed time: 2.36s
 setting main class to spec.benchmarks._213_javac.Main
 loading context-insensitive declarations...
-elapsed time: 3.99s
+elapsed time: 2.85s
 loading context-insensitive delta rules...
-elapsed time: 5.68s
+elapsed time: 3.55s
 loading reflection delta rules...
-elapsed time: 3.95s
+elapsed time: 2.78s
 loading client delta rules...
-elapsed time: 2.20s
+elapsed time: 2.13s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 16.39s
+elapsed time: 12.55s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/javac-organized-app.jar
 making database available at last-analysis
-array index points-to                     3034
-call graph edges (context-insensitive)    14575
-call graph edges (context-sensitive)      14575
+array index points-to                     3035
+call graph edges (context-insensitive)    14574
+call graph edges (context-sensitive)      14574
 instance field points-to                  66364
-reachable methods (context-insensitive)   1368
-reachable methods (context-sensitive)     1368
-reachable variables (context-insensitive) 13154
-reachable variables (context-sensitive)   13154
-static field points-to                    1862
+reachable methods (context-insensitive)   1369
+reachable methods (context-sensitive)     1369
+reachable variables (context-insensitive) 13405
+reachable variables (context-sensitive)   13405
+static field points-to                    1865
 retrieving call graph edges ...
-elapsed time: 5.41s
+elapsed time: 3.75s
 retrieving entry points ...
-elapsed time: 5.02s
-Total time to finish: 117.16
+elapsed time: 3.16s
+Total time to finish: 81.01
 =================================================
 # edges = 8581
 =================================================
@@ -50,4 +51,4 @@ making the database of Doop with Averroes available at all-output/1/callgraphs/d
 tar: Removing leading `../' from member names
 Disk usage stats: 21M	../doop/cache/analysis
 
-elapsed time: 122.43s
+elapsed time: 86.53s

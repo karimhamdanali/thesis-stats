@@ -4,50 +4,51 @@ Loading properties...
 Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, spec.benchmarks._205_raytrace.Main, benchmarks-averroes/specjvm/raytrace-organized-app.jar, benchmarks-averroes/specjvm/raytrace-placeholder-lib.jar]
 clearing all cached results ...
 running specjvm benchmark 
-generating facts (benchmarks-averroes/specjvm/raytrace-organized-app.jar -l benchmarks-averroes/specjvm/raytrace-placeholder-lib.jar) in cache/input-facts/jre1.4/d1d3044f845009e4dea945b2f82609d170e1726cc1f30e82bce5f709a4a4a5cf ...
+generating facts (benchmarks-averroes/specjvm/raytrace-organized-app.jar -l benchmarks-averroes/specjvm/raytrace-placeholder-lib.jar -l benchmarks-averroes/specjvm/raytrace-averroes-lib-class.jar) in cache/input-facts/jre1.4/acda0db614d7af20f6a306c757ba35a2e98b02478b9f628cae6c948395ef8a39 ...
 Adding archive: benchmarks-averroes/specjvm/raytrace-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/specjvm/raytrace-placeholder-lib.jar
-elapsed time: 6.26s
-creating database in cache/input-database/jre1.4/d1d3044f845009e4dea945b2f82609d170e1726cc1f30e82bce5f709a4a4a5cf ...
-elapsed time: 0.83s
+Adding archive for resolving: benchmarks-averroes/specjvm/raytrace-averroes-lib-class.jar
+elapsed time: 6.40s
+creating database in cache/input-database/jre1.4/acda0db614d7af20f6a306c757ba35a2e98b02478b9f628cae6c948395ef8a39 ...
+elapsed time: 0.94s
 loading fact declarations ...
-elapsed time: 5.51s
+elapsed time: 3.29s
 loading facts ...
-elapsed time: 1.27s
+elapsed time: 1.44s
 setting main class to spec.benchmarks._205_raytrace.Main
 loading context-insensitive declarations...
-elapsed time: 3.67s
+elapsed time: 2.62s
 loading context-insensitive delta rules...
-elapsed time: 5.61s
+elapsed time: 3.28s
 loading reflection delta rules...
-elapsed time: 3.81s
+elapsed time: 2.74s
 loading client delta rules...
-elapsed time: 1.98s
+elapsed time: 2.00s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 9.05s
+elapsed time: 5.54s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/specjvm/raytrace-organized-app.jar
 making database available at last-analysis
-array index points-to                     201
-call graph edges (context-insensitive)    1382
-call graph edges (context-sensitive)      1383
+array index points-to                     202
+call graph edges (context-insensitive)    1381
+call graph edges (context-sensitive)      1382
 instance field points-to                  178
-reachable methods (context-insensitive)   250
-reachable methods (context-sensitive)     250
-reachable variables (context-insensitive) 1822
-reachable variables (context-sensitive)   1822
-static field points-to                    303
+reachable methods (context-insensitive)   251
+reachable methods (context-sensitive)     251
+reachable variables (context-insensitive) 1905
+reachable variables (context-sensitive)   1905
+static field points-to                    306
 retrieving call graph edges ...
-elapsed time: 4.73s
+elapsed time: 3.16s
 retrieving entry points ...
-elapsed time: 4.81s
-Total time to finish: 94.34
+elapsed time: 3.04s
+Total time to finish: 68.2
 =================================================
 # edges = 435
 =================================================
 making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/specjvm/raytrace/doopAverroes.tar.gz ...
 tar: Removing leading `../' from member names
-Disk usage stats: 8.4M	../doop/cache/analysis
+Disk usage stats: 8.5M	../doop/cache/analysis
 
-elapsed time: 96.75s
+elapsed time: 70.42s

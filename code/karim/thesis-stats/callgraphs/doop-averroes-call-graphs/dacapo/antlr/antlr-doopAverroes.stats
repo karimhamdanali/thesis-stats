@@ -4,50 +4,51 @@ Loading properties...
 Spawning process [/u/karim/workspace/doop/alt-run-averroes, 1.4, dacapo.antlr.Main2, benchmarks-averroes/dacapo/antlr-organized-app.jar, benchmarks-averroes/dacapo/antlr-placeholder-lib.jar]
 clearing all cached results ...
 running dacapo benchmark 
-generating facts (benchmarks-averroes/dacapo/antlr-organized-app.jar -l benchmarks-averroes/dacapo/antlr-placeholder-lib.jar) in cache/input-facts/jre1.4/ee503e43cee16a4e275c1398657bab8e7c1cc5a4c11adee9a76156a9365dc0db ...
+generating facts (benchmarks-averroes/dacapo/antlr-organized-app.jar -l benchmarks-averroes/dacapo/antlr-placeholder-lib.jar -l benchmarks-averroes/dacapo/antlr-averroes-lib-class.jar) in cache/input-facts/jre1.4/971425237de790b2198f9988e3211a19afda33ff38ca4018e806de3d1e4cff3d ...
 Adding archive: benchmarks-averroes/dacapo/antlr-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/dacapo/antlr-placeholder-lib.jar
-elapsed time: 17.81s
-creating database in cache/input-database/jre1.4/ee503e43cee16a4e275c1398657bab8e7c1cc5a4c11adee9a76156a9365dc0db ...
-elapsed time: 0.85s
+Adding archive for resolving: benchmarks-averroes/dacapo/antlr-averroes-lib-class.jar
+elapsed time: 11.38s
+creating database in cache/input-database/jre1.4/971425237de790b2198f9988e3211a19afda33ff38ca4018e806de3d1e4cff3d ...
+elapsed time: 0.93s
 loading fact declarations ...
-elapsed time: 5.49s
+elapsed time: 3.16s
 loading facts ...
-elapsed time: 3.93s
+elapsed time: 3.95s
 setting main class to dacapo.antlr.Main2
 loading context-insensitive declarations...
-elapsed time: 3.93s
+elapsed time: 3.07s
 loading context-insensitive delta rules...
-elapsed time: 5.83s
+elapsed time: 3.67s
 loading reflection delta rules...
-elapsed time: 4.32s
+elapsed time: 3.20s
 loading client delta rules...
-elapsed time: 2.32s
+elapsed time: 2.31s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 31.80s
+elapsed time: 32.24s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/antlr-organized-app.jar
 making database available at last-analysis
-array index points-to                     10668
-call graph edges (context-insensitive)    21058
-call graph edges (context-sensitive)      21058
-instance field points-to                  133016
-reachable methods (context-insensitive)   1611
-reachable methods (context-sensitive)     1611
-reachable variables (context-insensitive) 25065
-reachable variables (context-sensitive)   25065
-static field points-to                    5582
+array index points-to                     11193
+call graph edges (context-insensitive)    22556
+call graph edges (context-sensitive)      22556
+instance field points-to                  130399
+reachable methods (context-insensitive)   1748
+reachable methods (context-sensitive)     1748
+reachable variables (context-insensitive) 27152
+reachable variables (context-sensitive)   27152
+static field points-to                    6175
 retrieving call graph edges ...
-elapsed time: 5.79s
+elapsed time: 4.16s
 retrieving entry points ...
-elapsed time: 5.14s
-Total time to finish: 138.66
+elapsed time: 3.53s
+Total time to finish: 109.3
 =================================================
-# edges = 6981
+# edges = 7632
 =================================================
 making the database of Doop with Averroes available at all-output/1/callgraphs/doop-averroes-call-graphs/dacapo/antlr/doopAverroes.tar.gz ...
 tar: Removing leading `../' from member names
-Disk usage stats: 79M	../doop/cache/analysis
+Disk usage stats: 86M	../doop/cache/analysis
 
-elapsed time: 148.84s
+elapsed time: 121.18s

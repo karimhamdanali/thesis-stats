@@ -21,7 +21,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>C</string>
+				<string>Ljava/lang/Object;</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id11">
@@ -33,7 +33,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>Ljava/lang/Object;</string>
+				<string>C</string>
 			</attr>
 		</node>
 		<edge from="id2" to="id11">

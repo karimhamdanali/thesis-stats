@@ -9,7 +9,7 @@ SparkAverroes: 15157
 Doop: 12433
 DoopAverroes: 14904
 Wala: 12698
-WalaAverroes: 12723
+WalaAverroes: 15156
 
 Library Call Graph Edges
 ========================
@@ -19,17 +19,17 @@ SparkAverroes: 880
 Doop: 841
 DoopAverroes: 878
 Wala: 845
-WalaAverroes: 851
+WalaAverroes: 880
 
 Library Call Back Edges
 =======================
 Dynamic: 49
 Spark: 210
-SparkAverroes: 203
+SparkAverroes: 202
 Doop: 84
-DoopAverroes: 203
+DoopAverroes: 202
 Wala: 92
-WalaAverroes: 146
+WalaAverroes: 202
 
 
 CGE
@@ -45,7 +45,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2301
 DoopAverroes - Doop: 2471
-WalaAverroes - Wala: 25
+WalaAverroes - Wala: 2458
 Cgc - DoopAverroes: 2
 DoopAverroes - Cgc: 476
 
@@ -62,7 +62,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 12
 DoopAverroes - Doop: 37
-WalaAverroes - Wala: 6
+WalaAverroes - Wala: 35
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 4
 
@@ -77,11 +77,11 @@ Dyn - WalaAverroes: 0
 Spark - SparkAverroes: 33
 Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
-SparkAverroes - Spark: 26
-DoopAverroes - Doop: 119
-WalaAverroes - Wala: 54
+SparkAverroes - Spark: 25
+DoopAverroes - Doop: 118
+WalaAverroes - Wala: 110
 Cgc - DoopAverroes: 0
-DoopAverroes - Cgc: 13
+DoopAverroes - Cgc: 12
 
 
 Frequencies of extra library call-backs
@@ -94,7 +94,6 @@ hasNext = 2
 next = 2
 removeAll = 2
 retainAll = 2
-<init> = 1
 addAll = 1
 hasPrevious = 1
 lastIndexOf = 1
@@ -118,7 +117,6 @@ removeAll = 2
 retainAll = 2
 set = 2
 size = 2
-<init> = 1
 addAll = 1
 get = 1
 hasPrevious = 1
@@ -137,18 +135,32 @@ clone = 2
 hasNext = 2
 next = 2
 remove = 2
-<init> = 1
 
 WalaAverroes - Wala
 ----------
-clone = 46
-<init> = 1
-add = 1
+clone = 52
+remove = 15
+clear = 5
+hasNext = 4
+next = 4
+toString = 4
+contains = 3
+add = 2
+iterator = 2
+removeAll = 2
+retainAll = 2
+set = 2
+size = 2
+addAll = 1
+get = 1
 hasPrevious = 1
+indexOf = 1
+lastIndexOf = 1
+listIterator = 1
 nextIndex = 1
 previous = 1
 previousIndex = 1
-remove = 1
-set = 1
+put = 1
+removeRange = 1
 
-elapsed time: 14.77s
+elapsed time: 14.73s

@@ -93,7 +93,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>J</string>
+				<string>Z</string>
 			</attr>
 		</node>
 		<edge from="id7" to="id11">
@@ -105,7 +105,7 @@
 				<string>println</string>
 			</attr>
 			<attr name="signature">
-				<string>Z</string>
+				<string>J</string>
 			</attr>
 		</node>
 		<edge from="id8" to="id11">

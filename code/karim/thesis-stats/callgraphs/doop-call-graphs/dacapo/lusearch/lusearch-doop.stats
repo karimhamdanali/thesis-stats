@@ -5,28 +5,28 @@ Spawning process [/u/karim/workspace/doop/alt-run, 1.4, dacapo.lusearch.Main2, b
 clearing all cached results ...
 running doop and generating output for graph generation for benchmark benchmarks-averroes/dacapo/lusearch-organized-app.jar ...
 running dacapo benchmark 
-generating facts (benchmarks-averroes/dacapo/lusearch-organized-app.jar -l benchmarks-averroes/dacapo/lusearch-organized-lib.jar) in cache/input-facts/jre1.4/6776f61ba8a2c0b4a4c78ca7920baebd10251b3762e6f010e3d24df7e9f306f0 ...
+generating facts (benchmarks-averroes/dacapo/lusearch-organized-app.jar -l benchmarks-averroes/dacapo/lusearch-organized-lib.jar) in cache/input-facts/jre1.4/48a3e58e54b47e7235c888e1f1f71827bbc6c6280c0df87d1693ecfde1c6024e ...
 Adding archive: benchmarks-averroes/dacapo/lusearch-organized-app.jar
 Adding archive for resolving: benchmarks-averroes/dacapo/lusearch-organized-lib.jar
-elapsed time: 65.77s
-creating database in cache/input-database/jre1.4/6776f61ba8a2c0b4a4c78ca7920baebd10251b3762e6f010e3d24df7e9f306f0 ...
-elapsed time: 1.18s
+elapsed time: 49.91s
+creating database in cache/input-database/jre1.4/48a3e58e54b47e7235c888e1f1f71827bbc6c6280c0df87d1693ecfde1c6024e ...
+elapsed time: 1.68s
 loading fact declarations ...
-elapsed time: 6.03s
+elapsed time: 3.19s
 loading facts ...
-elapsed time: 14.23s
+elapsed time: 14.01s
 setting main class to dacapo.lusearch.Main2
 loading context-insensitive declarations...
-elapsed time: 5.02s
+elapsed time: 3.90s
 loading context-insensitive delta rules...
-elapsed time: 7.48s
+elapsed time: 5.05s
 loading reflection delta rules...
-elapsed time: 7.85s
+elapsed time: 6.60s
 loading client delta rules...
-elapsed time: 3.12s
+elapsed time: 2.99s
 loading context-insensitive rules ...
 MBBENCH logicblox START
-elapsed time: 43.22s
+elapsed time: 37.56s
 MBBENCH logicblox STOP
 making database available at results/context-insensitive/jre1.4/benchmarks-averroes/dacapo/lusearch-organized-app.jar
 making database available at last-analysis
@@ -40,10 +40,10 @@ reachable variables (context-insensitive) 47368
 reachable variables (context-sensitive)   47368
 static field points-to                    1613
 retrieving call graph edges ...
-elapsed time: 7.01s
+elapsed time: 5.30s
 retrieving entry points ...
-elapsed time: 5.97s
-Total time to finish: 231.08
+elapsed time: 4.30s
+Total time to finish: 184.47
 =================================================
 # edges = 1784
 =================================================
@@ -51,4 +51,4 @@ making the database of Doop available at all-output/1/callgraphs/doop-call-graph
 tar: Removing leading `../' from member names
 Disk usage stats: 135M	../doop/cache/analysis
 
-elapsed time: 242.90s
+elapsed time: 194.93s

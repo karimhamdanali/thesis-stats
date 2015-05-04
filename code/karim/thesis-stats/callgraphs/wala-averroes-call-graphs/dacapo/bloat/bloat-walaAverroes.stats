@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/bloat
 Loading properties...
-[Wala] Solution found in 11.05 seconds.
-Total time to finish: 15.4
+[Wala] Solution found in 6.19 seconds.
+Total time to finish: 7.16
 =================================================
-# edges = 13720
+# edges = 16238
 =================================================
 
-elapsed time: 21.61s
+elapsed time: 15.38s

@@ -27,10 +27,10 @@
 		<node id="id1">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>AddDeftemplate</string>
+				<string>DeactivateRule</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Deftemplate;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
 			</attr>
 		</node>
 		<edge from="id1" to="id12">
@@ -39,10 +39,10 @@
 		<node id="id2">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>DeactivateRule</string>
+				<string>AddDeftemplate</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Defrule;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/Deftemplate;</string>
 			</attr>
 		</node>
 		<edge from="id2" to="id12">
@@ -111,10 +111,10 @@
 		<node id="id8">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>AddDeffacts</string>
+				<string>RetractFact</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/Deffacts;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
 			</attr>
 		</node>
 		<edge from="id8" to="id12">
@@ -123,10 +123,10 @@
 		<node id="id9">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#Method"/>
 			<attr name="name">
-				<string>RetractFact</string>
+				<string>AddDeffacts</string>
 			</attr>
 			<attr name="signature">
-				<string>Lspec/benchmarks/_202_jess/jess/ValueVector;</string>
+				<string>Lspec/benchmarks/_202_jess/jess/Deffacts;</string>
 			</attr>
 		</node>
 		<edge from="id9" to="id12">

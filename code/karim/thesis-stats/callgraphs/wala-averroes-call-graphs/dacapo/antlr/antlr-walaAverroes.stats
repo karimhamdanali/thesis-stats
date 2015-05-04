@@ -1,10 +1,10 @@
 ...
 running WalaAverroes for dacapo/antlr
 Loading properties...
-[Wala] Solution found in 2.87 seconds.
-Total time to finish: 6.86
+[Wala] Solution found in 3.87 seconds.
+Total time to finish: 4.52
 =================================================
-# edges = 2759
+# edges = 7633
 =================================================
 
-elapsed time: 10.51s
+elapsed time: 11.26s

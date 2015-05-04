@@ -354,7 +354,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id15" to="id27">
+		<edge from="id15" to="id38">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id16">
@@ -366,7 +366,7 @@
 				<string/>
 			</attr>
 		</node>
-		<edge from="id16" to="id38">
+		<edge from="id16" to="id27">
 			<type xlink:href="http://plg.uwaterloo.ca/~karim/projects/cgc/schemas/callgraph.gxl#declaredIn"/>
 		</edge>
 		<node id="id17">

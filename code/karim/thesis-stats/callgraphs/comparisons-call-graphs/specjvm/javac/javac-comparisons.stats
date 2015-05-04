@@ -9,7 +9,7 @@ SparkAverroes: 8350
 Doop: 8188
 DoopAverroes: 8239
 Wala: 8265
-WalaAverroes: 8293
+WalaAverroes: 8349
 
 Library Call Graph Edges
 ========================
@@ -29,7 +29,7 @@ SparkAverroes: 29
 Doop: 23
 DoopAverroes: 29
 Wala: 19
-WalaAverroes: 23
+WalaAverroes: 29
 
 
 CGE
@@ -45,7 +45,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 45
 DoopAverroes - Doop: 51
-WalaAverroes - Wala: 28
+WalaAverroes - Wala: 84
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 45
 
@@ -79,7 +79,7 @@ Doop - DoopAverroes: 0
 Wala - WalaAverroes: 0
 SparkAverroes - Spark: 2
 DoopAverroes - Doop: 6
-WalaAverroes - Wala: 4
+WalaAverroes - Wala: 10
 Cgc - DoopAverroes: 0
 DoopAverroes - Cgc: 4
 
@@ -107,6 +107,10 @@ nextElement = 1
 
 WalaAverroes - Wala
 ----------
-toString = 4
+toString = 6
+clone = 1
+hasMoreElements = 1
+nextElement = 1
+read = 1
 
-elapsed time: 9.22s
+elapsed time: 9.19s

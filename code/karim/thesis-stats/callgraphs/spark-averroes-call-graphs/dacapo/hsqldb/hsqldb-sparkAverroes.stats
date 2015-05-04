@@ -1,46 +1,46 @@
 ...
 running Spark with Averroes for dacapo/hsqldb
 Loading properties...
-Generating the call graph from Spark.
+Generating the call graph from SparkAverroes.
 
 Preparing classes ...
 Adding application archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/hsqldb-organized-app.jar
 Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/hsqldb-placeholder-lib.jar
+Adding placeholder library archive: /u4/karim/workspace/thesis-stats/benchmarks-averroes/dacapo/hsqldb-averroes-lib-class.jar
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-Total methods: 7588
-Initially reachable methods: 128
-Classes with at least one reachable method: 122
-[Spark] Pointer Assignment Graph in 4.4 seconds.
-Total types: 962
-[Spark] Type masks in 2.9 seconds.
-VarNodes: 1062
-FieldRefNodes: 97
-AllocNodes: 453
+Total methods: 7607
+Initially reachable methods: 7
+Classes with at least one reachable method: 6
+[Spark] Pointer Assignment Graph in 0.2 seconds.
+Total types: 941
+[Spark] Type masks in 0.0 seconds.
+VarNodes: 25
+FieldRefNodes: 1
+AllocNodes: 6
 Cleaning up graph for merged nodes
 Done cleaning up graph for merged nodes
 [Spark] Pointer Graph simplified in 0.0 seconds.
-Worklist has 457 nodes.
+Worklist has 7 nodes.
 Now handling field references
-Worklist has 1856 nodes.
+Worklist has 1760 nodes.
 Now handling field references
-Worklist has 1924 nodes.
+Worklist has 1792 nodes.
 Now handling field references
-Worklist has 1228 nodes.
+Worklist has 1279 nodes.
 Now handling field references
-Worklist has 1127 nodes.
+Worklist has 1071 nodes.
 Now handling field references
-Worklist has 444 nodes.
+Worklist has 434 nodes.
 Now handling field references
-Worklist has 281 nodes.
+Worklist has 269 nodes.
 Now handling field references
-Worklist has 1 nodes.
-Now handling field references
-[Spark] Propagation in 16.9 seconds.
-[Spark] Solution found in 17.2 seconds.
-[Spark] Number of reachable methods: 4941
-Total time to finish: 30.53
+[Spark] Propagation in 12.8 seconds.
+[Spark] Solution found in 13.1 seconds.
+[Spark] Number of reachable methods: 4943
+size of original spark is: 15494
+Total time to finish: 17.48
 =================================================
-# edges = 10575
+# edges = 9885
 =================================================
 
-elapsed time: 34.69s
+elapsed time: 25.31s

@@ -1,10 +1,10 @@
 ...
 running Wala for specjvm/db
 Loading properties...
-[Wala] Solution found in 2.11 seconds.
-Total time to finish: 6.23
+[Wala] Solution found in 2.15 seconds.
+Total time to finish: 4.5
 =================================================
 # edges = 71
 =================================================
 
-elapsed time: 9.64s
+elapsed time: 9.53s
