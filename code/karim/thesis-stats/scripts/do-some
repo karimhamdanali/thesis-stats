@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+set -e
+
+./doop dacapo/chart all-output/1

@@ -7,6 +7,9 @@ for i in {1..10}
 do
   base=all-output/${i}
   echo "running for the ${i}th time!"
+  echo "running Averroes"
+  #./averroes-all -disable-tamiflex ${base}
+  ./averroes-all -enable-tamiflex ${base}
   echo "running Spark"
   ./spark-all ${base}
   echo "running SparkAverroes"

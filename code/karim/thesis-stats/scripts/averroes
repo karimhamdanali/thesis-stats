@@ -3,7 +3,7 @@
 set -e
 
 benchmark=$1
-reflection=$2
+tamiflex=$2
 base=$3
 
 function timing()
@@ -26,8 +26,8 @@ program=$(basename $benchmark)
 cp properties/${benchmark}.properties averroes.properties
 jar uf averroes.jar averroes.properties
 
-if test "$2" = "-disable-reflection"; then
-  timing java -jar averroes.jar $reflection
+if test "$2" = "-disable-tamiflex"; then
+  timing java -jar averroes.jar $tamiflex
 else
   timing java -jar averroes.jar
 fi
