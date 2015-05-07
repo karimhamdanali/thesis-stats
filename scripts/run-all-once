@@ -3,7 +3,9 @@
 set -e
 
 date
-  base=.
+  base=$1
+  echo "running Averroes"
+  ./averroes-all -enable-tamiflex ${base}
   echo "running Spark"
   ./spark-all ${base}
   echo "running SparkAverroes"

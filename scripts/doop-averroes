@@ -19,7 +19,7 @@ mkdir -p ${outputdir}/
 # 2. run doop-averroes.jar
 cp properties/${benchmark}.properties averroes.properties
 jar uf doop-averroes.jar averroes.properties
-java -jar doop-averroes.jar $doopHome $benchmark
+java -jar doop-averroes.jar $doopHome $base $benchmark
 
 # 3. copy the call graph
 cp output/doopAverroes.gxl ${outputdir}/doopAverroes.gxl

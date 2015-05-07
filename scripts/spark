@@ -16,7 +16,7 @@ mkdir -p ${outputdir}/
 # 2. run spark-averroes.jar
 cp properties/${benchmark}.properties averroes.properties
 jar uf spark.jar averroes.properties
-java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar spark.jar $benchmark
+java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar spark.jar $base $benchmark
 
 # 3. copy the call graph
 cp output/spark.gxl ${outputdir}/spark.gxl

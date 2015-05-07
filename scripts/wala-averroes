@@ -16,7 +16,7 @@ mkdir -p ${outputdir}/
 # 2. run wala-averroes.jar
 cp properties/${benchmark}.properties averroes.properties
 jar uf wala-averroes.jar averroes.properties
-java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar wala-averroes.jar $benchmark
+java -verbose:gc -Xloggc:${outputdir}/${program}-gc.stats -jar wala-averroes.jar $base $benchmark
 
 # 3. copy the call graph
 cp output/walaAverroes.gxl ${outputdir}/walaAverroes.gxl
