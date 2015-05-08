@@ -2,7 +2,17 @@
 
 set -e
 
-base=$1
+tool=$1
+averroes=$2
+base=$3
+
+##################################################################
+if test "$averroes" = "-averroes"; then
+  toolname=${tool}-averroes
+else
+  toolname=${tool}
+fi
+##################################################################
 
 function timing()
 {
@@ -24,14 +34,13 @@ benchmarks=( ${dacapo[@]} ${specjvm[@]} )
 date
 for benchmark in ${benchmarks[@]}
 do
-  echo "running ${benchmark} ..."
   program=$(basename $benchmark)
-  outputdir=${base}/callgraphs/doop-averroes-call-graphs/${benchmark}
+  outputdir=${base}/callgraphs/${toolname}-call-graphs/${benchmark} 
   
   # 1. create output directory
   mkdir -p ${outputdir}/
   
   # 2. run the script
-  timing ./doop-averroes ${benchmark} ${base} > ${outputdir}/${program}-doopAverroes.stats
+  timing ./run-tool ${tool} ${averroes} ${base} ${benchmark} > ${outputdir}/${program}.stats
 done
 date
